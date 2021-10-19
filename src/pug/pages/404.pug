@@ -1,0 +1,73 @@
+extends ../layout/main
+	
+block meta
+  title= '404'
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  //- script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/libs.js')
+  //- script(defer src='./assets/scripts/header.js')
+  //- script(defer src='./assets/scripts/home.js')
+  script(defer src='./assets/scripts/script.js')
+
+block content
+  .container-404
+    h1.title-404 4
+      - let c = 0
+      while c < 48
+        .c(style=`--i: ${c};`)
+        - c++
+      |4
+    h2.text-404 Упс, щось пішло не так. Сторінку не знайдено =(
+    .link-container
+      .link-404 
+        <svg class="arrow-404"  viewBox="0 0 60 60"fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="30"/>
+          <path d="M29.5238 40C29.5238 32 23.1746 30 20 30M20 30C23.1746 30 29.5238 28 29.5238 20M20 30L40 30"/>
+        </svg>
+        
+        a(href="#") 
+          span повернутися 
+          | Назад
+      .link-404
+        a(href="index.html") На головну
+        <svg  class="arrow-404" viewBox="0 0 60 60"fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="30"/>
+          <path d="M30.4762 40C30.4762 32 36.8254 30 40 30M40 30C36.8254 30 30.4762 28 30.4762 20M40 30L20 30"/>
+        </svg>
+	
+block header
+  include ../includes/header.pug
+
+ 
+//- block meta
+//-   title= 'Главная'
+//-   meta(name='description', content='')
+//- block head
+//-     link(rel='stylesheet', href="./assets/styles/main.min.css")
+//- block scripts
+//-   script(defer src='./assets/scripts/vendors.bundle.js')
+//-   script(defer src='./assets/scripts/index.bundle.js')
+//-   //- script(defer src='./assets/scripts/index.js')
+//-   script(defer src='./assets/scripts/libs.js')
+//-   //- script(defer src='./assets/scripts/header.js')
+//-   //- script(defer src='./assets/scripts/home.js')
+//-   script(defer src='./assets/scripts/script.js')
+//- block content 
+//-   .container-404
+//-     h1.title-404 404
+//-     h2.text-404 Упс, щось пішло не так =(
+//- 	.link-container
+//-   	a(href="#").link-404 повернутися Назад
+//-  	  a(href="index.html").link-404 На головну
+	
+//- block header
+//-   include ../includes/header.pug
+
+
+
+

@@ -1,0 +1,219 @@
+
+extends ../layout/main
+block variable
+block meta
+  title= 'Головна'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  //- script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/libs.js')
+  //- script(defer src='./assets/scripts/header.js')
+  //- script(defer src='./assets/scripts/home.js')
+  //- script(defer src='./assets/scripts/scroll.js')
+  script(defer src='./assets/scripts/script.js')
+  //- script(defer src='./assets/scripts/animation.js')
+  //- script(defer src='./assets/scripts/animation-home.js')
+  //- script(defer src='./assets/scripts/menu-animation.js')
+block content
+//-   section.main
+//-     .main-content
+//-       h1
+//-         .line
+//-           .inner1
+//-             span H
+//-             | OLY
+//-         .line 
+//-           .inner2 BUILD
+//-       .main-text 
+//-         h3 Будуємо майбутнє для комфортного життя людей
+//-         .main-scroll(data-scroll-to='director')
+//-           .main-scroll-arrow
+//-             <svg class="scroll" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+//-               <title>scroll</title>
+//-               <path d="M16 31.467c-8.542 0-15.467-6.925-15.467-15.467s6.925-15.467 15.467-15.467c8.542 0 15.467 6.925 15.467 15.467s-6.925 15.467-15.467 15.467zM16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
+//-               <path class="scroll-arrow" d="M15.733 21.333c0-0.801-0.255-2.011-1.013-3.014-0.748-0.99-2.002-1.799-4.054-1.799v-0.533c2.215 0 3.628 0.884 4.479 2.011 0.239 0.316 0.433 0.65 0.587 0.986v-8.317h0.533v8.317c0.155-0.336 0.348-0.669 0.587-0.986 0.852-1.126 2.264-2.011 4.479-2.011v0.533c-2.052 0-3.306 0.809-4.054 1.799-0.758 1.003-1.013 2.213-1.013 3.014h-0.533z"></path>
+//-             </svg>
+//-           p Дізнатися більше
+//-       .main-img1
+//-         img(src="./assets/images/main1.jpg", alt="")
+//-       .main-img2
+//-         img(src="./assets/images/main2.jpg", alt="")
+//-       .main-img3
+//-         img(src="./assets/images/main3.jpg", alt="")
+//-       .main-img4
+//-         img(src="./assets/images/main4.jpg", alt="")
+     
+
+//-   section.director(data-container='director')
+//-     .director-content 
+//-       .director-content-info 
+//-         img(src="./assets/images/director.jpg", alt="")
+//-         h4(data-span-entry) Дмитро  Михайлович 
+//-         p(data-span-entry) директор Holy Build
+//-       .director-content-text
+//-         +svg('“')
+//-         p(data-span-entry)  Якщо можна говорити про те, що раніше сказали інші, то слід спробувати це сказати краще них.
+//-   section.about-company 
+//-     .about-company-img 
+//-       img(data-paralax src="./assets/images/about-company1.jpg", alt="")
+//-     .about-company-text(data-span-entry) 
+//-       .about-company-text-content
+//-         .about-company-text-description
+//-           h2.description-title Про компанію
+//-           p Тут роблять з латинського "Іпсуму" кириличний. А діалогів і прямої мови в іпсумі нема - просто додаєте пунктуацію за власним смаком.
+//-         img(src="./assets/images/about-company2.jpg", alt="")
+//-       .about-company-more 
+//-         a(href="company.html").about-company-scroll
+//-           .scroll-arrow
+//-             <svg class="scroll-more" version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+//-               <title>scroll</title>
+//-               <path d="M16 31.467c-8.542 0-15.467-6.925-15.467-15.467s6.925-15.467 15.467-15.467c8.542 0 15.467 6.925 15.467 15.467s-6.925 15.467-15.467 15.467zM16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
+//-               <path class="scroll-arrow" d="M15.733 21.333c0-0.801-0.255-2.011-1.013-3.014-0.748-0.99-2.002-1.799-4.054-1.799v-0.533c2.215 0 3.628 0.884 4.479 2.011 0.239 0.316 0.433 0.65 0.587 0.986v-8.317h0.533v8.317c0.155-0.336 0.348-0.669 0.587-0.986 0.852-1.126 2.264-2.011 4.479-2.011v0.533c-2.052 0-3.306 0.809-4.054 1.799-0.758 1.003-1.013 2.213-1.013 3.014h-0.533z"></path>
+//-             </svg>
+
+//-           p Дивитися розділ
+//-         p Тут роблять з латинського "Іпсуму" кириличний (знайшов по посиланню в вікіпедії). А діалогів і прямої мови в іпсумі нема - просто додаєте пунктуацію за власним смаком. Це ж не тільки беззмістовний текст - там шматки слів з латини. 
+//-   section.project 
+//-     .project-content
+//-       .swiper.mySwiper 
+//-         .swiper-wrapper 
+//-           .swiper-slide 
+//-             .project-slide 
+//-               .project-slide-info(data-span-entry) 
+//-                 h2.project-slide-title ЖК Kyїvproєkt city space
+//-                 .project-slide-info-description
+//-                   .subparagraph Загальна площа:
+//-                   .subparagraph-info 48 505 м2
+//-                   .subparagraph Площа жилого фонду:
+//-                   .subparagraph-info 77 650 м2
+//-                   .subparagraph Строк здачі:
+//-                   .subparagraph-info 3 квартал 2022
+//-                   .subparagraph Місцезнаходження:
+//-                   .subparagraph-info метро “Палац Україна”
+//-                   .subparagraph Загальна кількість квартир:
+//-                   .subparagraph-info 676 шт
+//-               .project-slide-img
+//-                 img(data-paralax src="./assets/images/sliderProekt1.jpg", alt="")
+//-                 a(href="project-description").project-slide-more переглянути проєкт
+
+//-           .swiper-slide
+//-             .project-slide 
+//-               .project-slide-info 
+//-                 h2.project-slide-title Новий проект
+//-                 .project-slide-info-description
+//-                   .subparagraph Загальна площа:
+//-                   .subparagraph-info уточнюється
+//-                   .subparagraph Площа жилого фонду:
+//-                   .subparagraph-info уточнюється
+//-                   .subparagraph Строк здачі:
+//-                   .subparagraph-info уточнюється
+//-                   .subparagraph Місцезнаходження:
+//-                   .subparagraph-info уточнюється
+//-                   .subparagraph Загальна кількість квартир:
+//-                   .subparagraph-info уточнюється
+//-               .project-slide-img
+//-                 img(src="./assets/images/sliderProekt2.jpg", alt="")
+//-                 a(href="#").project-slide-more переглянути проєкт
+
+//-           .swiper-slide 
+//-             .project-slide 
+//-               .project-slide-info 
+//-                 h2.project-slide-title ЖК Kyїvproєkt city space
+//-                 .project-slide-info-description
+//-                   .subparagraph Загальна площа:
+//-                   .subparagraph-info 48 505 м2
+//-                   .subparagraph Площа жилого фонду:
+//-                   .subparagraph-info 77 650 м2
+//-                   .subparagraph Строк здачі:
+//-                   .subparagraph-info 3 квартал 2022
+//-                   .subparagraph Місцезнаходження:
+//-                   .subparagraph-info метро “Палац Україна”
+//-                   .subparagraph Загальна кількість квартир:
+//-                   .subparagraph-info 676 шт
+//-               .project-slide-img
+//-                 img(src="./assets/images/sliderProekt1.jpg", alt="")
+//-                 a(href="#").project-slide-more переглянути проєкт
+        
+//-         .swiper-button-container
+     
+//-           .swiper-button-prev 
+//-             .swiper-arrow
+//-               <svg class="button-prev" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+//-                 <title>scroll</title>
+//-                 <path d="M16 31.467c8.542 0 15.467-6.925 15.467-15.467s-6.925-15.467-15.467-15.467c-8.542 0-15.467 6.925-15.467 15.467s6.925 15.467 15.467 15.467zM16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16s-7.163 16-16 16z"></path>
+//-                 <path class="button-prev-arrow" d="M10.667 16.267c0.801 0 2.011 0.255 3.014 1.013 0.99 0.748 1.799 2.002 1.799 4.054h0.533c0-2.215-0.884-3.628-2.011-4.479-0.316-0.239-0.65-0.433-0.986-0.587h8.317v-0.533h-8.317c0.336-0.155 0.669-0.348 0.986-0.587 1.126-0.852 2.011-2.264 2.011-4.479h-0.533c0 2.052-0.809 3.306-1.799 4.054-1.003 0.758-2.213 1.013-3.014 1.013v0.533z"></path> 
+//-               </svg>
+//-           .swiper-button-next 
+//-             .swiper-arrow
+//-               <svg class="scroll-more swiper-next" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+//-                 <title>scroll</title>
+//-                 <path d="M16 31.467c-8.542 0-15.467-6.925-15.467-15.467s6.925-15.467 15.467-15.467c8.542 0 15.467 6.925 15.467 15.467s-6.925 15.467-15.467 15.467zM16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"></path>
+//-                 <path class="scroll-arrow" d="M15.733 21.333c0-0.801-0.255-2.011-1.013-3.014-0.748-0.99-2.002-1.799-4.054-1.799v-0.533c2.215 0 3.628 0.884 4.479 2.011 0.239 0.316 0.433 0.65 0.587 0.986v-8.317h0.533v8.317c0.155-0.336 0.348-0.669 0.587-0.986 0.852-1.126 2.264-2.011 4.479-2.011v0.533c-2.052 0-3.306 0.809-4.054 1.799-0.758 1.003-1.013 2.213-1.013 3.014h-0.533z"></path>
+//-               </svg>
+//-           .swiper-pagination 
+        
+//-   section.news 
+//-     .news-content
+//-       h2.news-content-title Новини
+//-       .news-plagination
+//-         .news-plagination-current.active
+//-         .news-plagination-current
+//-         .news-plagination-current
+
+//-     .news-swiper.mynews-swiper 
+//-       .swiper-wrapper
+//-         .swiper-slide
+//-           .swiper-slide-content
+//-             a(href="news-redevelopment.html")
+//-               img(data-paralax src="./assets/images/news1.jpg", alt="")
+//-               p Встигніть здійснити бажання про власне житло! Купуйте квартиру з першим внеском 30% 
+//-         .swiper-slide
+//-           .swiper-slide-content
+//-             a(href="news-redevelopment.html")
+//-               img(data-paralax src="./assets/images/news2.jpg", alt="")
+//-               p У Кyїvproekt відкриється медичний центр Median
+//-         .swiper-slide
+//-           .swiper-slide-content
+//-             a(href="news-redevelopment.html")
+//-               img(data-paralax src="./assets/images/news3.jpg", alt="")
+//-               p Продаж квартир у KYЇVPROEKT Citу Space відкрито!
+//-         .swiper-slide
+//-           .swiper-slide-content
+//-             a(href="news-redevelopment.html")
+//-               img(data-paralax src="./assets/images/news4.jpg", alt="")
+//-               p Встигніть здійснити бажання про власне житло! Купуйте квартиру з першим внеском 30%
+//-         .swiper-slide
+//-           .swiper-slide-content
+//-             a(href="news-redevelopment.html") 
+//-               img(data-paralax src="./assets/images/news5.jpg", alt="")
+//-               p Продаж квартир у KYЇVPROEKT Citу Space відкрито!
+  
+//-   section.feedback 
+//-     .feedback-content 
+//-       .feedback-title 
+//-         button.js-call  Зворотній зв’язок
+//-       .feedback-description  
+//-         p.subtitle Адреса:
+//-         p.details м. Київ, вул. Хрещатик 263
+//-         a(href="https://g.page/?share" target="_blank").feedback-link
+//-           .arrow-gold
+//-             <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-               <path d="M13.0952 25C13.0952 15 21.0317 12.5 25 12.5M25 12.5C21.0317 12.5 13.0952 10 13.0952 3.81263e-07M25 12.5L-5.46392e-07 12.5" stroke="#00456F"/>
+//-             </svg>
+
+//-           |Відкрити на Google maps
+//-         p.subtitle Телефон:
+//-         a(href="tel:+380442222222").details (044) 22-22-222
+//-         p.subtitle E-mail:
+//-         a(href="mailto:HollyBuild@com.ua").details HollyBuild@com.ua
+block header
+  include ../includes/header.pug
+
+//- block footer
+//-   include ../includes/footer.pug
+
+
