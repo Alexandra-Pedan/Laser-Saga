@@ -1,56 +1,100 @@
-//- footer.footer 
-//-   .footer-content 
-//-     .footer-nav 
-//-       ul 
-//-         li 
-//-           a(href="index.html" target="_blank" data-text="Головна") 
-//-             span Головна
-//-         li 
-//-           a(href="company.html" target="_blank" data-text="Про компанію") 
-//-             span Про компанію
-//-         li 
-//-           a(href="#" target="_blank" data-text="Вакансії") 
-//-             span Вакансії
-//-         li 
-//-           a(href="#" target="_blank" data-text="Співпраця") 
-//-             span Співпраця
-//-         li 
-//-           a(href="#" target="_blank" data-text="Проекти")
-//-             span Проекти
-//-         li 
-//-           a(href="#" target="_blank" data-text="Новини")
-//-             span Новини
-//-         li 
-//-           a(href="#" target="_blank" data-text="Контакти") 
-//-             span Контакти
-//-     .footer-form 
-//-       h3 Залишились запитання?
-//-       p Залиште свої контакти і наш менеджер зв'яжеться з вами протягом 10-ти хвилин.
+footer 
+  .footer-content
+    .footer-content-left
+      ul.footer-content-left-list
+        li.footer-content-left-item
+          a(href="#" data-text="Home")
+            span Home
+        li.footer-content-left-item
+          a(href="#" data-text="Works")
+            span Works
+        li.footer-content-left-item
+          a(href="#" data-text="About")
+            span About
+        li.footer-content-left-item
+          a(href="#" data-text="services")
+            span services
+        li.footer-content-left-item
+          a(href="#" data-text="Equipment")
+            span Equipment
+        li.footer-content-left-item
+          a(href="#" data-text="Contacts")
+            span Contacts
 
-//-       form( action="#" class="contact-form")
-//-         .form-field
-//-           label(for="tel") Введіть ваш номер телефону
-//-           input(type="tel" data-required="true" name="tel" id="callback-form-input-phone" class="contact-form-input"  autocomplete="on" value="")
-//-           .input-message Телефон має містити 12 символів
+      a(href="#").download-link Downloads
+    .footer-content-right
+      ul.footer-content-right-list
+        li.footer-content-right-item
+          p.title Middle East Branch:
+          a(href="https://goo.gl/maps/knAS6HFbQWiVUQTZA" target="_blank").description
+            span Dubai, United Arab Emirates
+        li.footer-content-right-item
+          p.title Phone:
+          a(href="tel:+971558449890").description +97 (155) 844-98-90
+        li.footer-content-right-item
+          p.title Email:
+          a(href="mailto:ls@uaelaser.com").description ls@uaelaser.com
+        li.footer-content-right-item
+          p.title Distributor
+          p.distributor Kvant
+          p.distributor Pangolin laser systems
+      .footer-social 
+        h5 Get Social:
+        ul
+          li.footer-social-item 
+            a(href="#") Telegram
+          li.footer-social-item 
+            a(href="#") WhatsApp
+          li.footer-social-item 
+            a(href="#") Instagram
+          li.footer-social-item 
+            a(href="#") Facebook
+          li.footer-social-item 
+            a(href="#") Youtube 
+    .arrow-up.js-btn-up
+      .progress
+        <svg class="btn-circle" viewBox="0 0 200 200">
+          <circle class="circle" cx="100" cy="100" r="95" stroke-width="2" fill-opacity="0" />
+        </svg>
+        <svg class="arrow" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="16" y="12" width="4" height="4" transform="rotate(-90 16 12)" />
+            <rect x="12" y="8" width="4" height="4" transform="rotate(-90 12 8)" />
+            <rect x="8" y="4" width="4" height="4" transform="rotate(-90 8 4)" />
+            <rect x="8.5" y="27.5" width="27" height="3" transform="rotate(-90 8.5 27.5)"/>
+            <rect x="4" y="8" width="4" height="4" transform="rotate(-90 4 8)" />
+            <rect y="12" width="4" height="4" transform="rotate(-90 0 12)" />
+        </svg>
+  .footer-form
+    //- h3.sticker.sticker-lg(data-text="Leave a call request and our managers will call you soon!") Leave a call request and our managers will call you soon!
+    h3.sticker.sticker-lg( data-text="Leave a call request and our managers will call you soon!") Leave a call request and our managers will call you soon!
 
-//-         button( class="form-button form-button-js" type="submit")
-//-           <svg viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-//-             <circle cx="37.5" cy="37.5" r="37.5"/>
-//-             <path d="M38.0952 50C38.0952 40 46.0317 37.5 50 37.5M50 37.5C46.0317 37.5 38.0952 35 38.0952 25M50 37.5L25 37.5"/>
-//-           </svg>
+    //- <span class="sticker sticker-lg" data-text="CSS"><span>CSS</span></span>
 
-//-           | Надіслати
-//-     .arrow-up
-//-       .arrow-white
-//-         <svg class="js-btn-up" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-//-           <path d="M20 9.52381C12 9.52381 10 3.1746 10 1.35106e-06M10 1.35106e-06C10 3.1746 8 9.52381 -4.3902e-07 9.52381M10 1.35106e-06L10 20"/>
-//-         </svg>
 
-//-     .footer-rights-reserved
-//-       .footer-rights © Усі права захищено Holy Build
-//-       .footer-dev
-//-         a(href="https://smarto.agency/" rel="nofollow" target="_blank") Розробка сайту
-//-           span &nbsp; Smart Orange
+    form(action="#" class="contact-form")
+      .form-field
+        label(for="tel") 
+        input(type="tel" data-required="true" name="tel" id="callback-form-input-phone" class="contact-form-input"  autocomplete="on" value="")
+        .input-message Телефон має містити 12 символів
+
+        button(class="form-button form-button-js" type="submit") 
+          .form-button-footer
+            span.btn-text Call me back
+            <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="hover-shadow" d="M407 97V100H13V97H8V94H4V91H0V36H5V33H9V29H13V24H407V28H411V31H415V35H420V91H416V94H412V97H407Z" fill="#DADADC"/>
+              <rect x="14.5" y="22.1216" width="391" height="57.1081" fill="#F1F1F1" stroke="black"/>
+              <rect x="12.5" y="22.4995" width="395" height="66" fill="#F1F1F1" stroke="black"/>
+              <rect x="8.5" y="24.4995" width="4" height="61" fill="#F1F1F1" stroke="black"/>
+              <rect x="4.5" y="30.4995" width="4" height="52" fill="#F1F1F1" stroke="black"/>
+              <rect x="0.5" y="34.4995" width="4" height="45" fill="#F1F1F1" stroke="black"/>
+              <rect x="-0.5" y="0.5" width="4" height="59" transform="matrix(-1 0 0 1 411 25.9995)" fill="#F1F1F1" stroke="black"/>
+              <rect x="-0.5" y="0.5" width="4" height="51" transform="matrix(-1 0 0 1 415 31.9995)" fill="#F1F1F1" stroke="black"/>
+              <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
+              <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
+            </svg>
+  .footer-rights-reserved
+    .footer-rights © 2017 - 2021 Laser Saga Productions.
+    .footer-dev
+      a(href="https://smarto.agency/" rel="nofollow" target="_blank") 
+         +svg('smarto')
         
-    
-

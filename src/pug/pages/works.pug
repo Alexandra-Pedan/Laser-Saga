@@ -1,0 +1,166 @@
+
+extends ../layout/main
+block variable
+block meta
+  title= 'Works'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  //- script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/swiper-work.js')
+  //- script(defer src='./assets/scripts/scroll.js')
+  //- script(defer src='./assets/scripts/script.js')
+  //- script(defer src='./assets/scripts/animation.js')
+  //- script(defer src='./assets/scripts/animation-home.js')
+  //- script(defer src='./assets/scripts/menu-animation.js')
+block content
+  .container-page-header
+    .horizontal-red 
+    .vertical-red-left 
+    .page-header
+      .noise
+      .page-header-content
+        ul.breadcrumbs 
+          li.breadcrumbs-item 
+            a(href="https:main.html") 
+              span Home
+          li.breadcrumbs-item.breadcrumbs-item-active 
+            a(href="https:works.html") 
+              span Works
+        h2(data-text="Works").page-title 
+          span Works
+    .vertical-red-right
+    .horizontal-red-bottom 
+  
+  .filter-container 
+    h4 Filter
+    form(action="").filter-form
+      
+      label(for="all").container All
+        input(type="checkbox" id="all" value="all")
+        span.checkmark
+
+      label(for="laser-animation").container Laser Animation
+        input(type="checkbox" id="laser-animation" value="laser-animation")
+        span.checkmark
+
+      label(for="laser-performancel").container Laser Performance
+        input(type="checkbox" id="laser-performancel" value="laser-performancel")
+        span.checkmark
+
+      label(for="laser-show").container Laser Show
+        input(type="checkbox" id="laser-show" value="laser-show")
+        span.checkmark
+
+      label(for="new").container New
+        input(type="checkbox" id="new" value="new")
+        span.checkmark
+
+      label(for="video").container Video
+        input(type="checkbox" id="video" value="video")
+        span.checkmark
+
+  ul.works-list 
+    li.works-item 
+      a(href="#").works-link
+        .works-item-picture
+          img(src="./assets/images/work1.jpg")
+          +svg('eye').hover-eye
+        .works-item-description
+          .works-item-description-title
+            h5 Souk Okaz KSA 2018
+          .description-hover1
+          .description-hover2
+          .description-hover3
+    li.works-item 
+      a(href="#").works-link
+        .works-item-picture
+          img(src="./assets/images/work2.jpg")
+          +svg('eye').hover-eye
+        .works-item-description
+          .works-item-description-title
+            h5 Abu Dhabi Municipality Laser Show
+          .description-hover1
+          .description-hover2
+          .description-hover3
+    li.works-item 
+      a(href="#").works-link
+        .works-item-picture
+          img(src="./assets/images/work3.jpg")
+          +svg('eye').hover-eye
+        .works-item-description
+          .works-item-description-title
+            h5 Pakistan Laser Show 70 Quetta
+          .description-hover1
+          .description-hover2
+          .description-hover3
+    li.works-item 
+      a(href="#").works-link
+        .works-item-picture
+          img(src="./assets/images/work4.jpg")
+          +svg('eye').hover-eye
+        .works-item-description
+          .works-item-description-title
+            h5 Etihad Laser Mapping Bahrain National Day
+          .description-hover1
+          .description-hover2
+          .description-hover3
+    li.works-item 
+      a(href="#").works-link
+        .works-item-picture
+          img(src="./assets/images/work5.jpg")
+          +svg('eye').hover-eye
+        .works-item-description
+          .works-item-description-title
+            h5 Al Dana Weekend Laser Show Abu Dhabi
+          .description-hover1
+          .description-hover2
+          .description-hover3
+    li.works-item 
+      a(href="#").works-link
+        .works-item-picture
+          img(src="./assets/images/work6.jpg")
+          +svg('eye').hover-eye
+        .works-item-description
+          .works-item-description-title
+            h5 F1 Bahrain VIP Tower
+          .description-hover1
+          .description-hover2
+          .description-hover3
+
+  .more-works 
+    h5 more info
+    .works-swiper.myworks-swiper 
+        .swiper-wrapper
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#")
+                img(src="./assets/images/work-slider1.jpg", alt="")
+                p About
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#")
+                img(src="./assets/images/work-slider2.jpg", alt="")
+                p Equipment
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#l")
+                img(src="./assets/images/work-slider3.jpg", alt="")
+                p Services
+          
+        btn.btn-works
+          +svg('cursor')
+
+
+block header
+  include ../includes/header.pug
+
+block footer
+  include ../includes/footer.pug
+
+

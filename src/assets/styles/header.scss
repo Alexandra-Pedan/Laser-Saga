@@ -15,7 +15,7 @@ header {
     width: 364px;
     height: 35px;
     fill: $black;
-    transition: all 0.4s ease-in-out;
+    transition: $transition-fuction;
     &:hover {
       @include from(992px) {
         fill: $red;
@@ -41,7 +41,7 @@ header {
             height: 50px;
             fill: none;
             stroke: $black;
-            transition: all 0.4s ease-in-out;
+            transition: $transition-fuction;
             &:hover {
               @include from(992px) {
                 stroke: $red;
@@ -54,11 +54,11 @@ header {
           height: 50px;
           fill: none;
           stroke: $black;
-          transition: all 0.4s ease-in-out;
+          transition: $transition-fuction;
           path {
             fill: $black;
             stroke: none;
-            transition: all 0.4s ease-in-out;
+            transition: $transition-fuction;
           }
           &:hover {
             @include from(992px) {
@@ -78,7 +78,7 @@ header {
       padding: 10px 20px;
       border: 1px solid $black;
       border-radius: 30px;
-      transition: all 0.4s ease-in-out;
+      transition: $transition-fuction;
       &:hover {
         @include from(992px) {
           color: $red;
@@ -97,7 +97,7 @@ header {
       padding: 0;
       display: inline-block;
       position: relative;
-      transition: all 0.4s ease-in-out;
+      transition: $transition-fuction;
       &:hover {
         @include from(992px) {
           color: $red;
@@ -124,7 +124,7 @@ header {
       display: flex;
       align-items: center;
       cursor: pointer;
-      transition: all 0.4s ease-in-out;
+      transition: $transition-fuction;
       &:hover {
         @include from(992px) {
           color: $red;
@@ -141,12 +141,14 @@ header {
         height: 50px;
         fill: none;
         stroke: $black;
-        transition: all 0.4s ease-in-out;
+        transition: $transition-fuction;
       }
     }
   }
 }
-
+.header-js.not-on-top {
+  border-bottom: 1px solid $black;
+}
 // .header {
 //   position: fixed;
 //   top: 0;
