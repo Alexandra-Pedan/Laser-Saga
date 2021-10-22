@@ -1,0 +1,129 @@
+
+extends ../layout/main
+block variable
+block meta
+  title= 'Works-description'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  //- script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/header.js')
+  //- script(defer src='./assets/scripts/work.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/works-description.js')
+  script(defer src='./assets/scripts/animation.js')
+  //- script(defer src='./assets/scripts/animation-home.js')
+  //- script(defer src='./assets/scripts/menu-animation.js')
+block content
+  .container-page-header
+    .horizontal-red 
+    .vertical-red-left 
+    .page-header 
+      .noise
+      .page-header-content
+        ul.breadcrumbs 
+          li.breadcrumbs-item 
+            a(href="https:main.html") 
+              span Home
+          li.breadcrumbs-item
+            a(href="https:works.html") 
+              span Works
+          li.breadcrumbs-item.breadcrumbs-item-active 
+            a(href="https:works-description.html") 
+              span Abu Dhabi Municipality Laser Show
+        h2(data-text="Abu Dhabi Municipality Laser Show ").page-title.inner-title 
+          span Abu Dhabi Municipality Laser Show
+    .vertical-red-right
+    .horizontal-red-bottom 
+  
+  section.about 
+    .about-info 
+      button(class="form-button form-button-js" type="submit") 
+          .form-button-footer
+            span.btn-text Call back
+            <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="hover-shadow" d="M407 97V100H13V97H8V94H4V91H0V36H5V33H9V29H13V24H407V28H411V31H415V35H420V91H416V94H412V97H407Z" fill="#DADADC"/>
+              <rect x="14.5" y="22.1216" width="391" height="57.1081" fill="#F1F1F1" stroke="black"/>
+              <rect x="12.5" y="22.4995" width="395" height="66" fill="#F1F1F1" stroke="black"/>
+              <rect x="8.5" y="24.4995" width="4" height="61" fill="#F1F1F1" stroke="black"/>
+              <rect x="4.5" y="30.4995" width="4" height="52" fill="#F1F1F1" stroke="black"/>
+              <rect x="0.5" y="34.4995" width="4" height="45" fill="#F1F1F1" stroke="black"/>
+              <rect x="-0.5" y="0.5" width="4" height="59" transform="matrix(-1 0 0 1 411 25.9995)" fill="#F1F1F1" stroke="black"/>
+              <rect x="-0.5" y="0.5" width="4" height="51" transform="matrix(-1 0 0 1 415 31.9995)" fill="#F1F1F1" stroke="black"/>
+              <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
+              <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
+            </svg>
+      p 8W full color laser system SPECTR „ professional outdoor a and indoor RGB-10 air cooled white light laser system“ consist of 4W green 532nm laser, 3W blue 445nm laser, , 1W/640nm red diode, input power 230V/3A {on request 110V}, analog {RGB} modulation, color scale 16,8 mil., completed in aluminium housing , power consumption max.800VA, beam divergence 1,5 mrad, beam diameter 4mm X,Y scanning system CT6815 scanners with speed up to 30k 430x360x200 mm 21 kg
+
+    .production-swiper.myproduction-swiper 
+        .swiper-wrapper 
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#")
+                img(src="./assets/images/work-slider1.jpg", alt="")
+               
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#")
+                img(src="./assets/images/work-slider2.jpg", alt="")
+              
+          .swiper-slide
+            .swiper-slide-content.video-swiper
+              a(href="#")
+                <iframe src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+          .swiper-slide
+            .swiper-slide-content.video-swiper
+              a(href="#")
+                <iframe src="https://player.vimeo.com/video/219133206?h=8e1d491413" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>  
+          .swiper-slide
+            .swiper-slide-content.video-swiper
+              a(href="#")
+                <iframe src="https://player.vimeo.com/video/131635436?h=268e805b90" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        +svg('cursor').btn-works
+
+  .description-more-works 
+    //- h5 more info
+    .works-more-swiper.myworksmore-swiper 
+        .swiper-wrapper
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#")
+                h5 more info
+        .swiper-wrapper
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#")
+                img(src="./assets/images/work3.jpg", alt="")
+                p Pakistan Laser Show 70 Quetta
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#")
+                img(src="./assets/images/work5.jpg", alt="")
+                p Al Dana Weekend Laser Show Abu Dhabi 
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#l")
+                img(src="./assets/images/work1.jpg", alt="")
+                p Souk Okaz KSA 2018
+          .swiper-slide
+            .swiper-slide-content
+              a(href="#l")
+                img(src="./assets/images/work6.jpg", alt="")
+                p F1 Bahrain VIP Tower
+        
+        +svg('cursor').btn-works
+
+
+block header
+  include ../includes/header.pug
+
+block footer
+  include ../includes/footer.pug
+
+
+         

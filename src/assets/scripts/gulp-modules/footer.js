@@ -12,38 +12,18 @@ if (buttonUp) {
 }
 
 // form
-// const callbackForm = document.querySelector('.contact-form');
-// const feedbackForm = document.querySelector('.feedback-form');
-// const requestReceivedModal = document.querySelector('.form-gratitude');
 const btn = document.querySelector('.form-button-js');
 const btnForm = document.querySelectorAll('.button-js');
 const userPhone = document.querySelector('#callback-form-input-phone');
 const userPhoneForm = document.querySelector('.feedback-form [type="tel"]');
 const message = document.querySelector('.input-message');
-// const messagefeedback = document.querySelector('.input-feedback-message');
-// const messageName = document.querySelector('.input-feedback-message-name');
-// const userName = document.querySelector('#callback-form-input-name');
-// const vacanciesForm = document.querySelector('.form-vacancies');
-// const userPhoneVacancies = document.querySelector('.form-vacancies [type="tel"]');
-// const userNameVacation = document.querySelector('#vacation-form-input-name');
-// const messageNameVacancies = document.querySelector('.input-vacancies-message-name');
-// const messageVacancies = document.querySelector('.input-vacancies-message');
-// userPhone.addEventListener('click', function() {
-//   if (!userPhone.value.trim()) {
-//     userPhone.value = '+380';
-//   }
-// });
-
-// userPhone.addEventListener('blur', function() {
-//   if (userPhone.value === '+380') {
-//     userPhone.value = '';
-//   }
-// });
 
 function initMask(selector) {
   console.log(selector);
   $(selector).inputmask({
-    mask: '+97 9{3} 9{3} 9{2} 9{2}',
+    // mask: '+(38) 9{3} 9{3} 9{2} 9{2}',
+    /* prettier-ignore */
+    mask: '+\\97 (9{3}) 9{3} 9{2} 9{2}',
     clearMaskOnLostFocus: false,
     greedy: false,
     tabThrough: true,

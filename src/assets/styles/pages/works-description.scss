@@ -1,0 +1,108 @@
+.page-header-content {
+  .page-title.inner-title {
+    font-family: $default-font;
+    font-size: 120px;
+    margin-top: 10px;
+    &::after {
+      transform: translate(5px, 5px);
+    }
+  }
+}
+.about {
+  width: 100%;
+  // padding: 50px 187px 100px 187px;
+  .about-info {
+    display: flex;
+    padding: 50px 187px 50px 187px;
+
+    .form-button {
+      background: none;
+      border: none;
+      padding: 0%;
+      width: 270px;
+      height: 74px;
+      .form-button-footer {
+        position: relative;
+        width: 270px;
+        height: 74px;
+      }
+      .btn-text {
+        font-family: $default-font;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        transition: $transition-fuction;
+      }
+      .btn-submite {
+        width: 100%;
+        height: 100%;
+      }
+      .hover-fill {
+        fill: $red;
+        transition: $transition-fuction;
+      }
+      .hover-shadow {
+        transition: $transition-fuction;
+      }
+      &:hover {
+        @include from(992px) {
+          .hover-fill {
+            fill: $orange;
+            transform: translate(0, 5px);
+          }
+          .hover-shadow {
+            transform: translate(0, -5px);
+          }
+          .btn-text {
+            transform: translate(-50%, -25%);
+          }
+        }
+      }
+    }
+    p {
+      width: 1075px;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: -0.03em;
+      color: $text;
+      margin-left: 200px;
+    }
+  }
+}
+
+.production-swiper {
+  padding: 0 0 100px 657px;
+  .swiper-slide {
+    width: 85.4%;
+    height: 650px;
+    &-content {
+      border: 1px solid #000000;
+      width: 100%;
+      height: 100%;
+      img {
+        object-fit: cover;
+      }
+      // .video-swiper {
+      //   width: 100%;
+      //   height: 100%;
+      //   width: 700px;
+      //   height: 650px;
+      // }
+    }
+    .video-swiper {
+      background: $black;
+    }
+  }
+}
+
+.description-more-works {
+}

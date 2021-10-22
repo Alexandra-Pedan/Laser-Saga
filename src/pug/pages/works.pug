@@ -12,8 +12,8 @@ block scripts
   //- script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
-  script(defer src='./assets/scripts/swiper-work.js')
-  //- script(defer src='./assets/scripts/scroll.js')
+  script(defer src='./assets/scripts/works.js')
+  script(defer src='./assets/scripts/footer.js')
   //- script(defer src='./assets/scripts/script.js')
   //- script(defer src='./assets/scripts/animation.js')
   //- script(defer src='./assets/scripts/animation-home.js')
@@ -67,7 +67,7 @@ block content
 
   ul.works-list 
     li.works-item 
-      a(href="#").works-link
+      a(href="works-description.html").works-link
         .works-item-picture
           img(src="./assets/images/work1.jpg")
           +svg('eye').hover-eye
@@ -78,7 +78,7 @@ block content
           .description-hover2
           .description-hover3
     li.works-item 
-      a(href="#").works-link
+      a(href="works-description.html").works-link
         .works-item-picture
           img(src="./assets/images/work2.jpg")
           +svg('eye').hover-eye
@@ -89,7 +89,7 @@ block content
           .description-hover2
           .description-hover3
     li.works-item 
-      a(href="#").works-link
+      a(href="works-description.html").works-link
         .works-item-picture
           img(src="./assets/images/work3.jpg")
           +svg('eye').hover-eye
@@ -100,7 +100,7 @@ block content
           .description-hover2
           .description-hover3
     li.works-item 
-      a(href="#").works-link
+      a(href="works-description.html").works-link
         .works-item-picture
           img(src="./assets/images/work4.jpg")
           +svg('eye').hover-eye
@@ -111,7 +111,7 @@ block content
           .description-hover2
           .description-hover3
     li.works-item 
-      a(href="#").works-link
+      a(href="works-description.html").works-link
         .works-item-picture
           img(src="./assets/images/work5.jpg")
           +svg('eye').hover-eye
@@ -122,7 +122,7 @@ block content
           .description-hover2
           .description-hover3
     li.works-item 
-      a(href="#").works-link
+      a(href="works-description.html").works-link
         .works-item-picture
           img(src="./assets/images/work6.jpg")
           +svg('eye').hover-eye
@@ -136,7 +136,7 @@ block content
   .more-works 
     h5 more info
     .works-swiper.myworks-swiper 
-        .swiper-wrapper
+        .swiper-wrapper 
           .swiper-slide
             .swiper-slide-content
               a(href="#")
@@ -153,8 +153,8 @@ block content
                 img(src="./assets/images/work-slider3.jpg", alt="")
                 p Services
           
-        btn.btn-works
-          +svg('cursor')
+        
+        +svg('cursor').btn-works
 
 
 block header
