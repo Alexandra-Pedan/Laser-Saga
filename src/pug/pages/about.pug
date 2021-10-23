@@ -1,0 +1,275 @@
+
+extends ../layout/main
+block variable
+block meta
+  title= 'Works'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  //- script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/about.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/no-scroll.js')
+  //- script(defer src='./assets/scripts/animation.js')
+  //- script(defer src='./assets/scripts/animation-home.js')
+  //- script(defer src='./assets/scripts/menu-animation.js')
+block content
+  .container-page-header
+    .horizontal-red 
+    .vertical-red-left 
+    .page-header
+      .noise
+      .page-header-content
+        ul.breadcrumbs 
+          li.breadcrumbs-item 
+            a(href="https:main.html") 
+              span Home
+          li.breadcrumbs-item.breadcrumbs-item-active 
+            a(href="https:works.html") 
+              span About
+        h2(data-text="About").page-title 
+          span About 
+    .vertical-red-right
+    .horizontal-red-bottom 
+  
+  section.about-us 
+    .about-us-title
+      h4 Award winning shows
+      p Art Inspired by Technology
+    .about-us-description 
+      .video-container 
+        <iframe src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> 
+      p Creating magic and art by bringing together modern laser & multimedia show equipment creative minds and passion. All the best for your and our guests, friends, visitors, spectators and everyone who is going to witness The Show.
+ 
+  section.specialities
+    .specialities-swiper.myspecialities-swiper 
+      .swiper-wrapper 
+        .swiper-slide.slide-title
+          .swiper-slide-content
+            p.specialities-title What are our specialities?
+        .swiper-slide
+          .swiper-slide-content
+            a(href="#")
+              img(src="./assets/images/work-slider3.jpg", alt="")
+              p Laser Light Shows
+        .swiper-slide
+          .swiper-slide-content
+            a(href="#")
+              img(src="./assets/images/about-slide2.jpg", alt="")
+              p 3D Video Mapping Projection
+        .swiper-slide
+          .swiper-slide-content
+            a(href="#l")
+              img(src="./assets/images/about-slide3.jpg", alt="")
+              p Multimedia Show Production
+        .swiper-slide
+          .swiper-slide-content
+            a(href="#")
+              img(src="./assets/images/about-slide2.jpg", alt="")
+              p 3D Video Mapping Projection
+        .swiper-slide
+          .swiper-slide-content
+            a(href="#")
+              img(src="./assets/images/work-slider3.jpg", alt="")
+              p Laser Light Shows
+      +svg('cursor').btn-works
+
+  section.team 
+    .team-title
+      h4 Team
+    .team-description 
+      h5 Having all hardware equipment mounted on site is not enough for real emotions for the spectators:
+      p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators giving it a long lasting feel. Laser beams, laser projections, video projections, fire, pyrotechnics, light, fog, haze, water fountains, water screens gets combined together for our multimedia shows  Take your audience on a journey to a colourful, mythically world, where elements like fire, water, fog and light match perfectly and create a spectacle, which will amaze everyone. 
+      .team-description-swiper
+        .team-swiper.myteam-swiper
+          .swiper-wrapper
+            .swiper-slide
+              img(src="./assets/images/team1.jpg", alt="")
+            .swiper-slide
+              img(src="./assets/images/team1.jpg", alt="")
+            .swiper-slide
+              img(src="./assets/images/team1.jpg", alt="")
+            .swiper-slide
+              img(src="./assets/images/team1.jpg", alt="")
+        .plagination-container
+          .swiper-button-prev
+            <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="4" width="4" height="4" transform="rotate(-180 12 4)" "/>
+              <rect x="8" y="8" width="4" height="4" transform="rotate(-180 8 8)" "/>
+              <rect x="4" y="12" width="4" height="4" transform="rotate(-180 4 12)" "/>
+              <rect class="stroke" x="27.5" y="11.5" width="24" height="3" transform="rotate(-180 27.5 11.5)"/>
+              <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
+              <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
+            </svg>
+       
+          .swiper-button-next
+            <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
+              <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 20 8)"/>
+              <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 24 12)"/>
+              <rect class="stroke" x="0.5" y="-0.5" width="24" height="3" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 -2.78181e-08 11)"/>
+              <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 20 16)"/>
+              <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
+            </svg>
+          .swiper-pagination
+ 
+  section.clients 
+    .clients-title
+      h4 Clients
+    .clients-description 
+      ul.clients-description-list
+        li.clients-description-item 
+          img(src="./assets/images/Logo_Lightconverse.jpg", alt="")
+        li.clients-description-item 
+          img(src="./assets/images/Logo_Pangolin-Laser.jpg", alt="")
+        li.clients-description-item 
+          img(src="./assets/images/Logo-Kvant-Laser.jpg", alt="")
+        li.clients-description-item 
+          img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
+        li.clients-description-item 
+          img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
+        li.clients-description-item 
+          img(src="./assets/images/Logo-Kvant-Laser.jpg", alt="")
+        li.clients-description-item 
+          img(src="./assets/images/Logo_Pangolin-Laser.jpg", alt="")
+        li.clients-description-item 
+          img(src="./assets/images/Logo_Lightconverse.jpg", alt="")
+ 
+  section.reviews 
+    .reviews-title
+      h4 Reviews
+      .reviews-plagination-container
+            .swiper-button-prev
+              <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="4" width="4" height="4" transform="rotate(-180 12 4)" "/>
+                <rect x="8" y="8" width="4" height="4" transform="rotate(-180 8 8)" "/>
+                <rect x="4" y="12" width="4" height="4" transform="rotate(-180 4 12)" "/>
+                <rect class="stroke" x="27.5" y="11.5" width="24" height="3" transform="rotate(-180 27.5 11.5)"/>
+                <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
+                <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
+              </svg>
+        
+            .swiper-button-next
+              <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
+                <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 20 8)"/>
+                <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 24 12)"/>
+                <rect class="stroke" x="0.5" y="-0.5" width="24" height="3" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 -2.78181e-08 11)"/>
+                <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 20 16)"/>
+                <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
+              </svg>
+            .reviews-swiper-pagination
+
+    .reviews-description 
+      .reviews-description-swiper
+        .reviews-swiper.myreviews-swiper
+          .swiper-wrapper
+            .swiper-slide
+              .card-container 
+                +svg('”')
+                h5 Dmytro Lubomirov
+                p Director KVANT company
+                .card-description 
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi
+                .social-container 
+                  a(href="#") Facebook
+              .card-container 
+                +svg('”')
+                h5 Oleg Voloshko
+                p Director Smile Studio
+                .card-description 
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. 
+                .social-container 
+                  a(href="#") Instagram
+            .swiper-slide
+              .card-container 
+                +svg('”')
+                h5 Dmytro Lubomirov
+                p Director KVANT company
+                .card-description 
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi
+                .social-container 
+                  a(href="#") Facebook
+              .card-container 
+                +svg('”')
+                h5 Oleg Voloshko
+                p Director Smile Studio
+                .card-description 
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. 
+                .social-container 
+                  a(href="#") Instagram
+            .swiper-slide
+              .card-container 
+                +svg('”')
+                h5 Dmytro Lubomirov
+                p Director KVANT company
+                .card-description 
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi
+                .social-container 
+                  a(href="#") Facebook
+              .card-container 
+                +svg('”')
+                h5 Oleg Voloshko
+                p Director Smile Studio
+                .card-description 
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. 
+                .social-container 
+                  a(href="#") Instagram
+   
+  section.friends 
+    .friends-container
+      .friends-title
+        h4 Our friends
+      .friends-description 
+        ul.friends-description-list
+          li.friends-description-item 
+            img(src="./assets/images/Logo_Lightconverse.jpg", alt="")
+          li.friends-description-item 
+            img(src="./assets/images/Logo_Pangolin-Laser.jpg", alt="")
+          li.friends-description-item 
+            img(src="./assets/images/Logo-Kvant-Laser.jpg", alt="")
+          li.friends-description-item 
+            img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
+          li.friends-description-item 
+            img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
+    .container-call-back
+      .horizontal-black 
+      .vertical-black-left 
+      .call-back-form
+        .noise
+        .call-back-form-content
+          .call-back
+            h4 Want to know more?
+            p Mail us, call us, lets meet up and get you covered for the next show or just have a friendly chat.
+          button(class="form-button form-button-js" type="submit") 
+            .form-button-footer
+              span.btn-text Call back
+              <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="hover-shadow" d="M407 97V100H13V97H8V94H4V91H0V36H5V33H9V29H13V24H407V28H411V31H415V35H420V91H416V94H412V97H407Z" fill="#DADADC"/>
+                <rect x="14.5" y="22.1216" width="391" height="57.1081" fill="#F1F1F1" stroke="black"/>
+                <rect x="12.5" y="22.4995" width="395" height="66" fill="#F1F1F1" stroke="black"/>
+                <rect x="8.5" y="24.4995" width="4" height="61" fill="#F1F1F1" stroke="black"/>
+                <rect x="4.5" y="30.4995" width="4" height="52" fill="#F1F1F1" stroke="black"/>
+                <rect x="0.5" y="34.4995" width="4" height="45" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="59" transform="matrix(-1 0 0 1 411 25.9995)" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="51" transform="matrix(-1 0 0 1 415 31.9995)" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
+                <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
+              </svg>
+      .vertical-black-right
+      .horizontal-black-bottom
+      .horizontal-black-bottom1 
+      .horizontal-black-bottom2 
+      .horizontal-black-bottom3  
+block header
+  include ../includes/header.pug
+
+block footer
+  include ../includes/footer.pug
+
+
