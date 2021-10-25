@@ -369,142 +369,172 @@
 }
 .container-call-back {
   display: grid;
-  grid-template-rows: 30px auto 30px; /* 3 строки */
+  grid-template-rows: 30px auto 30px 5px 5px 5px; /* 3 строки */
   grid-template-columns: 30px auto 30px; /* 3 столбца */
   margin-top: 60px;
   width: 1076px;
-}
-.horizontal-black {
-  grid-column: 2/3;
-  grid-row: 1;
-  background: $white;
-  border: 1px solid #000000;
-  z-index: 5;
-  width: calc(100% + 2px);
-  margin-left: -1px;
-}
-.vertical-black-left {
-  grid-column: 1/1;
-  grid-row: 2;
-  background: $white;
-  border: 1px solid #000000;
-  z-index: 5;
-  width: calc(100% + 1px);
-  margin-left: -1px;
-  height: calc(100% + 2px);
-  height: calc(100% + 2px);
-  margin-top: -1px;
-}
-.call-back-form {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-  position: relative;
-  overflow: hidden;
-  padding: 80px 80px 110px 80px;
-  &-content {
-    display: flex;
-    align-items: center;
-    .call-back {
+  margin-left: auto;
+  .horizontal-black {
+    grid-column: 2/3;
+    grid-row: 1;
+    background: $white;
+    border: 1px solid #000000;
+    z-index: 5;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+  }
+  .vertical-black-left {
+    grid-column: 1/1;
+    grid-row: 2/3;
+    background: $white;
+    border: 1px solid #000000;
+    z-index: 5;
+    width: calc(100% + 1px);
+    margin-left: -1px;
+    height: calc(100% + 2px);
+    height: calc(100% + 2px);
+    margin-top: -1px;
+  }
+  .call-back-form {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 80px 110px 80px;
+    &-content {
       display: flex;
-      flex-direction: column;
-      width: 450px;
-      margin-right: 100px;
-      h4 {
-        font-size: 48px;
-        line-height: 130%;
-        color: #000000;
-        margin-bottom: 20px;
-      }
-      p {
-        width: 370px;
-        font-size: 24px;
-        line-height: 140%;
-        letter-spacing: -0.03em;
-        color: #000000;
+      align-items: center;
+      .call-back {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        margin-right: 100px;
+        h4 {
+          font-size: 48px;
+          line-height: 130%;
+          color: #000000;
+          margin-bottom: 20px;
+        }
+        p {
+          width: 370px;
+          font-size: 24px;
+          line-height: 140%;
+          letter-spacing: -0.03em;
+          color: #000000;
+        }
       }
     }
   }
-}
-.vertical-black-right {
-  grid-column: 3/3;
-  grid-row: 2;
-  background: $white;
-  border: 1px solid #000000;
-  z-index: 5;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  margin-top: -1px;
-}
-.horizontal-black-bottom {
-  grid-column: 2/3;
-  grid-row: 3;
-  background: $white;
-  border: 1px solid #000000;
-  z-index: 5;
-  width: calc(100% + 2px);
-  margin-left: -1px;
-}
-.noise {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -3;
-  background-image: url(../images/noise.png);
-  animation: Noise_grain 7s steps(10) infinite;
-  height: 300%;
-  left: -50%;
-  top: -100%;
-  width: 300%;
-}
-.form-button {
-  background: none;
-  border: none;
-  padding: 0%;
-  width: 270px;
-  height: 74px;
-  .form-button-footer {
-    position: relative;
-    width: 270px;
-    height: 74px;
+  .vertical-black-right {
+    grid-column: 3/3;
+    grid-row: 2/3;
+    background: $white;
+    border: 1px solid #000000;
+    z-index: 5;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    margin-top: -1px;
   }
-  .btn-text {
-    font-family: $default-font;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 100%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
+  .horizontal-black-bottom {
+    grid-column: 2/3;
+    grid-row: 3;
+    background: $white;
+    border: 1px solid #000000;
+    z-index: 5;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+  }
+  .horizontal-black-bottom1 {
+    grid-column: 2/3;
+    grid-row: 4;
+    background: $white;
+    border: 1px solid #000000;
+    z-index: 5;
+    width: 100%;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+  }
+
+  .horizontal-black-bottom2 {
+    grid-column: 2/3;
+    grid-row: 5;
+    background: $white;
+    border: 1px solid #000000;
+    z-index: 5;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+  }
+  .horizontal-black-bottom3 {
+    grid-column: 2/3;
+    grid-row: 6;
+    background: $white;
+    border: 1px solid #000000;
+    z-index: 5;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+  .noise {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    transition: $transition-fuction;
-  }
-  .btn-submite {
     width: 100%;
     height: 100%;
+    z-index: -3;
+    background-image: url(../images/noise.png);
+    animation: Noise_grain 7s steps(10) infinite;
+    height: 300%;
+    left: -50%;
+    top: -100%;
+    width: 300%;
   }
-  .hover-fill {
-    fill: $red;
-    transition: $transition-fuction;
-  }
-  .hover-shadow {
-    transition: $transition-fuction;
-  }
-  &:hover {
-    @include from(992px) {
-      .hover-fill {
-        fill: $orange;
-        transform: translate(0, 5px);
-      }
-      .hover-shadow {
-        transform: translate(0, -5px);
-      }
-      .btn-text {
-        transform: translate(-50%, -25%);
+  .form-button {
+    background: none;
+    border: none;
+    padding: 0%;
+    width: 270px;
+    height: 74px;
+    .form-button-footer {
+      position: relative;
+      width: 270px;
+      height: 74px;
+    }
+    .btn-text {
+      font-family: $default-font;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      transition: $transition-fuction;
+    }
+    .btn-submite {
+      width: 100%;
+      height: 100%;
+    }
+    .hover-fill {
+      fill: $red;
+      transition: $transition-fuction;
+    }
+    .hover-shadow {
+      transition: $transition-fuction;
+    }
+    &:hover {
+      @include from(992px) {
+        .hover-fill {
+          fill: $orange;
+          transform: translate(0, 5px);
+        }
+        .hover-shadow {
+          transform: translate(0, -5px);
+        }
+        .btn-text {
+          transform: translate(-50%, -25%);
+        }
       }
     }
   }

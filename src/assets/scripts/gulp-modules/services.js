@@ -1,25 +1,33 @@
-const swiper = new Swiper('.myspecialities-swiper', {
-  slidesPerView: 3.3,
-  spaceBetween: 30,
-  slidesPerView: 'auto',
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10,
-  //   },
-  //   576: {
-  //     spaceBetween: 30,
-  //   },
-  //   1440: {
-  //     spaceBetween: 40,
-  //   },
-  // },
+// On DOM ready,
+$(() => {
+  // Cache selectors
+  const $accordion = $('.js-accordion');
+  const $allPanels = $(' .accordion-panel').hide();
+  const $allItems = $('.accordion-item');
+
+  // Event listeners
+  $accordion.on('click', '.accordion-toggle', function () {
+    // Toggle the current accordion panel and close others
+    $allPanels.slideUp();
+    $allItems.removeClass('is-open');
+    if (
+      $(this)
+        .next()
+        .is(':visible')
+    ) {
+      $('.accordion-panel').slideUp();
+    } else {
+      $(this)
+        .next()
+        .slideDown()
+        .closest('.accordion-item')
+        .addClass('is-open');
+    }
+    return false;
+  });
 });
-// const swiper2 = new Swiper('.myworksmore-swiper', {
-//   slidesPerView: 1.5,
-//   spaceBetween: 60,
-//   slidesPerView: 'auto',
-// });
-const swiper2 = new Swiper('.myteam-swiper', {
+
+const swiper = new Swiper('.myservices-swiper', {
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -30,18 +38,7 @@ const swiper2 = new Swiper('.myteam-swiper', {
   },
 });
 
-const swiper3 = new Swiper('.myreviews-swiper', {
-  pagination: {
-    el: '.reviews-swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-const swiper4 = new Swiper('.myworks-swiper', {
+const swiper2 = new Swiper('.myworks-swiper', {
   slidesPerView: 2.5,
   spaceBetween: 60,
   slidesPerView: 'auto',
@@ -57,6 +54,9 @@ const swiper4 = new Swiper('.myworks-swiper', {
   //   },
   // },
 });
+
+/** СТрелка переключатель в зависимости от положения на єкране */
+
 function sideSwitchArrow(swiper, arrow, container) {
   const mediumCordValue = document.documentElement.clientWidth / 2;
   document.body.append(arrow);
@@ -136,6 +136,6 @@ function sideSwitchArrow(swiper, arrow, container) {
 sideSwitchArrow(
   swiper,
   document.querySelector('.btn-works'),
-  document.querySelector('.specialities-swiper'),
+  document.querySelector('.works-swiper'),
 );
 /** СТрелка переключатель в зависимости от положения на єкране END */

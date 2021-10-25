@@ -1,0 +1,227 @@
+.equipment {
+  display: grid;
+  grid-template-rows: auto 650px; /* 3 строки */
+  grid-template-columns: 658px auto; /* 3 столбца */
+  //   padding: 100px 187px 0 187px;
+  &-title {
+    grid-column: 1/2;
+    grid-row: 1;
+    padding: 100px 0 0 187px;
+    font-size: 24px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  &-description {
+    grid-column: 2/2;
+    grid-row: 1;
+    padding: 100px 187px 100px 0;
+    p {
+      font-size: 48px;
+      line-height: 130%;
+      color: #000000;
+      width: 1076px;
+    }
+  }
+  &-img {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+}
+
+.accordion {
+  &-item {
+    border-bottom: 1px solid #000000;
+    position: relative;
+  }
+  &-toggle {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    text-align: left;
+    font-size: 48px;
+    line-height: 130%;
+    color: #000000;
+    padding: 29px 187px;
+  }
+  &-panel {
+    padding: 38px 187px 50px 187px;
+  }
+  &-arrow {
+    position: absolute;
+    cursor: pointer;
+    right: 187px;
+    top: 20px;
+    transition: $transition-fuction;
+    pointer-events: none;
+    svg {
+      width: 80px;
+      height: 80px;
+      fill: $black;
+      transition: $transition-fuction;
+      .accordion-arrow-stroke {
+        fill: $white;
+        stroke: $black;
+      }
+      circle {
+        fill: $white;
+      }
+    }
+    .is-open > & {
+      transform: rotate(180deg);
+      svg {
+        fill: $white;
+        .accordion-arrow-stroke {
+          fill: $black;
+          stroke: $white;
+        }
+        circle {
+          fill: $black;
+        }
+      }
+    }
+  }
+}
+.form-button {
+  background: none;
+  border: none;
+  padding: 0%;
+  width: 270px;
+  height: 74px;
+  .form-button-footer {
+    position: relative;
+    width: 270px;
+    height: 74px;
+  }
+  .btn-text {
+    font-family: $default-font;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    transition: $transition-fuction;
+  }
+  .btn-submite {
+    width: 100%;
+    height: 100%;
+  }
+  .hover-fill {
+    fill: $red;
+    transition: $transition-fuction;
+  }
+  .hover-shadow {
+    transition: $transition-fuction;
+  }
+  &:hover {
+    @include from(992px) {
+      .hover-fill {
+        fill: $orange;
+        transform: translate(0, 5px);
+      }
+      .hover-shadow {
+        transform: translate(0, -5px);
+      }
+      .btn-text {
+        transform: translate(-50%, -25%);
+      }
+    }
+  }
+}
+
+.panel-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .description {
+    p {
+      width: 450px;
+      margin-right: 176px;
+      padding-bottom: 30px;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: -0.03em;
+      color: #000000;
+    }
+  }
+  .description-swiper {
+    width: 920px;
+    .services-swiper {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+
+      .swiper-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 920px;
+        height: 555px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .plagination-container {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      .swiper-button-next,
+      .swiper-button-prev {
+        z-index: 10;
+        cursor: pointer;
+        width: 28px;
+        height: 20px;
+
+        svg {
+          fill: #000000;
+          transition: $transition-fuction;
+          .stroke {
+            fill: #fff;
+            stroke: $black;
+            transition: $transition-fuction;
+          }
+        }
+        &:hover {
+          @include from(992px) {
+            svg {
+              fill: $red;
+              .stroke {
+                stroke: $red;
+              }
+            }
+          }
+        }
+      }
+      .swiper-pagination {
+        position: absolute;
+        text-align: center;
+        transition: 300ms opacity;
+        z-index: 10;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0%);
+        font-size: 24px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: -0.03em;
+        color: #000000;
+      }
+    }
+  }
+}
