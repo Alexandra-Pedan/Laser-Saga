@@ -9,21 +9,16 @@ block head
 block scripts
   script(defer src='./assets/scripts/vendors.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
-  //- script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/libs.js')
-  //- script(defer src='./assets/scripts/header.js')
-  //- script(defer src='./assets/scripts/home.js')
-  //- script(defer src='./assets/scripts/scroll.js')
-  script(defer src='./assets/scripts/script.js')
-  script(defer src='./assets/scripts/animation.js')
+  script(defer src='./assets/scripts/header.js')
   //- script(defer src='./assets/scripts/animation-home.js')
-  //- script(defer src='./assets/scripts/menu-animation.js')
 block content
+  .main-img
+    img(src="./assets/images/main.jpg", alt="").main-img
 
-//- block header
-//-   include ../includes/header.pug
+block header
+  include ../includes/header.pug
 
-block footer
-  include ../includes/footer.pug
+
 
 

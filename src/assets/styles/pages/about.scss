@@ -314,6 +314,13 @@
             margin-top: 30px;
             border: 1px solid #000000;
             padding: 16px 30px;
+            &:hover {
+              @include from(992px) {
+                a {
+                  color: $red;
+                }
+              }
+            }
             a {
               text-decoration: none;
               font-family: $default-font2;
@@ -321,6 +328,8 @@
               line-height: 100%;
               letter-spacing: -0.03em;
               color: #000000;
+              width: 100%;
+              transition: $transition-fuction;
             }
           }
         }
@@ -369,8 +378,8 @@
 }
 .container-call-back {
   display: grid;
-  grid-template-rows: 30px auto 30px 5px 5px 5px; /* 3 строки */
-  grid-template-columns: 30px auto 30px; /* 3 столбца */
+  grid-template-rows: 30px auto 30px 5px 5px 5px;
+  grid-template-columns: 30px auto 30px;
   margin-top: 60px;
   width: 1076px;
   margin-left: auto;

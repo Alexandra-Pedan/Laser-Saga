@@ -1,21 +1,31 @@
-const swiper = new Swiper('.myproduction-swiper', {
-  slidesPerView: 1.2,
-  spaceBetween: 60,
-  slidesPerView: 'auto',
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10,
-  //   },
-  //   576: {
-  //     spaceBetween: 30,
-  //   },
-  //   1440: {
-  //     spaceBetween: 40,
-  //   },
-  // },
+function initSlider(container) {
+  const pagination = container.querySelector('.swiper-pagination');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swipEl = container.querySelector('.js-init-swiper');
+  if (!pagination || !btnNext || !btnPrev || !swipEl) {
+    return;
+  }
+  const swiper = new Swiper(swipEl, {
+    pagination: {
+      el: pagination,
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sliders = document.querySelectorAll('.js-equipment');
+  console.log(sliders);
+  sliders.forEach(initSlider);
 });
-const swiper2 = new Swiper('.myworksmore-swiper', {
-  slidesPerView: 2.5,
+
+const swiper = new Swiper('.myequipment-more-swiper', {
+  slidesPerView: 2.6,
   spaceBetween: 60,
   slidesPerView: 'auto',
   // breakpoints: {
@@ -31,6 +41,7 @@ const swiper2 = new Swiper('.myworksmore-swiper', {
   // },
 });
 
+/** СТрелка переключатель в зависимости от положения на єкране */
 function sideSwitchArrow(swiper, arrow, container) {
   const mediumCordValue = document.documentElement.clientWidth / 2;
   document.body.append(arrow);
@@ -59,10 +70,6 @@ function sideSwitchArrow(swiper, arrow, container) {
     window.removeEventListener('mousemove', desktopNavButtonHandler);
     arrow.remove();
   }
-
-  /** Записывает координаты обьекта, на котором нужно скрыть стрелку переключения слайдера */
-  /** ms ---> main-screen */
-
   function desktopNavButtonHandler(evt) {
     // arrow.style.position = 'fixed';
     arrow.style.left = `${evt.clientX - 18}px`;
@@ -110,11 +117,6 @@ function sideSwitchArrow(swiper, arrow, container) {
 sideSwitchArrow(
   swiper,
   document.querySelector('.btn-works'),
-  document.querySelector('.production-swiper'),
-);
-sideSwitchArrow(
-  swiper,
-  document.querySelector('.btn-works'),
-  document.querySelector('.works-more-swiper'),
+  document.querySelector('.equipment-more-swiper'),
 );
 /** СТрелка переключатель в зависимости от положения на єкране END */

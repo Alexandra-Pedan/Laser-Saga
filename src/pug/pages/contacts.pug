@@ -2,7 +2,7 @@
 extends ../layout/main
 block variable
 block meta
-  title= 'Equipment'
+  title= 'Contacts'
   meta(name='description', content='')
 block head
     link(rel='stylesheet', href="./assets/styles/main.min.css")
@@ -12,7 +12,7 @@ block scripts
   //- script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
-  script(defer src='./assets/scripts/equipment.js')
+  //- script(defer src='./assets/scripts/equipment-more.js')
   script(defer src='./assets/scripts/footer.js')
 //-   script(defer src='./assets/scripts/no-scroll.js')
   //- script(defer src='./assets/scripts/animation.js')
@@ -30,19 +30,42 @@ block content
             a(href="https:main.html") 
               span Home
           li.breadcrumbs-item.breadcrumbs-item-active 
-            a(href="https:equipment.html") 
-              span Equipment
-        h2(data-text="Equipment").page-title 
-          span Equipment   
+            a(href="https:equipment-more.html") 
+              span Contacts
+        h2(data-text="Contacts").page-title 
+          span Contacts 
     .vertical-red-right
     .horizontal-red-bottom 
   
-  .equipment-container 
-    .title
-      h4 reliable equipment
+  .contacts-container 
+    ul.address-content
+      li.address-content-item
+        p.title Middle East Branch:
+        a(href="https://goo.gl/maps/knAS6HFbQWiVUQTZA" target="_blank").description
+          span Dubai, United Arab Emirates
+      li.address-content-item
+        p.title Phone:
+        a(href="tel:+971558449890").description +97 (155) 844-98-90
+      li.address-content-item
+        p.title Email:
+        a(href="mailto:ls@uaelaser.com").description ls@uaelaser.com
+      li.address-content-item 
+        p  Get Social:
+        ul.social-list
+          li.social-item 
+            a(href="#") Telegram
+          li.social-item 
+            a(href="#") WhatsApp
+          li.social-item 
+            a(href="#") Instagram
+          li.social-item 
+            a(href="#") Facebook
+          li.social-item 
+            a(href="#") Youtube 
+    .contacts-call
       button(class="form-button form-button-js" type="submit") 
         .form-button-footer
-          span.btn-text Catalog PDF ↓
+          span.btn-text Call back
           <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="hover-shadow" d="M407 97V100H13V97H8V94H4V91H0V36H5V33H9V29H13V24H407V28H411V31H415V35H420V91H416V94H412V97H407Z" fill="#DADADC"/>
             <rect x="14.5" y="22.1216" width="391" height="57.1081" fill="#F1F1F1" stroke="black"/>
@@ -55,71 +78,7 @@ block content
             <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
             <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
           </svg>
-    .description 
-      p At LSP we believe in quality, therefor we only use reliable equipment at our shows and installations. Laser Saga Productions is representing and supporting KVANT Laser, Pangolin Laser Systems, TechArt Laser in UAE and Middle East.
-   
-  ul.equipment-list
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/Laser-bar.png", alt="") 
-          +svg('eye').hover-eye
-        .text-container 
-          p Laser bar
-        .line-hover1 
-        .line-hover2
-        .line-hover3
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/Lasers.png", alt="") 
-          +svg('eye').hover-eye
-        .text-container 
-          p Laser bar
-        .line-hover1  
-        .line-hover2
-        .line-hover3
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/SFX.png", alt="") 
-          +svg('eye').hover-eye
-        .text-container 
-          p Laser bar
-        .line-hover1 
-        .line-hover2
-        .line-hover3
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/Video.png", alt="") 
-          +svg('eye').hover-eye
-        .text-container 
-          p Laser bar
-        .line-hover1 
-        .line-hover2
-        .line-hover3
-
-  section.more-works
-    h5 more info
-    .works-swiper.myworks-swiper 
-        .swiper-wrapper 
-          .swiper-slide
-            .swiper-slide-content
-              a(href="about.html")
-                img(src="./assets/images/work-slider1.jpg", alt="")
-                p About
-          .swiper-slide
-            .swiper-slide-content
-              a(href="equipment.html")
-                img(src="./assets/images/work-slider2.jpg", alt="")
-                p Equipment
-          .swiper-slide
-            .swiper-slide-content
-              a(href="services.html")
-                img(src="./assets/images/work-slider3.jpg", alt="")
-                p Services
-        +svg('cursor').btn-works
+      img(src="./assets/images/contacts.jpg", alt="")
 
 block header
   include ../includes/header.pug

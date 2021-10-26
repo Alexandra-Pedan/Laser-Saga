@@ -1,0 +1,52 @@
+.downloads-container {
+  h5 {
+    padding: 30px 187px;
+    background: $black;
+    font-size: 48px;
+    line-height: 130%;
+    color: #ffffff;
+  }
+  .downloads-list {
+    display: flex;
+    flex-direction: column;
+    .downloads-item {
+      border-bottom: 1px solid $black;
+      width: 100%;
+      padding: 20px 187px;
+      a {
+        width: 100%;
+        text-decoration: none;
+        font-size: 36px;
+        line-height: 100%;
+        color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: $transition-fuction;
+        &:hover {
+          @include from(992px) {
+            color: $red;
+            svg {
+              stroke: $red;
+              .fill {
+                fill: $red;
+              }
+            }
+          }
+        }
+        svg {
+          width: 80px;
+          height: 80px;
+          fill: #ffffff;
+          stroke: $black;
+          transition: $transition-fuction;
+          .fill {
+            fill: $black;
+            stroke: $white;
+            transition: $transition-fuction;
+          }
+        }
+      }
+    }
+  }
+}

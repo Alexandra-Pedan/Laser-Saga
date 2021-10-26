@@ -9,15 +9,10 @@ block head
 block scripts
   script(defer src='./assets/scripts/vendors.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
-  //- script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/works.js')
   script(defer src='./assets/scripts/footer.js')
-  //- script(defer src='./assets/scripts/script.js')
-  //- script(defer src='./assets/scripts/animation.js')
-  //- script(defer src='./assets/scripts/animation-home.js')
-  //- script(defer src='./assets/scripts/menu-animation.js')
 block content
   .container-page-header
     .horizontal-red 
@@ -139,21 +134,19 @@ block content
         .swiper-wrapper 
           .swiper-slide
             .swiper-slide-content
-              a(href="#")
+              a(href="about.html")
                 img(src="./assets/images/work-slider1.jpg", alt="")
                 p About
           .swiper-slide
             .swiper-slide-content
-              a(href="#")
+              a(href="equipment.html")
                 img(src="./assets/images/work-slider2.jpg", alt="")
                 p Equipment
           .swiper-slide
             .swiper-slide-content
-              a(href="#l")
+              a(href="services.html")
                 img(src="./assets/images/work-slider3.jpg", alt="")
                 p Services
-          
-        
         +svg('cursor').btn-works
 
 
