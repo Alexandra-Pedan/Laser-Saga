@@ -6,7 +6,7 @@ $(() => {
   const $allItems = $('.accordion-item');
 
   // Event listeners
-  $accordion.on('click', '.accordion-toggle', function () {
+  $accordion.on('click', '.accordion-toggle', function() {
     // Toggle the current accordion panel and close others
     $allPanels.slideUp();
     $allItems.removeClass('is-open');
@@ -27,16 +27,42 @@ $(() => {
   });
 });
 
-const swiper = new Swiper('.myservices-swiper', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+function initSlider(container) {
+  const pagination = container.querySelector('.swiper-pagination');
+  const btnNext = container.querySelector('.swiper-button-next');
+  const btnPrev = container.querySelector('.swiper-button-prev');
+  const swipEl = container.querySelector('.js-init-services');
+  if (!pagination || !btnNext || !btnPrev || !swipEl) {
+    return;
+  }
+  const swiper = new Swiper(swipEl, {
+    pagination: {
+      el: pagination,
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: btnNext,
+      prevEl: btnPrev,
+    },
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sliders = document.querySelectorAll('.js-services');
+  console.log(sliders);
+  sliders.forEach(initSlider);
 });
+
+// const swiper = new Swiper('.myservices-swiper', {
+//   pagination: {
+//     el: '.swiper-pagination',
+//     type: 'fraction',
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
 
 const swiper2 = new Swiper('.myworks-swiper', {
   slidesPerView: 2.5,
@@ -64,11 +90,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function () {
+  arrow.__proto__.hide = function() {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function () {
+  arrow.__proto__.show = function() {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };
@@ -134,7 +160,7 @@ function sideSwitchArrow(swiper, arrow, container) {
   // eslint-disable-next-line no-unused-vars
 }
 sideSwitchArrow(
-  swiper,
+  swiper2,
   document.querySelector('.btn-works'),
   document.querySelector('.works-swiper'),
 );

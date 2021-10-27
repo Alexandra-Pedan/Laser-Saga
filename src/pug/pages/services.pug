@@ -9,15 +9,11 @@ block head
 block scripts
   script(defer src='./assets/scripts/vendors.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
-  //- script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/menu.js')
   script(defer src='./assets/scripts/services.js')
   script(defer src='./assets/scripts/footer.js')
-//-   script(defer src='./assets/scripts/no-scroll.js')
-  //- script(defer src='./assets/scripts/animation.js')
-  //- script(defer src='./assets/scripts/animation-home.js')
-  //- script(defer src='./assets/scripts/menu-animation.js')
 block content
   .container-page-header
     .horizontal-red 
@@ -46,7 +42,7 @@ block content
       img(src="./assets/images/equipment.jpg", alt="")
 
   .accordion.js-accordion
-    .accordion-item
+    .accordion-item.js-services
       .accordion-arrow 
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
@@ -78,7 +74,7 @@ block content
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
           .description-swiper
-            .services-swiper.myservices-swiper
+            .services-swiper.myservices-swiper.js-init-services 
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -109,7 +105,7 @@ block content
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
                 </svg>
               .swiper-pagination
-    .accordion-item
+    .accordion-item.js-services
       .accordion-arrow 
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
@@ -140,8 +136,8 @@ block content
                   <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
-          //- .description-swiper
-            .services-swiper.myservices-swiper
+          .description-swiper
+            .services-swiper.myservices-swiper.js-init-services
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -172,7 +168,7 @@ block content
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
                 </svg>
               .swiper-pagination   
-    .accordion-item
+    .accordion-item.js-services
       .accordion-arrow 
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
@@ -203,8 +199,8 @@ block content
                   <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
-          //- .description-swiper
-            .services-swiper.myservices-swiper
+          .description-swiper
+            .services-swiper.myservices-swiper.js-init-services
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -266,8 +262,8 @@ block content
                   <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
-          //- .description-swiper
-            .services-swiper.myservices-swiper
+          .description-swiper
+            .services-swiper.myservices-swiper.js-init-services
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -298,7 +294,7 @@ block content
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
                 </svg>
               .swiper-pagination
-    .accordion-item
+    .accordion-item.js-services
       .accordion-arrow 
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
@@ -329,8 +325,8 @@ block content
                   <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
-          //- .description-swiper
-            .services-swiper.myservices-swiper
+          .description-swiper
+            .services-swiper.myservices-swiper.js-init-services
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -392,8 +388,8 @@ block content
                   <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
-          //- .description-swiper
-            .services-swiper.myservices-swiper
+          .description-swiper
+            .services-swiper.myservices-swiper.js-init-services
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -424,7 +420,7 @@ block content
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
                 </svg>
               .swiper-pagination
-    .accordion-item
+    .accordion-item.js-services
       .accordion-arrow 
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
@@ -455,8 +451,8 @@ block content
                   <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
-          //- .description-swiper
-            .services-swiper.myservices-swiper
+          .description-swiper
+            .services-swiper.myservices-swiper.js-init-services
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -494,17 +490,17 @@ block content
         .swiper-wrapper 
           .swiper-slide
             .swiper-slide-content
-              a(href="#")
+              a(href="about.html")
                 img(src="./assets/images/work-slider1.jpg", alt="")
                 p About
           .swiper-slide
             .swiper-slide-content
-              a(href="#")
+              a(href="equipment.html")
                 img(src="./assets/images/work-slider2.jpg", alt="")
                 p Equipment
           .swiper-slide
             .swiper-slide-content
-              a(href="#l")
+              a(href="services.html")
                 img(src="./assets/images/work-slider3.jpg", alt="")
                 p Services
         +svg('cursor').btn-works

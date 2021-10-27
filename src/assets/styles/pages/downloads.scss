@@ -13,6 +13,21 @@
       border-bottom: 1px solid $black;
       width: 100%;
       padding: 20px 187px;
+      transition: $transition-fuction;
+      &:hover {
+        @include from(992px) {
+          border-bottom: 1px solid $red;
+          a {
+            color: $red;
+          }
+          svg {
+            stroke: $red;
+            .fill {
+              fill: $red;
+            }
+          }
+        }
+      }
       a {
         width: 100%;
         text-decoration: none;
@@ -23,17 +38,6 @@
         justify-content: space-between;
         align-items: center;
         transition: $transition-fuction;
-        &:hover {
-          @include from(992px) {
-            color: $red;
-            svg {
-              stroke: $red;
-              .fill {
-                fill: $red;
-              }
-            }
-          }
-        }
         svg {
           width: 80px;
           height: 80px;

@@ -33,6 +33,46 @@
   &-item {
     border-bottom: 1px solid #000000;
     position: relative;
+    transition: $transition-fuction;
+    &:hover {
+      @include from(992px) {
+        border-bottom: 1px solid $red;
+        .accordion-arrow {
+          svg {
+            fill: $red;
+            .accordion-arrow-stroke {
+              stroke: $red;
+              fill: $white;
+            }
+            circle {
+              stroke: $red;
+            }
+          }
+        }
+        .accordion-toggle {
+          color: $red;
+        }
+      }
+    }
+    &.is-open:hover {
+      @include from(992px) {
+        border-bottom: 1px solid #000000;
+        .accordion-toggle {
+          color: $black;
+        }
+        .accordion-arrow {
+          svg {
+            fill: $white;
+            .accordion-arrow-stroke {
+              stroke: $white;
+            }
+            circle {
+              stroke: $black;
+            }
+          }
+        }
+      }
+    }
   }
   &-toggle {
     display: block;
@@ -45,6 +85,7 @@
     line-height: 130%;
     color: #000000;
     padding: 29px 187px;
+    transition: $transition-fuction;
   }
   &-panel {
     padding: 38px 187px 50px 187px;
@@ -64,6 +105,7 @@
       .accordion-arrow-stroke {
         fill: $white;
         stroke: $black;
+        transition: $transition-fuction;
       }
       circle {
         fill: $white;
