@@ -21,6 +21,10 @@ header {
         fill: $red;
       }
     }
+    @include to(1440px) {
+      width: 264px;
+      height: 25px;
+    }
   }
   .header-nav {
     display: flex;
@@ -28,10 +32,18 @@ header {
     .social-list {
       display: flex;
       margin-right: 100px;
+      @include to(1440px) {
+        margin-right: 50px;
+      }
       .social-item {
         margin-right: 20px;
         width: 50px;
         height: 50px;
+        @include to(1440px) {
+          margin-right: 10px;
+          width: 40px;
+          height: 40px;
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -42,6 +54,10 @@ header {
             fill: none;
             stroke: $black;
             transition: $transition-fuction;
+            @include to(1440px) {
+              width: 40px;
+              height: 40px;
+            }
             &:hover {
               @include from(992px) {
                 stroke: $red;
@@ -68,6 +84,10 @@ header {
               }
             }
           }
+          @include to(1440px) {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
     }
@@ -79,6 +99,11 @@ header {
       border: 1px solid $black;
       border-radius: 30px;
       transition: $transition-fuction;
+      @include to(1440px) {
+        margin-right: 50px;
+        padding: 8px 20px;
+        font-size: 20px;
+      }
       &:hover {
         @include from(992px) {
           color: $red;
@@ -98,6 +123,10 @@ header {
       display: inline-block;
       position: relative;
       transition: $transition-fuction;
+      @include to(1440px) {
+        margin-right: 50px;
+        font-size: 20px;
+      }
       &:hover {
         @include from(992px) {
           color: $red;
@@ -135,6 +164,7 @@ header {
       }
       span {
         margin-right: 10px;
+        font-size: 20px;
       }
       svg {
         width: 50px;
@@ -142,6 +172,10 @@ header {
         fill: none;
         stroke: $black;
         transition: $transition-fuction;
+        @include to(1440px) {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
