@@ -10,35 +10,74 @@ block scripts
   script(defer src='./assets/scripts/index.bundle.js')
   //- script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/libs.js')
-  //- script(defer src='./assets/scripts/header.js')
-  //- script(defer src='./assets/scripts/home.js')
-  script(defer src='./assets/scripts/script.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/menu.js')
 
 block content
   .container-404
-    h1.title-404 4
-      - let c = 0
-      while c < 48
-        .c(style=`--i: ${c};`)
-        - c++
-      |4
-    h2.text-404 Упс, щось пішло не так. Сторінку не знайдено =(
-    .link-container
-      .link-404 
-        <svg class="arrow-404"  viewBox="0 0 60 60"fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="30" r="30"/>
-          <path d="M29.5238 40C29.5238 32 23.1746 30 20 30M20 30C23.1746 30 29.5238 28 29.5238 20M20 30L40 30"/>
-        </svg>
-        
+    .horizontal-black 
+    .vertical-black-left
+    .content-404
+      <figure>
+        <div class="sad-mac"></div>
+        <figcaption>
+          <span class="sr-text">Error 404: Not Found</span>
+          <span class="e"></span>
+          <span class="r"></span>
+          <span class="r"></span>
+          <span class="o"></span>
+          <span class="r"></span>
+          <span class="_4"></span>
+          <span class="_0"></span>
+          <span class="_4"></span>
+          <span class="n"></span>
+          <span class="o"></span>
+          <span class="t"></span>
+          <span class="f"></span>
+          <span class="o"></span>
+          <span class="u"></span>
+          <span class="n"></span>
+          <span class="d"></span>
+        </figcaption>
+      </figure>
+    .container-back
+      .btn-container
         a(href="#") 
-          span повернутися 
-          | Назад
-      .link-404
-        a(href="index.html") На головну
-        <svg  class="arrow-404" viewBox="0 0 60 60"fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="30" r="30"/>
-          <path d="M30.4762 40C30.4762 32 36.8254 30 40 30M40 30C36.8254 30 30.4762 28 30.4762 20M40 30L20 30"/>
-        </svg>
+          button(class="form-button form-button-js" type="submit") 
+            .form-button-footer
+              span.btn-text Go back
+              <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="hover-shadow" d="M407 97V100H13V97H8V94H4V91H0V36H5V33H9V29H13V24H407V28H411V31H415V35H420V91H416V94H412V97H407Z" fill="#DADADC"/>
+                <rect x="14.5" y="22.1216" width="391" height="57.1081" fill="#F1F1F1" stroke="black"/>
+                <rect x="12.5" y="22.4995" width="395" height="66" fill="#F1F1F1" stroke="black"/>
+                <rect x="8.5" y="24.4995" width="4" height="61" fill="#F1F1F1" stroke="black"/>
+                <rect x="4.5" y="30.4995" width="4" height="52" fill="#F1F1F1" stroke="black"/>
+                <rect x="0.5" y="34.4995" width="4" height="45" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="59" transform="matrix(-1 0 0 1 411 25.9995)" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="51" transform="matrix(-1 0 0 1 415 31.9995)" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
+                <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
+              </svg>
+        a(href="#")
+          button(class="form-button form-button-js" type="submit") 
+            .form-button-footer
+              span.btn-text Home page
+              <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="hover-shadow" d="M407 97V100H13V97H8V94H4V91H0V36H5V33H9V29H13V24H407V28H411V31H415V35H420V91H416V94H412V97H407Z" fill="#DADADC"/>
+                <rect x="14.5" y="22.1216" width="391" height="57.1081" fill="#F1F1F1" stroke="black"/>
+                <rect x="12.5" y="22.4995" width="395" height="66" fill="#F1F1F1" stroke="black"/>
+                <rect x="8.5" y="24.4995" width="4" height="61" fill="#F1F1F1" stroke="black"/>
+                <rect x="4.5" y="30.4995" width="4" height="52" fill="#F1F1F1" stroke="black"/>
+                <rect x="0.5" y="34.4995" width="4" height="45" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="59" transform="matrix(-1 0 0 1 411 25.9995)" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="51" transform="matrix(-1 0 0 1 415 31.9995)" fill="#F1F1F1" stroke="black"/>
+                <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
+                <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
+              </svg>
+    .vertical-black-right
+    .horizontal-black-bottom
+
+
 	
 block header
   include ../includes/header.pug
