@@ -2,17 +2,17 @@ const swiper = new Swiper('.myworks-swiper', {
   slidesPerView: 2.5,
   spaceBetween: 60,
   slidesPerView: 'auto',
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10,
-  //   },
-  //   576: {
-  //     spaceBetween: 30,
-  //   },
-  //   1440: {
-  //     spaceBetween: 40,
-  //   },
-  // },
+  breakpoints: {
+    //   320: {
+    //     spaceBetween: 10,
+    //   },
+    //   576: {
+    //     spaceBetween: 30,
+    //   },
+    1440: {
+      spaceBetween: 40,
+    },
+  },
 });
 
 /** СТрелка переключатель в зависимости от положения на єкране */
@@ -24,11 +24,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function() {
+  arrow.__proto__.hide = function () {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function() {
+  arrow.__proto__.show = function () {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };
@@ -71,7 +71,7 @@ function sideSwitchArrow(swiper, arrow, container) {
       // switchGallerySlide('rightSide')
     }
   }
-  container.addEventListener('click', function clickToChange() {
+  container.addEventListener('click', () => {
     switchGallerySlide(arrow.dataset.side);
   });
   if (document.documentElement.clientWidth < 576) {

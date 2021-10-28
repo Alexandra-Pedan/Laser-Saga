@@ -5,6 +5,10 @@
     font-size: 48px;
     line-height: 130%;
     color: #ffffff;
+    @include to(1440px) {
+      padding: 20px 132px;
+      font-size: 42px;
+    }
   }
   .downloads-list {
     display: flex;
@@ -14,6 +18,9 @@
       width: 100%;
       padding: 20px 187px;
       transition: $transition-fuction;
+      @include to(1440px) {
+        padding: 32px 132px;
+      }
       &:hover {
         @include from(992px) {
           border-bottom: 1px solid $red;
@@ -38,6 +45,9 @@
         justify-content: space-between;
         align-items: center;
         transition: $transition-fuction;
+        @include to(1440px) {
+          font-size: 30px;
+        }
         svg {
           width: 80px;
           height: 80px;
@@ -48,6 +58,10 @@
             fill: $black;
             stroke: $white;
             transition: $transition-fuction;
+          }
+          @include to(1440px) {
+            width: 60px;
+            height: 60px;
           }
         }
       }

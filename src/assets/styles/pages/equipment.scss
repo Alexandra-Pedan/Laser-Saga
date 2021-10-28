@@ -3,12 +3,19 @@
   width: 100%;
   justify-content: space-between;
   padding: 100px 187px 60px 187px;
+  @include to(1440px) {
+    padding: 80px 132px 50px 132px;
+  }
   .title {
     font-size: 24px;
     line-height: 150%;
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 20px;
+    @include to(1440px) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
   }
   .description {
     p {
@@ -16,6 +23,10 @@
       font-size: 48px;
       line-height: 130%;
       color: #000000;
+      @include to(1440px) {
+        width: 767px;
+        font-size: 34px;
+      }
     }
   }
 }
@@ -24,18 +35,30 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 0 187px 40px 187px;
+  @include to(1440px) {
+    padding: 0 132px 30px 132px;
+  }
   .equipment-item:nth-child(odd) {
     margin-right: 60px;
+    @include to(1440px) {
+      margin-right: 50px;
+    }
   }
   .equipment-item {
     margin-bottom: 60px;
     width: calc(50% - 31px);
-
+    @include to(1440px) {
+      margin-bottom: 50px;
+      width: calc(50% - 26px);
+    }
     .equipment-link {
       text-decoration: none;
       display: grid;
       grid-template-rows: 450px auto 5px 5px 5px;
       grid-template-columns: auto;
+      @include to(1440px) {
+        grid-template-rows: 320px auto 5px 5px 5px;
+      }
       .img-container {
         position: relative;
         border: 1px solid #000000;
@@ -55,6 +78,10 @@
           left: 50%;
           transform: translate(-50%, -50%);
           transition: $transition-fuction;
+          @include to(1440px) {
+            width: 80px;
+            height: 80px;
+          }
         }
       }
       .text-container {
@@ -66,6 +93,10 @@
         line-height: 140%;
         letter-spacing: -0.03em;
         color: #000000;
+        @include to(1440px) {
+          padding: 19px 20ox;
+          font-size: 18px;
+        }
       }
       .line-hover1 {
         grid-column: 1;
@@ -111,5 +142,11 @@
         }
       }
     }
+  }
+}
+
+.form-button .btn-equipment {
+  @include to(1440px) {
+    left: 39% !important;
   }
 }
