@@ -11,6 +11,10 @@ header {
   align-items: center;
   padding: 0 50px;
   height: 80px;
+  @include to(1440px) {
+    height: 60px;
+    padding: 0 40px;
+  }
   .icon--logo {
     width: 364px;
     height: 35px;

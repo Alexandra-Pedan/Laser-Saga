@@ -2,33 +2,33 @@ const swiper = new Swiper('.myproduction-swiper', {
   slidesPerView: 1.2,
   spaceBetween: 60,
   slidesPerView: 'auto',
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10,
-  //   },
-  //   576: {
-  //     spaceBetween: 30,
-  //   },
-  //   1440: {
-  //     spaceBetween: 40,
-  //   },
-  // },
+  breakpoints: {
+    //   320: {
+    //     spaceBetween: 10,
+    //   },
+    //   576: {
+    //     spaceBetween: 30,
+    //   },
+    1440: {
+      spaceBetween: 40,
+    },
+  },
 });
 const swiper2 = new Swiper('.myworksmore-swiper', {
   slidesPerView: 2.5,
   spaceBetween: 60,
   slidesPerView: 'auto',
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10,
-  //   },
-  //   576: {
-  //     spaceBetween: 30,
-  //   },
-  //   1440: {
-  //     spaceBetween: 40,
-  //   },
-  // },
+  breakpoints: {
+    //   320: {
+    //     spaceBetween: 10,
+    //   },
+    //   576: {
+    //     spaceBetween: 30,
+    //   },
+    1440: {
+      spaceBetween: 40,
+    },
+  },
 });
 
 function sideSwitchArrow(swiper, arrow, container) {

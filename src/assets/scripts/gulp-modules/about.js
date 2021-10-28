@@ -45,17 +45,17 @@ const swiper4 = new Swiper('.myworks-swiper', {
   slidesPerView: 2.5,
   spaceBetween: 60,
   slidesPerView: 'auto',
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10,
-  //   },
-  //   576: {
-  //     spaceBetween: 30,
-  //   },
-  //   1440: {
-  //     spaceBetween: 40,
-  //   },
-  // },
+  breakpoints: {
+    //   320: {
+    //     spaceBetween: 10,
+    //   },
+    //   576: {
+    //     spaceBetween: 30,
+    //   },
+    1440: {
+      spaceBetween: 50,
+    },
+  },
 });
 function sideSwitchArrow(swiper, arrow, container) {
   const mediumCordValue = document.documentElement.clientWidth / 2;
@@ -64,11 +64,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function () {
+  arrow.__proto__.hide = function() {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function () {
+  arrow.__proto__.show = function() {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };
@@ -137,5 +137,10 @@ sideSwitchArrow(
   swiper,
   document.querySelector('.btn-works'),
   document.querySelector('.specialities-swiper'),
+);
+sideSwitchArrow(
+  swiper4,
+  document.querySelector('.btn-works'),
+  document.querySelector('.works-swiper'),
 );
 /** СТрелка переключатель в зависимости от положения на єкране END */

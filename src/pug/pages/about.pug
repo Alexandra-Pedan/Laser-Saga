@@ -268,7 +268,26 @@ block content
       .horizontal-black-bottom2 
       .horizontal-black-bottom3  
 
-     
+  .more-works 
+    h5 more info
+    .works-swiper.myworks-swiper 
+        .swiper-wrapper 
+          .swiper-slide
+            .swiper-slide-content
+              a(href="about.html")
+                img(src="./assets/images/work-slider1.jpg", alt="")
+                p About
+          .swiper-slide
+            .swiper-slide-content
+              a(href="equipment.html")
+                img(src="./assets/images/work-slider2.jpg", alt="")
+                p Equipment
+          .swiper-slide
+            .swiper-slide-content
+              a(href="services.html")
+                img(src="./assets/images/work-slider3.jpg", alt="")
+                p Services
+        +svg('cursor').btn-works
 
 block header
   include ../includes/header.pug
