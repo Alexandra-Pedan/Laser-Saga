@@ -6,6 +6,9 @@
   @include to(1440px) {
     padding: 40px 132px 80px 132px;
   }
+  @include to(992px) {
+    padding: 30px 82px 60px 82px;
+  }
   &-title {
     h4 {
       font-size: 36px;
@@ -16,6 +19,10 @@
       @include to(1440px) {
         font-size: 30px;
         width: 208px;
+      }
+      @include to(992px) {
+        font-size: 24px;
+        width: 113px;
       }
     }
     p {
@@ -29,6 +36,11 @@
         width: 112px;
         margin-top: 20px;
       }
+      @include to(992px) {
+        font-size: 12px;
+        width: 120px;
+        margin-top: 10px;
+      }
     }
   }
   &-description {
@@ -38,6 +50,10 @@
       margin-left: 127px;
       width: 767px;
     }
+    @include to(992px) {
+      margin-left: 71px;
+      width: 421px;
+    }
     .video-container {
       width: 1076px;
       height: 650px;
@@ -46,6 +62,10 @@
       @include to(1440px) {
         width: 767px;
         height: 464px;
+      }
+      @include to(992px) {
+        width: 421px;
+        height: 254px;
       }
     }
     p {
@@ -57,6 +77,10 @@
         font-size: 34px;
         margin-top: 40px;
       }
+      @include to(992px) {
+        font-size: 22px;
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -65,6 +89,9 @@
   border-bottom: 1px solid #000000;
   @include to(1440px) {
     padding: 80px 0 80px 132px;
+  }
+  @include to(992px) {
+    padding: 60px 0 60px 82px;
   }
   &-swiper {
     .swiper-slide {
@@ -83,6 +110,10 @@
             font-size: 18px;
             width: 208px;
           }
+          @include to(992px) {
+            font-size: 12px;
+            width: 113px;
+          }
         }
         a {
           text-decoration: none;
@@ -95,6 +126,9 @@
           @include to(1440px) {
             height: 446px;
           }
+          @include to(992px) {
+            height: 254px;
+          }
         }
         p {
           font-size: 24px;
@@ -104,6 +138,10 @@
           padding-top: 20px;
           @include to(1440px) {
             font-size: 18px;
+          }
+          @include to(992px) {
+            font-size: 12px;
+            padding-top: 10px;
           }
         }
       }
@@ -122,6 +160,9 @@
   @include to(1440px) {
     padding: 80px 132px;
   }
+  @include to(992px) {
+    padding: 60px 82px;
+  }
   &-title {
     h4 {
       font-size: 24px;
@@ -133,6 +174,10 @@
         font-size: 18px;
         width: 208px;
       }
+      @include to(992px) {
+        font-size: 12px;
+        width: 113px;
+      }
     }
   }
   &-description {
@@ -141,6 +186,10 @@
     @include to(1440px) {
       margin-left: 127px;
       width: 767px;
+    }
+    @include to(992px) {
+      margin-left: 71px;
+      width: 421px;
     }
     h5 {
       font-size: 48px;
@@ -151,6 +200,10 @@
         font-size: 34px;
         margin-bottom: 40px;
       }
+      @include to(992px) {
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
     }
     p {
       font-size: 24px;
@@ -159,9 +212,15 @@
       @include to(1440px) {
         font-size: 18px;
       }
+      @include to(992px) {
+        font-size: 12px;
+      }
     }
     &-swiper {
-      margin-top: 30px;
+      margin-top: 50px;
+      @include to(992px) {
+        margin-top: 20px;
+      }
       .team-swiper {
         width: 100%;
         height: 100%;
@@ -228,6 +287,9 @@
           @include to(1440px) {
             font-size: 20px;
           }
+          @include to(992px) {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -242,6 +304,9 @@
   @include to(1440px) {
     padding: 80px 132px 54px 132px;
   }
+  @include to(992px) {
+    padding: 60px 82px 45px 82px;
+  }
   &-title {
     h4 {
       font-size: 24px;
@@ -253,6 +318,10 @@
         font-size: 18px;
         width: 208px;
       }
+      @include to(992px) {
+        font-size: 12px;
+        width: 113px;
+      }
     }
   }
   &-description {
@@ -262,14 +331,32 @@
       margin-left: 127px;
       width: 767px;
     }
+    @include to(992px) {
+      margin-left: 71px;
+      width: 421px;
+    }
     &-list {
       display: flex;
       flex-wrap: wrap;
     }
     &-item {
       margin: 0 100px 40px 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @include from(992px) {
+        &:hover {
+          img {
+            filter: none;
+            // transform: scale(1.05);
+          }
+        }
+      }
       @include to(1440px) {
         margin: 0 71px 26px 0;
+      }
+      @include to(992px) {
+        margin: 0 39px 25px 0;
       }
       &:nth-child(4n) {
         margin-right: 0;
@@ -277,9 +364,16 @@
       img {
         width: 169px;
         height: 108px;
+        height: auto;
+        filter: grayscale(1);
+        transition: $transition-fuction;
         @include to(1440px) {
           width: 121px;
-          height: 77px;
+          // height: 77px;
+        }
+        @include to(992px) {
+          width: 66px;
+          // height: 42px;
         }
       }
     }
@@ -293,6 +387,9 @@
   justify-content: space-between;
   @include to(1440px) {
     padding: 80px 132px 80px 132px;
+  }
+  @include to(992px) {
+    padding: 60px 0 60px 82px;
   }
   &-title {
     display: flex;
@@ -308,6 +405,10 @@
         font-size: 18px;
         width: 208px;
       }
+      @include to(992px) {
+        font-size: 12px;
+        width: 113px;
+      }
     }
     .reviews-plagination-container {
       width: 220px;
@@ -318,6 +419,9 @@
       @include to(1440px) {
         width: 169px;
         padding-bottom: 0px;
+      }
+      @include to(992px) {
+        width: 138px;
       }
       .swiper-button-next,
       .swiper-button-prev {
@@ -357,6 +461,9 @@
         @include to(1440px) {
           font-size: 18px;
         }
+        @include to(992px) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -367,6 +474,10 @@
       margin-left: 127px;
       width: 767px;
     }
+    @include to(992px) {
+      margin-left: 46px;
+      width: 502px;
+    }
     .reviews-swiper {
       width: 100%;
       height: 100%;
@@ -375,10 +486,19 @@
       .swiper-slide {
         display: flex;
         justify-content: space-between;
+        @include to(992px) {
+          justify-content: flex-start;
+        }
         .card-container {
           width: 470px;
           @include to(1440px) {
             width: 340px;
+          }
+          @include to(992px) {
+            width: 214px;
+            &:first-child {
+              margin-right: 25px;
+            }
           }
           svg {
             width: 56px;
@@ -388,6 +508,10 @@
               width: 46px;
               height: 40px;
             }
+            @include to(992px) {
+              width: 35px;
+              height: 30px;
+            }
           }
           h5 {
             font-size: 48px;
@@ -395,6 +519,9 @@
             color: #000000;
             @include to(1440px) {
               font-size: 34px;
+            }
+            @include to(992px) {
+              font-size: 22px;
             }
           }
           p {
@@ -406,6 +533,10 @@
             @include to(1440px) {
               margin-bottom: 40px;
             }
+            @include to(992px) {
+              margin-bottom: 30px;
+              font-size: 14px;
+            }
           }
           .card-description {
             height: 306px;
@@ -413,6 +544,9 @@
             overflow: auto;
             @include to(1440px) {
               height: 200px;
+            }
+            @include to(992px) {
+              height: 160px;
             }
             p {
               font-size: 24px;
@@ -424,6 +558,10 @@
               @include to(1440px) {
                 font-size: 18px;
               }
+              @include to(992px) {
+                font-size: 14px;
+                padding-right: 15px;
+              }
             }
           }
           .social-container {
@@ -433,6 +571,7 @@
             @include to(1440px) {
               padding: 12px 20px;
             }
+
             a {
               text-decoration: none;
               font-family: $default-font2;
@@ -444,6 +583,9 @@
               transition: $transition-fuction;
               @include to(1440px) {
                 font-size: 16px;
+              }
+              @include to(992px) {
+                font-size: 12px;
               }
               &:hover {
                 @include from(992px) {
@@ -467,6 +609,9 @@
   @include to(1440px) {
     padding: 80px 132px;
   }
+  @include to(992px) {
+    padding: 60px 82px;
+  }
   &-container {
     display: flex;
     justify-content: space-between;
@@ -482,6 +627,10 @@
         font-size: 18px;
         width: 208px;
       }
+      @include to(992px) {
+        font-size: 12px;
+        width: 113px;
+      }
     }
   }
   &-description {
@@ -491,24 +640,48 @@
       margin-left: 127px;
       width: 767px;
     }
+    @include to(992px) {
+      margin-left: 71px;
+      width: 421px;
+    }
     &-list {
       display: flex;
       flex-wrap: wrap;
     }
     &-item {
       margin: 0 100px 40px 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        @include from(992px) {
+          img {
+            filter: none;
+          }
+        }
+      }
       @include to(1440px) {
         margin: 0 70px 26px 0;
+      }
+      @include to(992px) {
+        margin: 0 39px 25px 0;
       }
       &:nth-child(4n) {
         margin-right: 0;
       }
       img {
         width: 169px;
-        height: 108px;
+        // height: 108px;
+        filter: grayscale(1);
+        height: auto;
+        transition: $transition-fuction;
         @include to(1440px) {
           width: 121px;
-          height: 77px;
+          // height: 77px;
+        }
+        @include to(992px) {
+          width: 66px;
+          // height: 42px;
         }
       }
     }
@@ -526,6 +699,12 @@
     grid-template-columns: 20px auto 20px;
     margin-top: 60px;
     width: 767px;
+  }
+  @include to(992px) {
+    grid-template-rows: 10px auto 10px 5px 5px 5px;
+    grid-template-columns: 10px auto 10px;
+    margin-top: 35px;
+    width: 421px;
   }
   .horizontal-black {
     grid-column: 2/3;
@@ -557,6 +736,9 @@
     @include to(1440px) {
       padding: 60px 128px 88px 60px;
     }
+    @include to(992px) {
+      padding: 30px 38px 46px 30px;
+    }
     &-content {
       display: flex;
       align-items: center;
@@ -569,6 +751,10 @@
           width: 320px;
           margin-right: 70px;
         }
+        @include to(992px) {
+          width: 170px;
+          margin-right: 45px;
+        }
         h4 {
           font-size: 48px;
           line-height: 130%;
@@ -576,6 +762,9 @@
           margin-bottom: 20px;
           @include to(1440px) {
             font-size: 34px;
+          }
+          @include to(992px) {
+            font-size: 18px;
           }
         }
         p {
@@ -587,6 +776,10 @@
           @include to(1440px) {
             width: 260px;
             font-size: 18px;
+          }
+          @include to(992px) {
+            width: 167px;
+            font-size: 10px;
           }
         }
       }
@@ -662,6 +855,14 @@
       position: relative;
       width: 270px;
       height: 74px;
+      @include to(1440px) {
+        width: 192px;
+        height: 52px;
+      }
+      @include to(992px) {
+        width: 136px;
+        height: 40px;
+      }
     }
     .btn-text {
       font-family: $default-font;
@@ -678,6 +879,15 @@
       left: 50%;
       transform: translate(-50%, -40%);
       transition: $transition-fuction;
+      @include to(1440px) {
+        font-size: 16px;
+        top: 40%;
+        left: 42%;
+        transform: translate(-35%, -40%);
+      }
+      @include to(992px) {
+        font-size: 10px;
+      }
     }
     .btn-submite {
       width: 100%;

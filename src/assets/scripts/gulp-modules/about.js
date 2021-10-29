@@ -1,18 +1,18 @@
 const swiper = new Swiper('.myspecialities-swiper', {
   slidesPerView: 3.3,
-  spaceBetween: 30,
+  spaceBetween: 15,
   slidesPerView: 'auto',
-  // breakpoints: {
-  //   320: {
-  //     spaceBetween: 10,
-  //   },
-  //   576: {
-  //     spaceBetween: 30,
-  //   },
-  //   1440: {
-  //     spaceBetween: 40,
-  //   },
-  // },
+  breakpoints: {
+    // 320: {
+    //   spaceBetween: 10,
+    // },
+    992: {
+      spaceBetween: 20,
+    },
+    1440: {
+      spaceBetween: 30,
+    },
+  },
 });
 // const swiper2 = new Swiper('.myworksmore-swiper', {
 //   slidesPerView: 1.5,
@@ -43,17 +43,17 @@ const swiper3 = new Swiper('.myreviews-swiper', {
 
 const swiper4 = new Swiper('.myworks-swiper', {
   slidesPerView: 2.5,
-  spaceBetween: 60,
+  spaceBetween: 15,
   slidesPerView: 'auto',
   breakpoints: {
-    //   320: {
-    //     spaceBetween: 10,
-    //   },
-    //   576: {
-    //     spaceBetween: 30,
-    //   },
-    1440: {
+    575: {
+      spaceBetween: 20,
+    },
+    992: {
       spaceBetween: 50,
+    },
+    1440: {
+      spaceBetween: 60,
     },
   },
 });

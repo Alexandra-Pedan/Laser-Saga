@@ -75,6 +75,9 @@
   @include to(1440px) {
     padding: 59px 132px 80px 132px;
   }
+  @include to(992px) {
+    padding: 50px 82px 65px 82px;
+  }
   .breadcrumbs {
     display: flex;
     .breadcrumbs-item {
@@ -85,6 +88,9 @@
         color: $black;
         @include to(1440px) {
           font-size: 14px;
+        }
+        @include to(992px) {
+          font-size: 12px;
         }
         span::after {
           content: '';
@@ -97,6 +103,10 @@
           @include to(1440px) {
             width: 18px;
             height: 14px;
+          }
+          @include to(992px) {
+            width: 16px;
+            height: 12px;
           }
         }
       }
@@ -122,6 +132,9 @@
     @include to(1440px) {
       font-size: 120px;
     }
+    @include to(992px) {
+      font-size: 80px;
+    }
     span {
       background: #000000;
       -webkit-background-clip: text;
@@ -139,6 +152,9 @@
       transform: translate(10px, 10px);
       @include to(1440px) {
         transform: translate(6px, 6px);
+      }
+      @include to(992px) {
+        transform: translate(4px, 4px);
       }
     }
 
@@ -162,6 +178,9 @@
   @include to(1440px) {
     padding: 25px 132px;
   }
+  @include to(992px) {
+    padding: 18px 82px;
+  }
   h4 {
     font-weight: 700;
     font-size: 36px;
@@ -170,6 +189,9 @@
     color: #000000;
     @include to(1440px) {
       font-size: 30px;
+    }
+    @include to(992px) {
+      font-size: 24px;
     }
   }
   .filter-form {
@@ -261,12 +283,19 @@
   @include to(1440px) {
     padding: 40px 132px 30px 132px;
   }
+  @include to(992px) {
+    padding: 30px 82px 40px 82px;
+  }
   .works-item:nth-child(odd) {
     margin-right: 60px;
     width: calc(50% - 31px);
     @include to(1440px) {
       margin-right: 50px;
       width: calc(50% - 26px);
+    }
+    @include to(992px) {
+      margin-right: 20px;
+      width: calc(50% - 11px);
     }
   }
   .works-item {
@@ -276,6 +305,10 @@
       margin-bottom: 50px;
       width: calc(50% - 26px);
     }
+    @include to(992px) {
+      margin-bottom: 20px;
+      width: calc(50% - 11px);
+    }
   }
   .works-link {
     // width: calc(50% - 30px);
@@ -283,6 +316,10 @@
 
     .works-item-picture {
       position: relative;
+      overflow: hidden;
+      img {
+        transition: $transition-fuction;
+      }
       .hover-eye {
         width: 100px;
         height: 100px;
@@ -296,6 +333,10 @@
           width: 80px;
           height: 80px;
         }
+        @include to(992px) {
+          width: 60px;
+          height: 60px;
+        }
       }
     }
     .works-item-description {
@@ -305,7 +346,9 @@
         padding: 20px;
         border: 1px solid #000000;
         z-index: 22;
-
+        @include to(992px) {
+          padding: 10px 20px;
+        }
         h5 {
           font-size: 24px;
           line-height: 140%;
@@ -313,6 +356,9 @@
           color: #000000;
           @include to(1440px) {
             font-size: 18px;
+          }
+          @include to(992px) {
+            font-size: 12px;
           }
         }
       }
@@ -352,6 +398,11 @@
     }
     &:hover {
       @include from(992px) {
+        .works-item-picture {
+          img {
+            transform: scale(1.03);
+          }
+        }
         .hover-eye {
           opacity: 1;
         }
@@ -389,6 +440,9 @@
   @include to(1440px) {
     padding: 80px 0 80px 132px;
   }
+  @include to(992px) {
+    padding: 60px 0 60px 82px;
+  }
   h5 {
     font-size: 24px;
     line-height: 150%;
@@ -397,6 +451,9 @@
     margin-bottom: 10px;
     @include to(1440px) {
       font-size: 18px;
+    }
+    @include to(992px) {
+      font-size: 16px;
     }
   }
   .swiper-slide {
@@ -418,6 +475,10 @@
         @include to(1440px) {
           font-size: 18px;
         }
+        @include to(992px) {
+          font-size: 12px;
+          padding: 10px 20px;
+        }
       }
     }
   }
@@ -434,8 +495,13 @@
   pointer-events: none;
   cursor: none;
   fill: none !important;
+  mix-blend-mode: difference;
   @include to(1440px) {
     width: 150px;
     height: 150px;
+  }
+  @include to(992px) {
+    width: 100px;
+    height: 100px;
   }
 }

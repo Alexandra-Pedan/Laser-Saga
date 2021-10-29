@@ -1,32 +1,32 @@
 const swiper = new Swiper('.myproduction-swiper', {
   slidesPerView: 1.2,
-  spaceBetween: 60,
+  spaceBetween: 15,
   slidesPerView: 'auto',
   breakpoints: {
-    //   320: {
-    //     spaceBetween: 10,
-    //   },
-    //   576: {
-    //     spaceBetween: 30,
-    //   },
-    1440: {
+    575: {
+      spaceBetween: 20,
+    },
+    992: {
       spaceBetween: 40,
+    },
+    1440: {
+      spaceBetween: 60,
     },
   },
 });
 const swiper2 = new Swiper('.myworksmore-swiper', {
   slidesPerView: 2.5,
-  spaceBetween: 60,
+  spaceBetween: 15,
   slidesPerView: 'auto',
   breakpoints: {
-    //   320: {
-    //     spaceBetween: 10,
-    //   },
-    //   576: {
-    //     spaceBetween: 30,
-    //   },
-    1440: {
+    575: {
+      spaceBetween: 20,
+    },
+    992: {
       spaceBetween: 40,
+    },
+    1440: {
+      spaceBetween: 60,
     },
   },
 });

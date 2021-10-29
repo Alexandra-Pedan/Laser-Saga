@@ -6,6 +6,10 @@
     @include to(1440px) {
       font-size: 80px;
     }
+    @include to(992px) {
+      font-size: 43px;
+      width: 605px;
+    }
     &::after {
       transform: translate(5px, 5px);
       @include to(1440px) {
@@ -24,6 +28,9 @@
     @include to(1440px) {
       padding: 40px 132px;
     }
+    @include to(992px) {
+      padding: 30px 82px 20px 82px;
+    }
     .form-button {
       background: none;
       border: none;
@@ -34,6 +41,10 @@
         width: 192px;
         height: 52px;
       }
+      @include to(992px) {
+        width: 136px;
+        height: 40px;
+      }
       .form-button-footer {
         position: relative;
         width: 270px;
@@ -41,6 +52,10 @@
         @include to(1440px) {
           width: 192px;
           height: 52px;
+        }
+        @include to(992px) {
+          width: 136px;
+          height: 40px;
         }
       }
       .btn-text {
@@ -63,6 +78,9 @@
           top: 40%;
           left: 42%;
           transform: translate(-35%, -40%);
+        }
+        @include to(992px) {
+          font-size: 10px;
         }
       }
       .btn-submite {
@@ -106,6 +124,11 @@
         font-size: 20px;
         margin-left: 140px;
       }
+      @include to(992px) {
+        width: 421px;
+        font-size: 16px;
+        margin-left: 50px;
+      }
     }
   }
 }
@@ -115,11 +138,17 @@
   @include to(1440px) {
     padding: 0 0 80px 467px;
   }
+  @include to(992px) {
+    padding: 0 0 60px 266px;
+  }
   .swiper-slide {
     width: 85.4%;
     height: 650px;
     @include to(1440px) {
       height: 464px;
+    }
+    @include to(992px) {
+      height: 254px;
     }
     &-content {
       border: 1px solid #000000;
@@ -147,10 +176,16 @@
   @include to(1440px) {
     padding: 80px 0;
   }
+  @include to(992px) {
+    padding: 60px 0;
+  }
   .works-more-swiper {
     padding-left: 187px;
     @include to(1440px) {
       padding-left: 132px;
+    }
+    @include to(992px) {
+      padding-left: 82px;
     }
     .swiper-slide {
       width: 43.1%;
@@ -170,6 +205,10 @@
           @include to(1440px) {
             font-size: 18px;
           }
+          @include to(992px) {
+            font-size: 12px;
+            padding: 10px 20px;
+          }
         }
       }
     }
@@ -183,6 +222,10 @@
       @include to(1440px) {
         font-size: 18px;
         width: 23%;
+      }
+      @include to(992px) {
+        font-size: 16px;
+        width: 24%;
       }
       .swiper-slide-content {
         border: none;
