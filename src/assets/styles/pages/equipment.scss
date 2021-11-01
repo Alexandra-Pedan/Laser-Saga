@@ -6,6 +6,9 @@
   @include to(1440px) {
     padding: 80px 132px 50px 132px;
   }
+  @include to(992px) {
+    padding: 30px 82px 50px 82px;
+  }
   .title {
     font-size: 24px;
     line-height: 150%;
@@ -15,6 +18,9 @@
     @include to(1440px) {
       font-size: 18px;
       margin-bottom: 10px;
+    }
+    @include to(992px) {
+      font-size: 12px;
     }
   }
   .description {
@@ -27,6 +33,10 @@
         width: 767px;
         font-size: 34px;
       }
+      @include to(992px) {
+        width: 421px;
+        font-size: 22px;
+      }
     }
   }
 }
@@ -38,10 +48,16 @@
   @include to(1440px) {
     padding: 0 132px 30px 132px;
   }
+  @include to(992px) {
+    padding: 0 82px 40px 82px;
+  }
   .equipment-item:nth-child(odd) {
     margin-right: 60px;
     @include to(1440px) {
       margin-right: 50px;
+    }
+    @include to(992px) {
+      margin-right: 20px;
     }
   }
   .equipment-item {
@@ -51,6 +67,10 @@
       margin-bottom: 50px;
       width: calc(50% - 26px);
     }
+    @include to(992px) {
+      margin-bottom: 20px;
+      width: calc(50% - 11px);
+    }
     .equipment-link {
       text-decoration: none;
       display: grid;
@@ -59,6 +79,9 @@
       @include to(1440px) {
         grid-template-rows: 320px auto 5px 5px 5px;
       }
+      @include to(992px) {
+        grid-template-rows: 177px auto 5px 5px 5px;
+      }
       .img-container {
         position: relative;
         border: 1px solid #000000;
@@ -66,8 +89,13 @@
         grid-column: 1;
         grid-row: 1;
         img {
+          // transform: scale(0.5);
           object-fit: none;
           transition: $transition-fuction;
+          @include to(992px) {
+            transform: scale(0.6);
+            object-fit: contain;
+          }
         }
         .hover-eye {
           position: absolute;
@@ -82,6 +110,10 @@
             width: 80px;
             height: 80px;
           }
+          @include to(992px) {
+            width: 60px;
+            height: 60px;
+          }
         }
       }
       .text-container {
@@ -94,8 +126,12 @@
         letter-spacing: -0.03em;
         color: #000000;
         @include to(1440px) {
-          padding: 19px 20ox;
+          padding: 19px 20px;
           font-size: 18px;
+        }
+        @include to(992px) {
+          padding: 10px 20px;
+          font-size: 12px;
         }
       }
       .line-hover1 {

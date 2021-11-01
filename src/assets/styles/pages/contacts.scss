@@ -5,12 +5,29 @@
   @include to(1440px) {
     padding: 50px 132px 80px 132px;
   }
+  @include to(992px) {
+    padding: 30px 82px 80px 82px;
+    flex-direction: column-reverse;
+    position: relative;
+  }
   .address-content {
     width: 50%;
+    @include to(992px) {
+      width: 100%;
+      position: relative;
+    }
     &-item {
       margin-bottom: 50px;
       @include to(1440px) {
         margin-bottom: 40px;
+      }
+      @include to(992px) {
+        margin-bottom: 30px;
+        &:last-child {
+          position: absolute;
+          top: 0;
+          left: 430px;
+        }
       }
       &:last-child {
         margin-bottom: 0;
@@ -24,6 +41,9 @@
           font-size: 16px;
           margin-bottom: 10px;
         }
+        @include to(992px) {
+          font-size: 14px;
+        }
       }
       .description {
         text-decoration: none;
@@ -33,6 +53,9 @@
         transition: $transition-fuction;
         @include to(1440px) {
           font-size: 30px;
+        }
+        @include to(992px) {
+          font-size: 24px;
         }
         @include from(992px) {
           &:hover {
@@ -60,6 +83,9 @@
             @include to(1440px) {
               font-size: 30px;
             }
+            @include to(992px) {
+              font-size: 24px;
+            }
             @include from(992px) {
               &:hover {
                 color: $red;
@@ -72,10 +98,18 @@
   }
   .contacts-call {
     width: 50%;
+    @include to(992px) {
+      width: 100%;
+    }
     button {
       margin-bottom: 50px;
       @include to(1440px) {
         margin-bottom: 40px;
+      }
+      @include to(992px) {
+        position: absolute;
+        bottom: 0;
+        left: 82px;
       }
     }
     img {
@@ -84,6 +118,11 @@
       object-fit: cover;
       @include to(1440px) {
         height: 326px;
+      }
+      @include to(992px) {
+        height: 364px;
+        width: 100%;
+        margin-bottom: 30px;
       }
     }
   }

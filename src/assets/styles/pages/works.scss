@@ -8,6 +8,11 @@
     grid-template-rows: 20px auto 20px;
     grid-template-columns: 20px auto 20px;
   }
+  @include to(575px) {
+    margin-top: 51px;
+    grid-template-rows: 10px auto 10px;
+    grid-template-columns: 10px auto 10px;
+  }
 }
 .horizontal-red {
   grid-column: 2/3;
@@ -78,10 +83,21 @@
   @include to(992px) {
     padding: 50px 82px 65px 82px;
   }
+  @include to(575px) {
+    padding: 25px 40px 38px 40px;
+  }
   .breadcrumbs {
     display: flex;
     .breadcrumbs-item {
       margin-right: 10px;
+      @include to(575px) {
+        &:nth-child(3) {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 88px;
+        }
+      }
       a {
         font-size: 18px;
         line-height: 100%;
@@ -92,6 +108,7 @@
         @include to(992px) {
           font-size: 12px;
         }
+
         span::after {
           content: '';
           background: url(../images/heart.svg) no-repeat;
@@ -135,6 +152,9 @@
     @include to(992px) {
       font-size: 80px;
     }
+    @include to(575px) {
+      font-size: 34px;
+    }
     span {
       background: #000000;
       -webkit-background-clip: text;
@@ -155,6 +175,9 @@
       }
       @include to(992px) {
         transform: translate(4px, 4px);
+      }
+      @include to(575px) {
+        transform: translate(2px, 2px);
       }
     }
 
@@ -181,6 +204,9 @@
   @include to(992px) {
     padding: 18px 82px;
   }
+  @include to(575px) {
+    padding: 21px 40px;
+  }
   h4 {
     font-weight: 700;
     font-size: 36px;
@@ -192,6 +218,9 @@
     }
     @include to(992px) {
       font-size: 24px;
+    }
+    @include to(575px) {
+      font-size: 18px;
     }
   }
   .filter-form {
@@ -243,6 +272,10 @@
       height: 26px;
       width: 26px;
     }
+    @include to(575px) {
+      height: 30px;
+      width: 30px;
+    }
   }
   .container:hover {
     text-decoration: underline;
@@ -286,6 +319,9 @@
   @include to(992px) {
     padding: 30px 82px 40px 82px;
   }
+  @include to(575px) {
+    padding: 15px 40px 15px 40px;
+  }
   .works-item:nth-child(odd) {
     margin-right: 60px;
     width: calc(50% - 31px);
@@ -296,6 +332,11 @@
     @include to(992px) {
       margin-right: 20px;
       width: calc(50% - 11px);
+    }
+    @include to(575px) {
+      margin-right: 0;
+      margin-bottom: 15px;
+      width: 100%;
     }
   }
   .works-item {
@@ -308,6 +349,10 @@
     @include to(992px) {
       margin-bottom: 20px;
       width: calc(50% - 11px);
+    }
+    @include to(575px) {
+      margin-bottom: 15px;
+      width: 100%;
     }
   }
   .works-link {
@@ -349,6 +394,9 @@
         @include to(992px) {
           padding: 10px 20px;
         }
+        @include to(575px) {
+          padding: 8px 10px;
+        }
         h5 {
           font-size: 24px;
           line-height: 140%;
@@ -359,6 +407,9 @@
           }
           @include to(992px) {
             font-size: 12px;
+          }
+          @include to(575px) {
+            font-size: 14px;
           }
         }
       }
@@ -443,6 +494,9 @@
   @include to(992px) {
     padding: 60px 0 60px 82px;
   }
+  @include to(575px) {
+    padding: 30px 0 30px 40px;
+  }
   h5 {
     font-size: 24px;
     line-height: 150%;
@@ -458,6 +512,9 @@
   }
   .swiper-slide {
     width: 44.2%;
+    @include to(575px) {
+      width: 80%;
+    }
     &-content {
       border: 1px solid #414141;
       a {
@@ -478,6 +535,10 @@
         @include to(992px) {
           font-size: 12px;
           padding: 10px 20px;
+        }
+        @include to(575px) {
+          font-size: 14px;
+          padding: 8px 10px;
         }
       }
     }

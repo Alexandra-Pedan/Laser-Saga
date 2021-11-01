@@ -1,5 +1,5 @@
 const swiper = new Swiper('.myspecialities-swiper', {
-  slidesPerView: 3.3,
+  slidesPerView: 2.3,
   spaceBetween: 15,
   slidesPerView: 'auto',
   breakpoints: {
@@ -64,11 +64,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function() {
+  arrow.__proto__.hide = function () {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function() {
+  arrow.__proto__.show = function () {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };

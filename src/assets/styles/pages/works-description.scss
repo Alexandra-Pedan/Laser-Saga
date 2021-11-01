@@ -10,17 +10,27 @@
       font-size: 43px;
       width: 605px;
     }
+    @include to(575px) {
+      font-size: 25px;
+      text-transform: none;
+      width: calc(100% + 4px);
+    }
     &::after {
       transform: translate(5px, 5px);
       @include to(1440px) {
         transform: translate(2px, 4px);
+      }
+      @include to(575px) {
+        display: none;
       }
     }
   }
 }
 .about {
   width: 100%;
-  // padding: 50px 187px 100px 187px;
+  @include to(575px) {
+    position: relative;
+  }
   .about-info {
     display: flex;
     // justify-content: space-between;
@@ -30,6 +40,10 @@
     }
     @include to(992px) {
       padding: 30px 82px 20px 82px;
+    }
+    @include to(575px) {
+      padding: 15px 40px 15px 40px;
+      flex-direction: column-reverse;
     }
     .form-button {
       background: none;
@@ -45,6 +59,13 @@
         width: 136px;
         height: 40px;
       }
+      @include to(575px) {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: calc(100% - 80px);
+        height: 60px;
+      }
       .form-button-footer {
         position: relative;
         width: 270px;
@@ -56,6 +77,13 @@
         @include to(992px) {
           width: 136px;
           height: 40px;
+        }
+        @include to(575px) {
+          width: 100%;
+          height: 60px;
+          position: absolute;
+          bottom: 0;
+          left: 40px;
         }
       }
       .btn-text {
@@ -81,6 +109,12 @@
         }
         @include to(992px) {
           font-size: 10px;
+        }
+        @include to(575px) {
+          font-size: 12px;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -40%);
         }
       }
       .btn-submite {
@@ -129,6 +163,11 @@
         font-size: 16px;
         margin-left: 50px;
       }
+      @include to(575px) {
+        width: calc(100% + 2px);
+        font-size: 14px;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -141,6 +180,9 @@
   @include to(992px) {
     padding: 0 0 60px 266px;
   }
+  @include to(575px) {
+    padding: 0 0 110px 40px;
+  }
   .swiper-slide {
     width: 85.4%;
     height: 650px;
@@ -149,6 +191,9 @@
     }
     @include to(992px) {
       height: 254px;
+    }
+    @include to(575px) {
+      height: 170px;
     }
     &-content {
       border: 1px solid #000000;
@@ -179,16 +224,26 @@
   @include to(992px) {
     padding: 60px 0;
   }
+  @include to(575px) {
+    padding: 30px 0;
+  }
   .works-more-swiper {
-    padding-left: 187px;
+    padding-left: 657px;
     @include to(1440px) {
-      padding-left: 132px;
+      padding-left: 467px;
     }
     @include to(992px) {
-      padding-left: 82px;
+      padding-left: 266px;
+    }
+    @include to(575px) {
+      padding-left: 40px;
+      padding-top: 40px;
     }
     .swiper-slide {
-      width: 43.1%;
+      width: 60%;
+      @include to(575px) {
+        width: 85%;
+      }
       &-content {
         border: 1px solid #414141;
         a {
@@ -212,24 +267,24 @@
         }
       }
     }
-    .title-slide {
-      font-size: 24px;
-      line-height: 150%;
-      text-transform: uppercase;
-      color: #000000;
-      width: 24%;
-      border: none;
-      @include to(1440px) {
-        font-size: 18px;
-        width: 23%;
-      }
-      @include to(992px) {
-        font-size: 16px;
-        width: 24%;
-      }
-      .swiper-slide-content {
-        border: none;
-      }
-    }
+  }
+}
+.title-slide {
+  font-size: 24px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #000000;
+  padding-left: 187px;
+  position: absolute;
+  @include to(1440px) {
+    font-size: 18px;
+    padding-left: 132px;
+  }
+  @include to(992px) {
+    font-size: 16px;
+    padding-left: 82px;
+  }
+  @include to(575px) {
+    padding-left: 40px;
   }
 }

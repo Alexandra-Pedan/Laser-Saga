@@ -15,10 +15,10 @@ header {
     height: 60px;
     padding: 0 40px;
   }
-  // @include to(992px) {
-  //   height: 60px;
-  //   padding: 0 40px;
-  // }
+  @include to(575px) {
+    height: 50px;
+    padding: 0 20px;
+  }
   .icon--logo {
     width: 364px;
     height: 35px;
@@ -32,6 +32,17 @@ header {
     @include to(1440px) {
       width: 264px;
       height: 25px;
+    }
+    @include to(575px) {
+      display: none;
+    }
+  }
+  .icon--logo-mobile {
+    display: none;
+    @include to(575px) {
+      display: block;
+      width: 69px;
+      height: 28px;
     }
   }
   .header-nav {
@@ -55,6 +66,10 @@ header {
           width: 40px;
           height: 40px;
         }
+        @include to(575px) {
+          width: 35px;
+          height: 35px;
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -68,6 +83,10 @@ header {
             @include to(1440px) {
               width: 40px;
               height: 40px;
+            }
+            @include to(575px) {
+              width: 35px;
+              height: 35px;
             }
             &:hover {
               @include from(992px) {
@@ -98,6 +117,10 @@ header {
           @include to(1440px) {
             width: 40px;
             height: 40px;
+          }
+          @include to(575px) {
+            width: 35px;
+            height: 35px;
           }
         }
       }
@@ -182,6 +205,12 @@ header {
       span {
         margin-right: 10px;
         font-size: 20px;
+        @include to(992px) {
+          font-size: 16px;
+        }
+        @include to(575px) {
+          display: none;
+        }
       }
       svg {
         width: 50px;
@@ -192,6 +221,10 @@ header {
         @include to(1440px) {
           width: 40px;
           height: 40px;
+        }
+        @include to(575px) {
+          width: 35px;
+          height: 35px;
         }
       }
     }
@@ -209,5 +242,10 @@ header {
   display: none;
   @include to(992px) {
     display: block;
+  }
+  @include to(575px) {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
   }
 }

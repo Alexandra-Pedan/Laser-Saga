@@ -225,6 +225,10 @@
     width: 136px;
     height: 40px;
   }
+  @include to(575px) {
+    width: 100%;
+    height: 50px;
+  }
   .form-button-footer {
     position: relative;
     width: 270px;

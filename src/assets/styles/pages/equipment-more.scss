@@ -7,6 +7,9 @@
   @include to(1440px) {
     padding: 80px 132px;
   }
+  @include to(992px) {
+    padding: 30px 82px 60px 82px;
+  }
   .title {
     h4 {
       font-size: 24px;
@@ -17,12 +20,18 @@
       @include to(1440px) {
         font-size: 18px;
       }
+      @include to(992px) {
+        font-size: 12px;
+      }
     }
   }
   .description {
     width: 1076px;
     @include to(1440px) {
       width: 767px;
+    }
+    @include to(992px) {
+      width: 421px;
     }
     h4 {
       font-size: 48px;
@@ -33,6 +42,10 @@
         font-size: 34px;
         margin-bottom: 20px;
       }
+      @include to(992px) {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
     }
     p {
       font-size: 24px;
@@ -42,6 +55,9 @@
       @include to(1440px) {
         font-size: 18px;
       }
+      @include to(992px) {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -50,6 +66,10 @@
   @include to(1440px) {
     padding-bottom: 50px;
   }
+  @include to(992px) {
+    padding-bottom: 35px;
+    padding-top: 60px;
+  }
 }
 
 .equipment-more-img {
@@ -57,6 +77,9 @@
   height: 650px;
   @include to(1440px) {
     height: 460px;
+  }
+  @include to(992px) {
+    height: 260px;
   }
 }
 .equipment-details {
@@ -68,6 +91,9 @@
   @include to(1440px) {
     padding: 80px 132px;
   }
+  @include to(992px) {
+    padding: 60px 82px;
+  }
   .title {
     h4 {
       font-size: 24px;
@@ -78,6 +104,9 @@
       @include to(1440px) {
         font-size: 18px;
       }
+      @include to(992px) {
+        font-size: 12px;
+      }
     }
   }
   .description-container {
@@ -86,6 +115,9 @@
     flex-direction: column;
     @include to(1440px) {
       width: 767px;
+    }
+    @include to(992px) {
+      width: 421px;
     }
   }
   .description {
@@ -96,6 +128,10 @@
     justify-content: space-between;
     @include to(1440px) {
       padding: 40px 0;
+    }
+    @include to(992px) {
+      flex-direction: column-reverse;
+      padding: 30px 0 20px 0;
     }
     &:first-child {
       padding-top: 0;
@@ -108,6 +144,9 @@
       @include to(1440px) {
         width: 320px;
       }
+      @include to(992px) {
+        width: 100%;
+      }
       h4 {
         font-size: 48px;
         line-height: 130%;
@@ -117,6 +156,10 @@
           font-size: 34px;
           margin-bottom: 15px;
         }
+        @include to(992px) {
+          font-size: 22px;
+          margin-bottom: 10px;
+        }
       }
       p {
         font-size: 24px;
@@ -125,6 +168,9 @@
         color: #595959;
         @include to(1440px) {
           font-size: 18px;
+        }
+        @include to(992px) {
+          font-size: 12px;
         }
       }
     }
@@ -136,12 +182,19 @@
       @include to(1440px) {
         width: 320px;
       }
+      @include to(992px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
       .equipment-swiper {
         width: 450px;
         height: auto;
         overflow: hidden;
         @include to(1440px) {
           width: 320px;
+        }
+        @include to(992px) {
+          width: 100%;
         }
         .swiper-slide {
           text-align: center;
@@ -151,6 +204,10 @@
           width: 450px;
           height: 270px;
           background: #f3f3f6;
+          @include to(992px) {
+            width: 100%;
+            height: 250px;
+          }
         }
 
         .swiper-slide img {
@@ -209,6 +266,9 @@
           @include to(1440px) {
             font-size: 18px;
           }
+          @include to(992px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -221,6 +281,9 @@
   @include to(1440px) {
     margin: 0 132px 80px auto;
   }
+  @include to(992px) {
+    margin: 0 82px 60px auto;
+  }
 }
 
 .more-equipment {
@@ -230,6 +293,9 @@
   @include to(1440px) {
     padding: 80px 0 80px 132px;
   }
+  @include to(992px) {
+    padding: 60px 0 60px 82px;
+  }
   h5 {
     font-size: 24px;
     line-height: 150%;
@@ -238,6 +304,9 @@
     margin-bottom: 10px;
     @include to(1440px) {
       font-size: 18px;
+    }
+    @include to(992px) {
+      font-size: 12px;
     }
   }
   .swiper-slide {
@@ -254,6 +323,9 @@
           @include to(1440px) {
             height: 320px;
           }
+          @include to(992px) {
+            height: 177px;
+          }
         }
       }
       p {
@@ -267,6 +339,10 @@
           font-size: 18px;
           padding: 19px 20px;
         }
+        @include to(992px) {
+          font-size: 12px;
+          padding: 10px 20px;
+        }
       }
     }
   }
@@ -279,6 +355,9 @@
     border: none;
     @include to(1440px) {
       font-size: 18px;
+    }
+    @include to(992px) {
+      font-size: 12px;
     }
     .swiper-slide-content {
       border: none;
