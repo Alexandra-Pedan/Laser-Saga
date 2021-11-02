@@ -7,12 +7,14 @@ ScrollTrigger.scrollerProxy(document.body, {
       : locoScroll.scroll.instance.scroll.y;
   }, // we don't have to define a scrollLeft because we're only scrolling vertically.
   getBoundingClientRect() {
-    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    return {
+      top: 0, left: 0, width: window.innerWidth, height: window.innerHeight,
+    };
   },
   pinType: document.body.style.transform ? 'transform' : 'fixed',
 });
 const paralaxImages1 = document.querySelectorAll('[data-paralax1]');
-paralaxImages1.forEach(image => {
+paralaxImages1.forEach((image) => {
   const wrap = document.createElement('div');
   wrap.style.overflow = 'hidden';
   image.parentElement.prepend(wrap);
@@ -40,7 +42,7 @@ paralaxImages1.forEach(image => {
 });
 const spanBezier1 = 'power4.inOut';
 const spanEntries1 = document.querySelectorAll('[data-span-entry1]');
-spanEntries1.forEach(section => {
+spanEntries1.forEach((section) => {
   gsap.set(section, { overflow: 'hidden' });
   section.innerHTML = `
     <div>
@@ -60,6 +62,8 @@ spanEntries1.forEach(section => {
   tl.fromTo(
     section.querySelector('div'),
     { y: '50%', duration: 1, autoAlpha: 0 },
-    { y: 0, autoAlpha: 1, duration: 1, ease: spanBezier1 },
+    {
+      y: 0, autoAlpha: 1, duration: 1, ease: spanBezier1,
+    },
   );
 });

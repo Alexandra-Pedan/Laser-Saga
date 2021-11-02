@@ -13,7 +13,9 @@ ScrollTrigger.scrollerProxy(document.body, {
       : locoScroll.scroll.instance.scroll.y;
   }, // we don't have to define a scrollLeft because we're only scrolling vertically.
   getBoundingClientRect() {
-    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    return {
+      top: 0, left: 0, width: window.innerWidth, height: window.innerHeight,
+    };
   },
   // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
   pinType: document.body.style.transform ? 'transform' : 'fixed',
@@ -28,13 +30,15 @@ gsap.from('.main-img1', {
   y: 50,
 });
 
-var tl = gsap.timeline();
+const tl = gsap.timeline();
 tl.from('.inner1', { duration: 1, delay: 0.2, yPercent: 100 });
 tl.from('.inner2', { duration: 0.7, yPercent: 100 }, '<+=0.3');
-tl.from('.main-text', { opacity: 0, duration: 1, scale: 1.1, y: 50 }, '<');
+tl.from('.main-text', {
+  opacity: 0, duration: 1, scale: 1.1, y: 50,
+}, '<');
 
 const paralaxImages = document.querySelectorAll('[data-paralax]');
-paralaxImages.forEach(image => {
+paralaxImages.forEach((image) => {
   const wrap = document.createElement('div');
   wrap.style.overflow = 'hidden';
   image.parentElement.prepend(wrap);
@@ -64,7 +68,7 @@ paralaxImages.forEach(image => {
 });
 const spanBezier = 'power4.inOut';
 const spanEntries = document.querySelectorAll('[data-span-entry]');
-spanEntries.forEach(section => {
+spanEntries.forEach((section) => {
   // const pathes = section.querySelectorAll('path')
   gsap.set(section, { overflow: 'hidden' });
 
@@ -89,13 +93,15 @@ spanEntries.forEach(section => {
   tl.fromTo(
     section.querySelector('div'),
     { y: '50%', duration: 0.9, autoAlpha: 0 },
-    { y: 0, autoAlpha: 1, duration: 0.9, ease: spanBezier },
+    {
+      y: 0, autoAlpha: 1, duration: 0.9, ease: spanBezier,
+    },
   );
 });
 
 const scrollButtons = document.querySelectorAll('[data-scroll-to]');
-scrollButtons.forEach(container => {
-  container.addEventListener('click', e => {
+scrollButtons.forEach((container) => {
+  container.addEventListener('click', (e) => {
     const { scrollTo } = e.currentTarget.dataset;
     if (!scrollTo) return;
     const elem = document.querySelector(`[data-container="${scrollTo}"]`);

@@ -3,25 +3,43 @@
   padding: 100px 187px;
   border-bottom: 1px solid #000000;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   @include to(1440px) {
     padding: 80px 132px;
   }
   @include to(992px) {
     padding: 30px 82px 60px 82px;
   }
+  @include to(575px) {
+    padding: 15px 20px 30px 20px;
+    flex-direction: column;
+  }
   .title {
+    margin-right: 178px;
+    @include to(1440px) {
+      margin-right: 127px;
+    }
+    @include to(992px) {
+      margin-right: 71px;
+    }
     h4 {
       font-size: 24px;
       line-height: 150%;
       text-transform: uppercase;
       color: #000000;
       margin-bottom: 20px;
+      width: 293px;
       @include to(1440px) {
         font-size: 18px;
+        width: 208px;
       }
       @include to(992px) {
         font-size: 12px;
+        width: 113px;
+      }
+      @include to(575px) {
+        font-size: 16px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -32,6 +50,9 @@
     }
     @include to(992px) {
       width: 421px;
+    }
+    @include to(575px) {
+      width: 100%;
     }
     h4 {
       font-size: 48px;
@@ -46,6 +67,10 @@
         font-size: 22px;
         margin-bottom: 10px;
       }
+      @include to(575px) {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
     }
     p {
       font-size: 24px;
@@ -57,6 +82,9 @@
       }
       @include to(992px) {
         font-size: 12px;
+      }
+      @include to(575px) {
+        font-size: 16px;
       }
     }
   }
@@ -70,6 +98,13 @@
     padding-bottom: 35px;
     padding-top: 60px;
   }
+  @include to(575px) {
+    padding-bottom: 5px;
+    padding-top: 30px;
+    .title {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .equipment-more-img {
@@ -81,20 +116,38 @@
   @include to(992px) {
     height: 260px;
   }
+  @include to(575px) {
+    height: 122px;
+  }
 }
 .equipment-details {
   width: 100%;
   padding: 100px 187px;
   border-top: 1px solid $black;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   @include to(1440px) {
     padding: 80px 132px;
   }
   @include to(992px) {
     padding: 60px 82px;
   }
+  @include to(575px) {
+    padding: 30px 0;
+    flex-direction: column;
+    border-top: none;
+  }
   .title {
+    margin-right: 180px;
+    @include to(1440px) {
+      margin-right: 127px;
+    }
+    @include to(992px) {
+      margin-right: 71px;
+    }
+    @include to(575px) {
+      padding: 0 20px;
+    }
     h4 {
       font-size: 24px;
       line-height: 150%;
@@ -107,6 +160,10 @@
       @include to(992px) {
         font-size: 12px;
       }
+      @include to(575px) {
+        margin-bottom: 15px;
+        font-size: 24px;
+      }
     }
   }
   .description-container {
@@ -118,6 +175,10 @@
     }
     @include to(992px) {
       width: 421px;
+    }
+    @include to(575px) {
+      width: 100%;
+      margin-top: 20px;
     }
   }
   .description {
@@ -133,11 +194,17 @@
       flex-direction: column-reverse;
       padding: 30px 0 20px 0;
     }
+    @include to(575px) {
+      padding: 30px 20px;
+    }
     &:first-child {
       padding-top: 0;
     }
     &:last-child {
       border-bottom: none;
+      @include to(575px) {
+        border-bottom: 1px solid #000000;
+      }
     }
     .equipment-name {
       width: 450px;
@@ -159,6 +226,11 @@
         @include to(992px) {
           font-size: 22px;
           margin-bottom: 10px;
+          margin-top: 20px;
+        }
+        @include to(575px) {
+          font-size: 20px;
+          margin-bottom: 15px;
         }
       }
       p {
@@ -171,6 +243,9 @@
         }
         @include to(992px) {
           font-size: 12px;
+        }
+        @include to(575px) {
+          font-size: 16px;
         }
       }
     }
@@ -208,13 +283,16 @@
             width: 100%;
             height: 250px;
           }
+          @include to(575px) {
+            height: 170px;
+          }
         }
 
         .swiper-slide img {
           display: block;
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           transform: scale(0.6);
         }
       }
@@ -269,6 +347,9 @@
           @include to(992px) {
             font-size: 12px;
           }
+          @include to(575px) {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -284,18 +365,28 @@
   @include to(992px) {
     margin: 0 82px 60px auto;
   }
+  @include to(575px) {
+    margin: 0 20px 30px auto;
+    margin-left: -20px;
+    padding: 0 20px;
+  }
 }
 
 .more-equipment {
   width: 100%;
   padding: 100px 0 100px 187px;
   border-top: 1px solid #414141;
+  position: relative;
   @include to(1440px) {
     padding: 80px 0 80px 132px;
   }
   @include to(992px) {
     padding: 60px 0 60px 82px;
   }
+  @include to(575px) {
+    padding: 30px 20px 30px 20px;
+  }
+
   h5 {
     font-size: 24px;
     line-height: 150%;
@@ -309,8 +400,26 @@
       font-size: 12px;
     }
   }
+  .equipment-more-swiper {
+    padding-left: 470px;
+    @include to(1440px) {
+      padding-left: 335px;
+    }
+    @include to(992px) {
+      padding-left: 184px;
+    }
+    @include to(575px) {
+      padding-left: 0;
+      padding-top: 40px;
+    }
+  }
   .swiper-slide {
-    width: 43%;
+    // width: 43%;
+    width: 59%;
+    background: $white;
+    @include to(575px) {
+      width: 85%;
+    }
     &-content {
       border: 1px solid #414141;
       .swiper-link {
@@ -351,13 +460,18 @@
     line-height: 150%;
     text-transform: uppercase;
     color: #000000;
-    width: 24.5%;
+    // width: 24.5%;
     border: none;
+    position: absolute;
     @include to(1440px) {
       font-size: 18px;
     }
     @include to(992px) {
       font-size: 12px;
+    }
+    @include to(575px) {
+      font-size: 16px;
+      margin-top: 0;
     }
     .swiper-slide-content {
       border: none;

@@ -9,6 +9,11 @@
   @include to(992px) {
     padding: 30px 82px 50px 82px;
   }
+  @include to(575px) {
+    padding: 15px 20px 90px 20px;
+    flex-direction: column;
+    position: relative;
+  }
   .title {
     font-size: 24px;
     line-height: 150%;
@@ -21,6 +26,10 @@
     }
     @include to(992px) {
       font-size: 12px;
+    }
+    @include to(575px) {
+      font-size: 16px;
+      margin-bottom: 15px;
     }
   }
   .description {
@@ -37,6 +46,10 @@
         width: 421px;
         font-size: 22px;
       }
+      @include to(575px) {
+        width: 100%;
+        font-size: 20px;
+      }
     }
   }
 }
@@ -51,6 +64,9 @@
   @include to(992px) {
     padding: 0 82px 40px 82px;
   }
+  @include to(575px) {
+    padding: 0 20px 20px 20px;
+  }
   .equipment-item:nth-child(odd) {
     margin-right: 60px;
     @include to(1440px) {
@@ -58,6 +74,9 @@
     }
     @include to(992px) {
       margin-right: 20px;
+    }
+    @include to(575px) {
+      margin-right: 0;
     }
   }
   .equipment-item {
@@ -70,6 +89,13 @@
     @include to(992px) {
       margin-bottom: 20px;
       width: calc(50% - 11px);
+    }
+    @include to(575px) {
+      margin-bottom: 6px;
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     .equipment-link {
       text-decoration: none;
@@ -133,6 +159,10 @@
           padding: 10px 20px;
           font-size: 12px;
         }
+        @include to(575px) {
+          padding: 7px 10px;
+          font-size: 16px;
+        }
       }
       .line-hover1 {
         grid-column: 1;
@@ -184,5 +214,16 @@
 .form-button .btn-equipment {
   @include to(1440px) {
     left: 39% !important;
+  }
+  @include to(575px) {
+    left: 50% !important;
+    transform: translate(-50%, -40%) !important;
+  }
+}
+.form-btn-equipment {
+  @include to(575px) {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px) !important;
   }
 }

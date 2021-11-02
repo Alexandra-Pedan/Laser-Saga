@@ -37,7 +37,7 @@ function initMask(selector) {
   });
 }
 initMask(userPhone);
-callbackForm.addEventListener('submit', event => {
+callbackForm.addEventListener('submit', (event) => {
   event.preventDefault();
   let hasError = false;
   const requiredFieldsCount = event.target.querySelectorAll('[data-required="true"]').length;
@@ -53,7 +53,7 @@ callbackForm.addEventListener('submit', event => {
     event.target.querySelector('[type="submit"]').disabled = true;
     send(
       new FormData(event.target),
-      function() {
+      () => {
         $(userPhone).inputmask('remove');
         event.target.reset();
         initMask(userPhone);
@@ -84,13 +84,13 @@ function send(data, cb, form) {
     method: 'POST',
   })
     .then(res => res.json())
-    .then(res => {
+    .then((res) => {
       if (res.error === 0) {
         console.log(cb);
         cb();
       }
     })
-    .catch(err => {
+    .catch((err) => {
       form.querySelector('[type="submit"]').disabled = false;
     });
 }

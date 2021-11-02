@@ -143,4 +143,3 @@ sideSwitchArrow(
   document.querySelector('.btn-works'),
   document.querySelector('.works-swiper'),
 );
-/** СТрелка переключатель в зависимости от положения на єкране END */
