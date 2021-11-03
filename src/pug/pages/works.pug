@@ -34,7 +34,9 @@ block content
     .horizontal-red-bottom 
   
   .filter-container 
-    h4 Filter
+    .filter-title.js-filter
+      h4 Filter
+      +svg('arrow-filter')
     form(action="").filter-form
       
       label(for="all").container All

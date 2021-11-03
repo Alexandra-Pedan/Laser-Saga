@@ -40,3 +40,56 @@ menuClose.addEventListener('click', () => {
   menuContainer.classList.remove('active');
   document.querySelector('body').style.overflow = 'auto';
 });
+
+// Mobile phone menu start
+const btnCallMobile = document.querySelector('.js-mobile-call');
+const btnCloseMobile = document.querySelector('.js-mobile-close');
+const formMobile = document.querySelector('.form-header-call');
+const formCallMobile = document.querySelector('.js-mobile-form');
+formCallMobile.addEventListener('click', () => {
+  formCall.classList.add('sideform-active');
+  document.querySelector('body').style.overflow = 'hidden';
+});
+btnCallMobile.addEventListener('click', () => {
+  formMobile.classList.toggle('sideform-active');
+  document.querySelector('body').style.overflow = 'hidden';
+});
+
+btnCloseMobile.addEventListener('click', () => {
+  formMobile.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+});
+formMobile.addEventListener('click', onBackdropClick);
+function onBackdropClick(event) {
+  if (event.currentTarget === event.target) {
+    formMobile.classList.remove('sideform-active');
+    document.querySelector('body').style.overflow = 'auto';
+  }
+}
+// Mobile phone menu end
+
+const btnCallMenu = document.querySelectorAll('.js-call');
+const btnClose = document.querySelectorAll('.js-close');
+const formCall = document.querySelector('.sideform');
+const formGratitude = document.querySelector('.form-gratitude');
+const btnForm = document.querySelectorAll('form-button-js');
+
+btnCallMenu.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.toggle('sideform-active');
+  document.querySelector('body').style.overflow = 'hidden';
+}));
+
+btnClose.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+btnClose.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+btnForm.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));

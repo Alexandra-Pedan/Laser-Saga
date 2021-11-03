@@ -1,3 +1,14 @@
+const filter = document.querySelector('.js-filter');
+const filterForm = document.querySelector('.filter-form');
+const arrowFilter = document.querySelector('.icon--arrow-filter');
+
+filter.addEventListener('click', () => {
+  filterForm.classList.toggle('filter-open');
+  // if (filterForm.classList.contains('afilter-open')) {
+  //   arrowFilter.style.transform = 'rotate(90deg)';
+  // }
+});
+
 const swiper = new Swiper('.myworks-swiper', {
   slidesPerView: 2.5,
   spaceBetween: 15,
@@ -99,3 +110,14 @@ sideSwitchArrow(
   document.querySelector('.works-swiper'),
 );
 /** СТрелка переключатель в зависимости от положения на єкране END */
+
+// const filter = document.querySelector('.js-filter');
+// const filterForm = document.querySelector('.filter-form');
+// const arrowFilter = document.querySelector('.icon--arrow-filter');
+
+// filter.addEventListener('click', () => {
+//   filterForm.classList.toggle('filter-open');
+//   // if (filterForm.classList.contains('afilter-open')) {
+//   //   arrowFilter.style.transform = 'rotate(90deg)';
+//   // }
+// });

@@ -203,28 +203,55 @@
   }
   @include to(992px) {
     padding: 18px 82px;
+    flex-direction: column;
   }
   @include to(575px) {
-    padding: 21px 40px;
+    padding: 21px 20px;
   }
-  h4 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: #000000;
-    @include to(1440px) {
-      font-size: 30px;
-    }
-    @include to(992px) {
-      font-size: 24px;
-    }
+  .filter-title {
+    display: flex;
+    align-items: center;
+    // @include to(992px) {
+    //   margin-bottom: 30px;
+    // }
     @include to(575px) {
-      font-size: 18px;
+      justify-content: space-between;
+    }
+    .icon--arrow-filter {
+      width: 15px;
+      height: 9px;
+      margin-left: 10px;
+      display: none;
+      @include to(992px) {
+        display: block;
+      }
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #000000;
+      @include to(1440px) {
+        font-size: 30px;
+      }
+      @include to(992px) {
+        font-size: 24px;
+      }
+      @include to(575px) {
+        font-size: 18px;
+      }
     }
   }
   .filter-form {
     display: flex;
+    @include to(992px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 0;
+    }
+
     label {
       font-size: 18px;
       line-height: 140%;
@@ -238,6 +265,27 @@
         margin-right: 25px;
         padding: 5px 0 0 40px;
       }
+      @include to(992px) {
+        margin-bottom: 20px;
+        margin-left: 0;
+        opacity: 0;
+      }
+      @include to(575px) {
+        font-size: 16px;
+      }
+    }
+  }
+  .filter-open {
+    height: 135px;
+    margin-top: 30px;
+    @include to(575px) {
+      height: auto;
+    }
+    label {
+      opacity: 1;
+    }
+    .icon--arrow-filter {
+      transform: rotate(90deg);
     }
   }
   //Custom Checkbox start
@@ -320,7 +368,7 @@
     padding: 30px 82px 40px 82px;
   }
   @include to(575px) {
-    padding: 15px 40px 15px 40px;
+    padding: 15px 20px;
   }
   .works-item:nth-child(odd) {
     margin-right: 60px;
