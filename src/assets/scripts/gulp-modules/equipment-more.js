@@ -49,11 +49,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function () {
+  arrow.__proto__.hide = function() {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function () {
+  arrow.__proto__.show = function() {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };
@@ -96,7 +96,7 @@ function sideSwitchArrow(swiper, arrow, container) {
     switchGallerySlide(arrow.dataset.side);
   });
   if (document.documentElement.clientWidth < 576) {
-    container.removeEventListener('click', clickToChange);
+    // container.removeEventListener('click', clickToChange);
   }
   const navigate = {
     leftSide: () => {
@@ -120,3 +120,58 @@ sideSwitchArrow(
   document.querySelector('.equipment-more-swiper'),
 );
 /** СТрелка переключатель в зависимости от положения на єкране END */
+
+const equipDetailSwiper = new Swiper('[data-detail-equip-swiper]', {
+  navigation: {
+    nextEl: document.querySelector('.popup-button-next'),
+    prevEl: document.querySelector('.popup-button-prev'),
+  },
+});
+const equipPopup = document.querySelector('[data-equip-popup]');
+const equipClose = equipPopup.querySelector('.popup-close');
+const $miniSliders = document.querySelectorAll('[data-slider-content]');
+const allCount = equipPopup.querySelector('[data-all]');
+const currentCount = equipPopup.querySelector('[data-current]');
+equipDetailSwiper.on('update', swiper => {
+  allCount.textContent = swiper.slides.length;
+  currentCount.textContent = swiper.activeIndex + 1;
+  swiper.slideTo(0);
+});
+equipDetailSwiper.on('slideChange', swiper => {
+  currentCount.textContent = swiper.activeIndex + 1;
+  console.log(swiper);
+});
+
+// function getMiniSliderImages(slider) {
+//   const images = Array.from(slider.querySelectorAll('img')).map(el => el.src);
+//   const sliderContainer = document.querySelector('[data-detail-equip-swiper] .swiper-wrapper');
+//   sliderContainer.innerHTML = '';
+//   images.forEach(img => {
+//     sliderContainer.innerHTML += `
+//           <img class="swiper-slide" src="${img}"/>
+//       `;
+//   });
+//   equipDetailSwiper.update();
+// }
+function getMiniSliderImages(slider) {
+  const images = Array.from(slider.querySelectorAll('img')).map(el => el.src);
+  const sliderContainer = document.querySelector('[data-detail-equip-swiper] .swiper-wrapper');
+  sliderContainer.innerHTML = '';
+  images.forEach(img => {
+    sliderContainer.innerHTML += `
+          <div class="swiper-slide popup-img"><img src="${img}"/></div>
+      `;
+  });
+  equipDetailSwiper.update();
+}
+
+$miniSliders.forEach(el => {
+  el.addEventListener('click', () => {
+    gsap.to(equipPopup, { autoAlpha: 1, duration: 0.1 });
+    getMiniSliderImages(el);
+  });
+});
+
+equipClose.addEventListener('click', () => {
+  gsap.to(equipPopup, { autoAlpha: 0, duration: 0.2 });
+});

@@ -346,7 +346,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  @include to(1440px) {
+  @include to(992px) {
     flex-direction: column;
   }
   @include to(575px) {
@@ -420,6 +420,7 @@
       display: flex;
       justify-content: space-between;
       position: relative;
+      user-select: none;
       .swiper-button-next,
       .swiper-button-prev {
         z-index: 10;

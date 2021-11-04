@@ -64,11 +64,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function () {
+  arrow.__proto__.hide = function() {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function () {
+  arrow.__proto__.show = function() {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };
@@ -115,7 +115,7 @@ function sideSwitchArrow(swiper, arrow, container) {
     switchGallerySlide(arrow.dataset.side);
   });
   if (document.documentElement.clientWidth < 576) {
-    container.removeEventListener('click', clickToChange);
+    // container.removeEventListener('click', clickToChange);
   }
   const navigate = {
     leftSide: () => {

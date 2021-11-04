@@ -222,6 +222,7 @@
       height: 9px;
       margin-left: 10px;
       display: none;
+      transition: $transition-fuction;
       @include to(992px) {
         display: block;
       }
@@ -356,51 +357,62 @@
 }
 
 .works-list {
-  width: 100%;
+  --offset: 60px;
+  margin-left: calc((var(--offset) / 2) * -1);
+  margin-right: calc((var(--offset) / 2) * -1);
+  // width: 100%;
   padding: 50px 187px 40px 187px;
   background: #e5e5e5;
   display: flex;
   flex-wrap: wrap;
   @include to(1440px) {
     padding: 40px 132px 30px 132px;
+    --offset: 50px;
   }
   @include to(992px) {
     padding: 30px 82px 40px 82px;
+    --offset: 20px;
   }
   @include to(575px) {
     padding: 15px 20px;
   }
-  .works-item:nth-child(odd) {
-    margin-right: 60px;
-    width: calc(50% - 31px);
-    @include to(1440px) {
-      margin-right: 50px;
-      width: calc(50% - 26px);
-    }
-    @include to(992px) {
-      margin-right: 20px;
-      width: calc(50% - 11px);
-    }
+  .works-item {
+    @include customOffsetWidth(50, var(--offset));
     @include to(575px) {
-      margin-right: 0;
-      margin-bottom: 15px;
-      width: 100%;
+      @include customOffsetWidth(100, var(--offset));
     }
+  }
+  .works-item:nth-child(odd) {
+    // margin-right: 60px;
+    // width: calc(50% - 31px);
+    // @include to(1440px) {
+    //   margin-right: 50px;
+    //   width: calc(50% - 26px);
+    // }
+    // @include to(992px) {
+    //   margin-right: 20px;
+    //   width: calc(50% - 11px);
+    // }
+    // @include to(575px) {
+    //   margin-right: 0;
+    //   margin-bottom: 15px;
+    //   width: 100%;
+    // }
   }
   .works-item {
     margin-bottom: 60px;
-    width: calc(50% - 31px);
+    // width: calc(50% - 31px);
     @include to(1440px) {
       margin-bottom: 50px;
-      width: calc(50% - 26px);
+      // width: calc(50% - 26px);
     }
     @include to(992px) {
       margin-bottom: 20px;
-      width: calc(50% - 11px);
+      // width: calc(50% - 11px);
     }
     @include to(575px) {
       margin-bottom: 15px;
-      width: 100%;
+      // width: 100%;
     }
   }
   .works-link {

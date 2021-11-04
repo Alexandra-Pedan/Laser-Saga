@@ -4,9 +4,11 @@ const arrowFilter = document.querySelector('.icon--arrow-filter');
 
 filter.addEventListener('click', () => {
   filterForm.classList.toggle('filter-open');
-  // if (filterForm.classList.contains('afilter-open')) {
-  //   arrowFilter.style.transform = 'rotate(90deg)';
-  // }
+  if (filterForm.classList.contains('filter-open')) {
+    arrowFilter.style.transform = 'rotate(180deg)';
+  } else {
+    arrowFilter.style.transform = '';
+  }
 });
 
 const swiper = new Swiper('.myworks-swiper', {
@@ -35,11 +37,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function () {
+  arrow.__proto__.hide = function() {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function () {
+  arrow.__proto__.show = function() {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };
@@ -86,7 +88,7 @@ function sideSwitchArrow(swiper, arrow, container) {
     switchGallerySlide(arrow.dataset.side);
   });
   if (document.documentElement.clientWidth < 576) {
-    container.removeEventListener('click', clickToChange);
+    // container.removeEventListener('click', clickToChange);
   }
   const navigate = {
     leftSide: () => {
@@ -121,3 +123,18 @@ sideSwitchArrow(
 //   //   arrowFilter.style.transform = 'rotate(90deg)';
 //   // }
 // });
+const currentCategories = new Set();
+document.querySelectorAll('[data-filter]').forEach(filterItem => {
+  const key = filterItem.dataset.filter;
+  filterItem.addEventListener('change', () => {
+    filterItem.checked ? currentCategories.add(key) : currentCategories.delete(key);
+    filterByCategories();
+  });
+});
+
+function filterByCategories() {
+  document.querySelectorAll('[data-type]').forEach(el => {
+    const key = el.dataset.type;
+    el.style.display = currentCategories.has(key) || currentCategories.has('all') ? '' : 'none';
+  });
+}

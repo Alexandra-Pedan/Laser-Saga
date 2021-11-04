@@ -5,15 +5,17 @@ $(window).resize(() => {
 document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
 
 const buttonUp = document.querySelector('.js-btn-up');
+
 if (buttonUp) {
   buttonUp.addEventListener('click', () => {
     window.locoScroll.scrollTo(0);
   });
 }
+console.log(buttonUp);
 
 // form
 const btn = document.querySelector('.form-button-js');
-const btnForm = document.querySelectorAll('.button-js');
+// const btnForm = document.querySelectorAll('.button-js');
 const userPhone = document.querySelector('#callback-form-input-phone');
 const userPhoneForm = document.querySelector('.feedback-form [type="tel"]');
 const message = document.querySelector('.input-message');
@@ -37,7 +39,9 @@ function initMask(selector) {
   });
 }
 initMask(userPhone);
-callbackForm.addEventListener('submit', (event) => {
+
+const callbackForm = document.querySelector('[data-popup-form]');
+callbackForm.addEventListener('submit', event => {
   event.preventDefault();
   let hasError = false;
   const requiredFieldsCount = event.target.querySelectorAll('[data-required="true"]').length;
@@ -84,13 +88,13 @@ function send(data, cb, form) {
     method: 'POST',
   })
     .then(res => res.json())
-    .then((res) => {
+    .then(res => {
       if (res.error === 0) {
         console.log(cb);
         cb();
       }
     })
-    .catch((err) => {
+    .catch(err => {
       form.querySelector('[type="submit"]').disabled = false;
     });
 }

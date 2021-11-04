@@ -1,11 +1,23 @@
 .container-404 {
   background: $black;
   display: grid;
-  grid-template-rows: 30px auto 30px; /* 3 строки */
-  grid-template-columns: 30px auto 30px; /* 3 столбца */
+  grid-template-rows: 30px auto 30px;
+  grid-template-columns: 30px auto 30px;
   margin-top: 80px;
   width: 100vw;
   height: calc(100vh - 80px);
+  @include to(1440px) {
+    grid-template-rows: 20px auto 20px;
+    grid-template-columns: 20px auto 20px;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+  }
+  @include to(575px) {
+    grid-template-rows: 10px auto 10px;
+    grid-template-columns: 10px auto 10px;
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+  }
 
   .horizontal-black {
     grid-column: 2/3;
@@ -65,6 +77,11 @@
         &:last-child {
           margin-right: 0;
         }
+        .form-button {
+          @include to(575px) {
+            margin-bottom: 20px;
+          }
+        }
       }
     }
   }
@@ -83,6 +100,14 @@ figcaption {
   align-content: space-between;
   flex-wrap: wrap;
   height: 17em;
+  @include to(1440px) {
+    height: 14em;
+  }
+  @include to(575px) {
+    width: calc(100% - 80px);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 figcaption span:before,
 .sad-mac:before {
@@ -97,6 +122,11 @@ figcaption span {
   margin: 0 2em;
   width: 4em;
   height: 6em;
+  @include to(575px) {
+    margin: 0 2em;
+    width: 2em;
+    height: 3em;
+  }
 }
 .sr-text {
   overflow: hidden;
@@ -111,6 +141,10 @@ figcaption span {
   margin: 0 auto 7em auto;
   width: 23em;
   height: 30em;
+  @include to(1440px) {
+    width: 23em;
+    height: 27em;
+  }
 }
 .sad-mac:before {
   box-shadow: 1em 1em, 23em 1em, 4em 3em, 5em 3em, 6em 3em, 7em 3em, 8em 3em, 9em 3em, 10em 3em,

@@ -280,6 +280,7 @@
           width: 450px;
           height: 270px;
           background: #f3f3f6;
+          cursor: pointer;
           @include to(992px) {
             width: 100%;
             height: 250px;
@@ -342,6 +343,7 @@
           text-align: center;
           letter-spacing: -0.03em;
           color: #000000;
+          user-select: none;
           @include to(1440px) {
             font-size: 18px;
           }

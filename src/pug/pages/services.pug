@@ -1,6 +1,7 @@
 
 extends ../layout/main
 block variable
+  -var shows3d = 'lraser-shows'
 block meta
   title= 'Services'
   meta(name='description', content='')
@@ -310,7 +311,7 @@ block content
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 34 46)"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 30 42)"/>
         </svg>
-      .accordion-toggle#laser-shows Laser show
+      .accordion-toggle(id=shows3d) Laser show
       .accordion-panel
         .panel-container
           .description 

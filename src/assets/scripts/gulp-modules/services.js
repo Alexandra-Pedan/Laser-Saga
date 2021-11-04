@@ -6,7 +6,7 @@ $(() => {
   const $allItems = $('.accordion-item');
 
   // Event listeners
-  $accordion.on('click', '.accordion-toggle', function () {
+  $accordion.on('click', '.accordion-toggle', function() {
     // Toggle the current accordion panel and close others
     $allPanels.slideUp();
     $allItems.removeClass('is-open');
@@ -25,6 +25,7 @@ $(() => {
     }
     return false;
   });
+  openAccordeonOnAnchorLink();
 });
 
 function initSlider(container) {
@@ -79,11 +80,11 @@ function sideSwitchArrow(swiper, arrow, container) {
   arrow.style.cursor = 'none';
   arrow.style.position = 'fixed';
   arrow.style.zIndex = 10;
-  arrow.__proto__.hide = function () {
+  arrow.__proto__.hide = function() {
     this.style.opacity = '0';
     this.style.pointerEvents = 'none';
   };
-  arrow.__proto__.show = function () {
+  arrow.__proto__.show = function() {
     this.style.opacity = '1';
     // this.style.pointerEvents = 'auto';
   };
@@ -154,3 +155,18 @@ sideSwitchArrow(
   document.querySelector('.works-swiper'),
 );
 /** СТрелка переключатель в зависимости от положения на єкране END */
+
+// console.log(window.location.hash);
+// console.log(document.getElementById(window.location.hash.replace('#', '')));
+function openAccordeonOnAnchorLink() {
+  const hashId = window.location.hash.replace('#', '');
+  const elToOpen = document.getElementById(hashId);
+  if (elToOpen === null) return;
+  setTimeout(() => {
+    elToOpen.click();
+  }, 1000);
+  console.log(elToOpen, 'EL');
+}
+
+// window.addEventListener('load', openAccordeonOnAnchorLink);
+// openAccordeonOnAnchorLink();

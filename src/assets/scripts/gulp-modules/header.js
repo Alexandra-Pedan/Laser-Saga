@@ -1,13 +1,13 @@
-$(window).resize(() => {
-  window.locoScroll.update();
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-});
-document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-const header = document.querySelector('.header-js');
-console.log(header);
+// $(window).resize(() => {
+//   window.locoScroll.update();
+//   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+// });
+// document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+// const header = document.querySelector('.header-js');
+// console.log(header);
 
 function handleVisibilityOnScroll(elems = [], direction = 'up') {
-  elems.forEach((elem) => {
+  elems.forEach(elem => {
     switch (direction) {
       case 'down':
         elem[0].classList.add(elem[1]);
@@ -18,7 +18,7 @@ function handleVisibilityOnScroll(elems = [], direction = 'up') {
     }
   });
 }
-locoScroll.on('scroll', (position) => {
+locoScroll.on('scroll', position => {
   if (position.scroll.y > 50) {
     handleVisibilityOnScroll([[header, 'not-on-top']], 'down');
   } else {
@@ -76,20 +76,28 @@ const formCall = document.querySelector('.sideform');
 const formGratitude = document.querySelector('.form-gratitude');
 const btnForm = document.querySelectorAll('form-button-js');
 
-btnCallMenu.forEach(el => el.addEventListener('click', () => {
-  formCall.classList.toggle('sideform-active');
-  document.querySelector('body').style.overflow = 'hidden';
-}));
+btnCallMenu.forEach(el =>
+  el.addEventListener('click', () => {
+    formCall.classList.toggle('sideform-active');
+    document.querySelector('body').style.overflow = 'hidden';
+  }),
+);
 
-btnClose.forEach(el => el.addEventListener('click', () => {
-  formCall.classList.remove('sideform-active');
-  document.querySelector('body').style.overflow = 'auto';
-}));
-btnClose.forEach(el => el.addEventListener('click', () => {
-  formGratitude.classList.remove('sideform-active');
-  document.querySelector('body').style.overflow = 'auto';
-}));
-btnForm.forEach(el => el.addEventListener('click', () => {
-  formGratitude.classList.remove('sideform-active');
-  document.querySelector('body').style.overflow = 'auto';
-}));
+btnClose.forEach(el =>
+  el.addEventListener('click', () => {
+    formCall.classList.remove('sideform-active');
+    document.querySelector('body').style.overflow = 'auto';
+  }),
+);
+btnClose.forEach(el =>
+  el.addEventListener('click', () => {
+    formGratitude.classList.remove('sideform-active');
+    document.querySelector('body').style.overflow = 'auto';
+  }),
+);
+btnForm.forEach(el =>
+  el.addEventListener('click', () => {
+    formGratitude.classList.remove('sideform-active');
+    document.querySelector('body').style.overflow = 'auto';
+  }),
+);

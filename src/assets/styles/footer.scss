@@ -450,7 +450,8 @@ footer {
       @include to(575px) {
         position: inherit;
         padding-left: 0;
-        margin-top: 25px;
+        // margin-top: 25px;
+        margin-top: 50px;
       }
       .form-button-footer {
         width: 270px;
