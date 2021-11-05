@@ -2,7 +2,10 @@
   padding: 50px 187px 100px 187px;
   border-bottom: 1px solid #000000;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
+  @include to(1920px) {
+    justify-content: flex-start;
+  }
   @include to(1440px) {
     padding: 40px 132px 80px 132px;
   }
@@ -53,7 +56,11 @@
   }
   &-description {
     margin-left: 197px;
-    width: 1076px;
+    width: 1400px;
+    @include to(1920px) {
+      margin-left: 197px;
+      width: 1076px;
+    }
     @include to(1440px) {
       margin-left: 127px;
       width: 767px;
@@ -67,10 +74,14 @@
       width: 100%;
     }
     .video-container {
-      width: 1076px;
-      height: 650px;
+      width: 1400px;
+      height: 750px;
       background: $black;
       position: relative;
+      @include to(1920px) {
+        width: 1076px;
+        height: 650px;
+      }
       @include to(1440px) {
         width: 767px;
         height: 464px;
@@ -119,7 +130,10 @@
     padding: 30px 0 30px 20px;
   }
   &-swiper {
-    padding-left: 470px;
+    padding-left: 29vw;
+    @include to(1920px) {
+      padding-left: 470px;
+    }
     @include to(1440px) {
       padding-left: 335px;
     }
@@ -131,7 +145,7 @@
       padding-top: 42px;
     }
     .swiper-slide {
-      width: 40%;
+      width: 41%;
       @include to(575px) {
         width: 85%;
       }
@@ -205,7 +219,10 @@
   padding: 100px 187px;
   border-bottom: 1px solid #000000;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
+  @include to(1920px) {
+    justify-content: flex-start;
+  }
   @include to(1440px) {
     padding: 80px 132px;
   }
@@ -240,7 +257,11 @@
   }
   &-description {
     margin-left: 197px;
-    width: 1076px;
+    width: 1400px;
+    @include to(1920px) {
+      margin-left: 197px;
+      width: 1076px;
+    }
     @include to(1440px) {
       margin-left: 127px;
       width: 767px;
@@ -376,7 +397,10 @@
   padding: 100px 187px 60px 187px;
   border-bottom: 1px solid #000000;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
+  @include to(1920px) {
+    justify-content: flex-start;
+  }
   @include to(1440px) {
     padding: 80px 132px 54px 132px;
   }
@@ -411,7 +435,11 @@
   }
   &-description {
     margin-left: 197px;
-    width: 1076px;
+    width: 1400px;
+    @include to(1920px) {
+      margin-left: 197px;
+      width: 1076px;
+    }
     @include to(1440px) {
       margin-left: 127px;
       width: 767px;
@@ -484,7 +512,10 @@
   padding: 100px 187px 135px 187px;
   border-bottom: 1px solid #000000;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
+  @include to(1920px) {
+    justify-content: flex-start;
+  }
   @include to(1440px) {
     padding: 80px 132px 80px 132px;
   }
@@ -583,7 +614,11 @@
   }
   &-description {
     margin-left: 197px;
-    width: 1076px;
+    width: 1400px;
+    @include to(1920px) {
+      margin-left: 197px;
+      width: 1076px;
+    }
     @include to(1440px) {
       margin-left: 127px;
       width: 767px;
@@ -777,7 +812,10 @@
   }
   &-container {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
+    @include to(1920px) {
+      justify-content: flex-start;
+    }
     @include to(575px) {
       flex-direction: column;
     }
@@ -806,7 +844,11 @@
   }
   &-description {
     margin-left: 197px;
-    width: 1076px;
+    width: 1400px;
+    @include to(1920px) {
+      margin-left: 197px;
+      width: 1076px;
+    }
     @include to(1440px) {
       margin-left: 127px;
       width: 767px;
@@ -876,8 +918,11 @@
   grid-template-rows: 30px 360px 30px 7px 7px 7px;
   grid-template-columns: 30px auto 30px;
   margin-top: 60px;
-  width: 1076px;
+  width: 1400px;
   margin-left: auto;
+  @include to(1920px) {
+    width: 1076px;
+  }
   @include to(1440px) {
     // grid-template-rows: 20px auto 20px 7px 7px 7px;
     grid-template-rows: 20px 235px 20px 7px 7px 7px;
@@ -1126,7 +1171,8 @@
     &:hover {
       @include from(992px) {
         .hover-fill {
-          fill: $orange;
+          // fill: $orange;
+          fill: $red;
           transform: translate(0, 5px);
         }
         .hover-shadow {
@@ -1134,6 +1180,9 @@
         }
         .btn-text {
           transform: translate(-50%, -25%);
+          @include to(1440px) {
+            transform: translate(-35%, -25%);
+          }
         }
       }
     }

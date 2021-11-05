@@ -131,7 +131,7 @@
       &:hover {
         @include from(992px) {
           .hover-fill {
-            fill: $orange;
+            // fill: $orange;
             transform: translate(0, 5px);
           }
           .hover-shadow {

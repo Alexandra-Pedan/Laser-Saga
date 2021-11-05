@@ -7,7 +7,7 @@
 // console.log(header);
 
 function handleVisibilityOnScroll(elems = [], direction = 'up') {
-  elems.forEach(elem => {
+  elems.forEach((elem) => {
     switch (direction) {
       case 'down':
         elem[0].classList.add(elem[1]);
@@ -18,7 +18,7 @@ function handleVisibilityOnScroll(elems = [], direction = 'up') {
     }
   });
 }
-locoScroll.on('scroll', position => {
+locoScroll.on('scroll', (position) => {
   if (position.scroll.y > 50) {
     handleVisibilityOnScroll([[header, 'not-on-top']], 'down');
   } else {
@@ -76,28 +76,51 @@ const formCall = document.querySelector('.sideform');
 const formGratitude = document.querySelector('.form-gratitude');
 const btnForm = document.querySelectorAll('form-button-js');
 
-btnCallMenu.forEach(el =>
-  el.addEventListener('click', () => {
-    formCall.classList.toggle('sideform-active');
-    document.querySelector('body').style.overflow = 'hidden';
-  }),
-);
+btnCallMenu.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.toggle('sideform-active');
+  document.querySelector('body').style.overflow = 'hidden';
+}));
 
-btnClose.forEach(el =>
-  el.addEventListener('click', () => {
-    formCall.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
-btnClose.forEach(el =>
-  el.addEventListener('click', () => {
-    formGratitude.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
-btnForm.forEach(el =>
-  el.addEventListener('click', () => {
-    formGratitude.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
+btnClose.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+btnClose.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+btnForm.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+
+// // lazyImages
+// const lazyImages = document.querySelectorAll('img[data-src]:not(.swiper-lazy)');
+
+// lazyImages.forEach(imageArgs => {
+//   const image = imageArgs;
+//   image.style.opacity = 0;
+//   image.style.transition = ' .3s ease-out';
+//   image.addEventListener('load', () => {
+//     image.style.opacity = 1;
+//   });
+//   const target = image;
+//   const observer = new IntersectionObserver(
+//     entries => {
+//       /* Content excerpted, show below */
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           const lazyImage = entry.target;
+//           lazyImage.src = lazyImage.dataset.src;
+//           image.style.transition = '';
+//           observer.unobserve(target);
+//         }
+//       });
+//     },
+//     {
+//       rootMargin: '0px',
+//       threshold: 0.1,
+//     },
+//   );
+//   observer.observe(target);
+// });
