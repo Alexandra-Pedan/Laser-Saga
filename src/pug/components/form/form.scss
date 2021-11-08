@@ -350,7 +350,11 @@
     grid-template-rows: 10px auto 10px;
     grid-template-columns: 10px auto 10px;
   }
-
+  &.form-gratitude-active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+  }
   .horizontal-red {
     grid-column: 2/3;
     grid-row: 1;

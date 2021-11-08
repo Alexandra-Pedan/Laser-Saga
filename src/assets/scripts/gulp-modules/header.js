@@ -94,6 +94,136 @@ btnForm.forEach(el => el.addEventListener('click', () => {
   document.querySelector('body').style.overflow = 'auto';
 }));
 
+// form
+
+// const btnForm = document.querySelectorAll('.button-js');
+// const userPhoneForm = document.querySelector('.feedback-form [type="tel"]');
+
+function initMask(selector) {
+  console.log(selector);
+  $(selector).inputmask({
+    // mask: '+(38) 9{3} 9{3} 9{2} 9{2}',
+    /* prettier-ignore */
+    mask: '+\\97 (9{3}) 9{3} 9{2} 9{2}',
+    clearMaskOnLostFocus: false,
+    greedy: false,
+    tabThrough: true,
+    groupSeparator: ' ',
+    placeholder: '_',
+    definitions: {
+      '* ': {
+        validator: '_',
+      },
+    },
+  });
+}
+
+// footer form
+
+const callbackForm = document.querySelector('.contact-form');
+const requestReceivedModal = document.querySelector('.form-gratitude');
+const btn = document.querySelector('.form-button-js');
+const userPhone = document.querySelector('#callback-form-input-phone');
+const message = document.querySelector('.contact-form-input');
+
+initMask(userPhone);
+callbackForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  let hasError = false;
+  const requiredFieldsCount = event.target.querySelectorAll('[data-required="true"]').length;
+  let validFields = 0;
+  if (!userPhone.value.trim() || !isPhoneValid(userPhone.value)) {
+    message.classList.add('error-form-input');
+    hasError = true;
+  } else {
+    validFields++;
+    message.classList.remove('error-form-input');
+  }
+  if (validFields === requiredFieldsCount) {
+    event.target.querySelector('[type="submit"]').disabled = true;
+    send(
+      new FormData(event.target),
+      () => {
+        $(userPhone).inputmask('remove');
+        event.target.reset();
+        initMask(userPhone);
+        requestReceivedModal.classList.add('.form-gratitude-active');
+        setTimeout(() => {
+          requestReceivedModal.classList.remove('.form-gratitude-active');
+        }, 5000);
+        document.querySelector('body').style.overflow = 'auto';
+        event.target.querySelector('[type="submit"]').disabled = false;
+      },
+      event.target,
+    );
+  }
+  $(userPhone).inputmask('remove');
+  userPhone.value = '';
+  initMask(userPhone);
+});
+
+function isPhoneValid(phone = '') {
+  const regexp = /(\+97)?\(?\d{3}\)?[\s\.-]?(\d{7}|\d{3}[\s\.-]\d{2}[\s\.-]\d{2}|\d{3}-\d{4})/;
+  return phone.match(regexp);
+}
+
+// header form
+const callbackHeaderForm = document.querySelector('.sideform');
+// const requestReceivedModal = document.querySelector('.form-gratitude');
+const btnHeaderForm = document.querySelector('.header-form-button-js');
+const userPhoneHeader = document.querySelector('#callback-form-phone');
+// const message = document.querySelector('.contact-form-input');
+
+initMask(userPhoneHeader);
+callbackHeaderForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  let hasError1 = false;
+  const requiredFieldsCount = event.target.querySelectorAll('[data-required="true"]').length;
+  let validFields = 0;
+  if (!userPhoneForm.value.trim() || !isPhoneValid(userPhoneForm.value)) {
+    messagefeedback.classList.add('callback-form-input-error');
+    hasError1 = true;
+  } else {
+    validFields++;
+    messagefeedback.classList.remove('callback-form-input-error');
+  }
+  if (!userName.value.trim()) {
+    messageName.classList.add('callback-form-input-error');
+    hasError = true;
+  } else {
+    validFields++;
+    messageName.classList.remove('callback-form-input-error');
+  }
+
+  if (hasError1) {
+    initMask(userPhoneForm);
+    // return;
+  }
+  if (validFields === requiredFieldsCount) {
+    event.target.querySelector('[type="submit"]').disabled = true;
+    send(
+      new FormData(event.target),
+      () => {
+        $(userPhoneForm).inputmask('remove');
+        event.target.reset();
+        initMask(userPhoneForm);
+        console.log(feedbackForm);
+        if (feedbackForm.closest('.sideform-active') !== null) {
+          feedbackForm.closest('.sideform-active').classList.remove('sideform-active');
+        }
+
+        requestReceivedModal.classList.add('sideform-active');
+        setTimeout(() => {
+          requestReceivedModal.classList.remove('sideform-active');
+        }, 5000);
+        document.querySelector('body').style.overflow = 'auto';
+        event.target.querySelector('[type="submit"]').disabled = false;
+      },
+      event.target,
+    );
+  }
+});
+
 // // lazyImages
 // const lazyImages = document.querySelectorAll('img[data-src]:not(.swiper-lazy)');
 
