@@ -45,10 +45,11 @@ const forms = [
 
 // const formsTel = ['[data-home-contact]', '[data-form-homepage]'];
 // const formsTel = ['[data-form-homepage]'];
-const formsTel = [];
+const formsTel = ['[data-popup-form]'];
 
-formsTel.forEach((form) => {
+formsTel.forEach(form => {
   const $form = document.querySelector(form);
+  console.log($form);
   if ($form) {
     /* eslint-disable */
     new FormMonster({
@@ -57,9 +58,8 @@ formsTel.forEach((form) => {
         $form,
         showSuccessMessage: false,
         successAction: () => {
-          const backdrop = document.querySelector('.backdrop');
-          backdrop.classList.remove('is-hidden-form');
-          backdrop.classList.add('is-hidden-form');
+          const backdrop = document.querySelector('.form-gratitude');
+          gsap.to(backdrop, { autoAlpha: 1 });
         },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
@@ -83,6 +83,7 @@ formsTel.forEach((form) => {
             }),
             rule: yup
               .string()
+              // .nullable()
               .required(i18next.t('required'))
               .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
 
@@ -94,19 +95,19 @@ formsTel.forEach((form) => {
       },
     });
 
-    $form.querySelector('.js-mask-absolute').addEventListener(
-      'click',
-      () => {
-        $form.querySelector('[name="phone"]').focus();
-      },
-      false,
-    );
+    // $form.querySelector('.js-mask-absolute').addEventListener(
+    //   'click',
+    //   () => {
+    //     $form.querySelector('[name="phone"]').focus();
+    //   },
+    //   false,
+    // );
   }
 });
 
-const footerForm = [];
+const footerForm = ['[data-footer-form]'];
 // const footerForm = ['[data-form-footer]'];
-footerForm.forEach((form) => {
+footerForm.forEach(form => {
   const $form = document.querySelector(form);
   if ($form) {
     /* eslint-disable */
@@ -116,9 +117,8 @@ footerForm.forEach((form) => {
         $form,
         showSuccessMessage: false,
         successAction: () => {
-          const backdrop = document.querySelector('.backdrop');
-          backdrop.classList.remove('is-hidden-form');
-          backdrop.classList.add('is-hidden-form');
+          const backdrop = document.querySelector('.form-gratitude');
+          gsap.to(backdrop, { autoAlpha: 1 });
         },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
@@ -141,13 +141,13 @@ footerForm.forEach((form) => {
       },
     });
 
-    $form.querySelector('.js-mask-absolute').addEventListener(
-      'click',
-      () => {
-        $form.querySelector('[name="phone"]').focus();
-      },
-      false,
-    );
+    // $form.querySelector('.js-mask-absolute').addEventListener(
+    //   'click',
+    //   () => {
+    //     $form.querySelector('[name="phone"]').focus();
+    //   },
+    //   false,
+    // );
   }
 });
 
@@ -167,7 +167,7 @@ footerForm.forEach((form) => {
 // const formsWithRedirect = ['[data-popup-form]'];
 const formsWithRedirect = [];
 
-formsWithRedirect.forEach((form) => {
+formsWithRedirect.forEach(form => {
   const $form = document.querySelector(form);
   if ($form) {
     /* eslint-disable */
@@ -224,7 +224,7 @@ formsWithRedirect.forEach((form) => {
   }
 });
 
-forms.forEach((form) => {
+forms.forEach(form => {
   const $form = document.querySelector(form);
   if ($form) {
     /* eslint-disable */
@@ -296,7 +296,7 @@ forms.forEach((form) => {
       false,
     );
   }
-  document.querySelectorAll('[name="checkbox1"]').forEach((el) => {
+  document.querySelectorAll('[name="checkbox1"]').forEach(el => {
     el.value = false;
     el.addEventListener('change', () => {
       el.value = !!el.checked;
@@ -307,7 +307,7 @@ forms.forEach((form) => {
 
 function disableScroll() {
   const containersScroll = document.querySelectorAll('[data-disable-page-scroll]');
-  containersScroll.forEach((block) => {
+  containersScroll.forEach(block => {
     block.addEventListener('mouseenter', () => {
       window.locoScroll.stop();
     });
@@ -333,10 +333,10 @@ window.addEventListener('DOMContentLoaded', () => {
 const blockForUpdatingLocoScroll = document.querySelectorAll(
   '.page__content>*:last-child, .footer, .about-block-last, .about-block-last',
 );
-blockForUpdatingLocoScroll.forEach((image) => {
-  const callback = function (entries, observer) {
+blockForUpdatingLocoScroll.forEach(image => {
+  const callback = function(entries, observer) {
     /* Content excerpted, show below */
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         locoScroll.update();
         observer.unobserve(image);

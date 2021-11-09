@@ -71,13 +71,13 @@ footer
     //- <span class="sticker sticker-lg" data-text="CSS"><span>CSS</span></span>
 
 
-    form(action="#" class="contact-form")
-      .form-field
-        label(for="tel") 
+    form(action="#" class="contact-form" data-footer-form)
+      .form-field(data-field-input data-field-phone)
+        //- label(for="tel") 
         input(type="tel" data-required="true" name="tel" id="callback-form-input-phone" class="contact-form-input"  autocomplete="on" value="")
-        //- .input-message Телефон має містити 12 символів
+        .input-message(data-input-message)
 
-        button(class="form-button form-button-js" type="submit") 
+        button(class="form-button form-button-js" type="submit" data-btn-submit="data-btn-submit") 
           .form-button-footer
             span.btn-text Call me back
             <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">

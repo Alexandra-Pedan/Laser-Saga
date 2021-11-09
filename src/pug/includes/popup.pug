@@ -47,3 +47,54 @@
   .horizontal-red-bottom
 
 
+.popup-works(data-works-popup)
+  .horizontal-red 
+  .vertical-red-left
+  .popup-container(data-slider-popup)
+    .popup
+      span(data-current)
+      span(data-all)
+      +svg('close').popup-works-close
+      .swiper-container(data-works-popup-swiper)
+        .swiper-wrapper
+          .swiper-slide.popup-img
+            img(src="./assets/images/work-slider1.jpg", alt="")
+          .swiper-slide.video-swiper.popup-img
+            <iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href='https://player.vimeo.com/video/223829731?h=aff920558a'><span>▶</span></a>"src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          .swiper-slide.video-swiper.popup-img
+            <iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href='https://player.vimeo.com/video/223829731?h=aff920558a'><span>▶</span></a>"src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          .swiper-slide.video-swiper.popup-img
+            <iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href='https://player.vimeo.com/video/223829731?h=aff920558a'><span>▶</span></a>"src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          .swiper-slide.video-swiper.popup-img
+            <iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href='https://player.vimeo.com/video/223829731?h=aff920558a'><span>▶</span></a>"src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          .swiper-slide.video-swiper.popup-img
+            <iframe srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href='https://player.vimeo.com/video/223829731?h=aff920558a'><span>▶</span></a>"src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          
+      .popup-button-prev
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle r="29.5" transform="matrix(-1.19249e-08 1 1 1.19249e-08 30 30)" fill="white" stroke="black"/>
+          <rect x="28.5" y="25.5" width="3" height="3" transform="rotate(-180 28.5 25.5)" />
+          <rect x="25.5" y="28.5" width="3" height="3" transform="rotate(-180 25.5 28.5)" />
+          <rect x="22.5" y="31.5" width="3" height="3" transform="rotate(-180 22.5 31.5)" />
+          <rect class="arrow-fill" x="40" y="31" width="17.75" height="2" transform="rotate(-180 40 31)" fill="white" stroke="black"/>
+          <rect x="25.5" y="34.5" width="3" height="3" transform="rotate(-180 25.5 34.5)" />
+          <rect x="28.5" y="37.5" width="3" height="3" transform="rotate(-180 28.5 37.5)" />
+        </svg>
+
+
+      .popup-button-next
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="29.5" transform="rotate(90 30 30)" fill="white" stroke="black"/>
+          <rect width="3" height="3" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 31.5 25.5)" />
+          <rect width="3" height="3" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 34.5 28.5)" />
+          <rect width="3" height="3" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 37.5 31.5)" />
+          <rect class="arrow-fill" x="0.5" y="-0.5" width="17.75" height="2" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 19.5 30.5)" fill="white" stroke="black"/>
+          <rect width="3" height="3" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 34.5 34.5)" />
+          <rect width="3" height="3" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 31.5 37.5)" />
+        </svg>
+      //- .popup-pagination
+      //-   p 
+      //-     span(data-current) 
+      //-     span(data-all) 
+  .vertical-red-right
+  .horizontal-red-bottom 

@@ -211,6 +211,9 @@
     }
     .video-swiper {
       background: $black;
+      iframe {
+        pointer-events: none;
+      }
     }
   }
 }

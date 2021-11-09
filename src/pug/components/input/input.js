@@ -1,5 +1,5 @@
 import Cleave from 'cleave.js';
-
+import Inputmask from 'inputmask';
 export default class SexyInput {
   constructor(setting) {
     this.selected = false;
@@ -109,7 +109,7 @@ export default class SexyInput {
 
   listeners(input) {
     const self = this;
-
+    console.log(this, 'regherherhj');
     if (this.typeInput === 'phone') {
       /* eslint-disable */
       input.setAttribute('inputmode', 'tel');
@@ -117,26 +117,32 @@ export default class SexyInput {
       //   preferredCountries: ['ua'],
       //   autoPlaceholder: 'off',
       // });
-      let cleave = new Cleave(input, {
-        /* eslint-enable */
-        numericOnly: true,
-        prefix: '+380',
-        blocks: [4, 2, 3, 2, 2],
-        delimiters: [' ', ' ', ' ', ''],
-      });
+      var im = new Inputmask({
+        // mask: '+(38) 9{3} 9{3} 9{2} 9{2}',
+        /* prettier-ignore */
+        mask: '+\\97 (9{3}) 9{3} 9{2} 9{2}',
+        clearMaskOnLostFocus: false,
+        greedy: false,
+        tabThrough: true,
+        groupSeparator: ' ',
+        placeholder: '_',
+        definitions: {
+          '* ': {
+            validator: '_',
+          },
+        },
+      }).mask(input);
+      // let cleave = new Cleave(input, {
+      //   /* eslint-enable */
+      //   numericOnly: true,
+      //   prefix: '+97',
+      //   blocks: [3, 2, 3, 2, 2],
+      //   delimiters: [' ', ' ', ' ', ''],
+      // });
       if (input.closest('form') !== null) {
         input.closest('form').addEventListener('reset', () => {
           setTimeout(() => {
-            cleave.destroy();
-            cleave = new Cleave(input, {
-              /* eslint-enable */
-              numericOnly: true,
-              prefix: '+380',
-              blocks: [4, 2, 3, 2, 2],
-              delimiters: [' ', ' ', ' ', ''],
-            });
-            cleave.setRawValue('');
-            console.log('I reinit cleave');
+            Inputmask.setValue(input, '');
           }, 0);
         });
       }
