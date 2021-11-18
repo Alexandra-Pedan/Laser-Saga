@@ -915,7 +915,7 @@
 .container-call-back {
   display: grid;
   // grid-template-rows: 30px auto 30px 7px 7px 7px;
-  grid-template-rows: 30px 360px 30px 7px 7px 7px;
+  grid-template-rows: 30px 295px 30px 7px 7px 7px;
   grid-template-columns: 30px auto 30px;
   margin-top: 60px;
   width: 1400px;
@@ -990,7 +990,7 @@
       .call-back {
         display: flex;
         flex-direction: column;
-        width: 450px;
+        width: 455px;
         margin-right: 100px;
         @include to(1440px) {
           width: 400px;
