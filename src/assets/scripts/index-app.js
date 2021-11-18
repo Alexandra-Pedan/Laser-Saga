@@ -47,9 +47,8 @@ const forms = [
 // const formsTel = ['[data-form-homepage]'];
 const formsTel = ['[data-popup-form]'];
 
-formsTel.forEach(form => {
+formsTel.forEach((form) => {
   const $form = document.querySelector(form);
-  console.log($form);
   if ($form) {
     /* eslint-disable */
     new FormMonster({
@@ -107,7 +106,7 @@ formsTel.forEach(form => {
 
 const footerForm = ['[data-footer-form]'];
 // const footerForm = ['[data-form-footer]'];
-footerForm.forEach(form => {
+footerForm.forEach((form) => {
   const $form = document.querySelector(form);
   if ($form) {
     /* eslint-disable */
@@ -167,7 +166,7 @@ footerForm.forEach(form => {
 // const formsWithRedirect = ['[data-popup-form]'];
 const formsWithRedirect = [];
 
-formsWithRedirect.forEach(form => {
+formsWithRedirect.forEach((form) => {
   const $form = document.querySelector(form);
   if ($form) {
     /* eslint-disable */
@@ -224,7 +223,7 @@ formsWithRedirect.forEach(form => {
   }
 });
 
-forms.forEach(form => {
+forms.forEach((form) => {
   const $form = document.querySelector(form);
   if ($form) {
     /* eslint-disable */
@@ -296,7 +295,7 @@ forms.forEach(form => {
       false,
     );
   }
-  document.querySelectorAll('[name="checkbox1"]').forEach(el => {
+  document.querySelectorAll('[name="checkbox1"]').forEach((el) => {
     el.value = false;
     el.addEventListener('change', () => {
       el.value = !!el.checked;
@@ -307,7 +306,7 @@ forms.forEach(form => {
 
 function disableScroll() {
   const containersScroll = document.querySelectorAll('[data-disable-page-scroll]');
-  containersScroll.forEach(block => {
+  containersScroll.forEach((block) => {
     block.addEventListener('mouseenter', () => {
       window.locoScroll.stop();
     });
@@ -319,7 +318,6 @@ function disableScroll() {
 }
 
 window.addEventListener('load', () => {
-  console.log('load');
   window.locoScroll.update();
 });
 
@@ -330,24 +328,24 @@ window.addEventListener('DOMContentLoaded', () => {
   window.locoScroll.update();
 });
 
-const blockForUpdatingLocoScroll = document.querySelectorAll(
-  '.page__content>*:last-child, .footer, .about-block-last, .about-block-last',
-);
-blockForUpdatingLocoScroll.forEach(image => {
-  const callback = function(entries, observer) {
-    /* Content excerpted, show below */
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        locoScroll.update();
-        observer.unobserve(image);
-      }
-    });
-  };
-  // eslint-disable-next-line no-undef
-  const observer = new IntersectionObserver(callback, {
-    rootMargin: '0px',
-    threshold: 0.1,
-  });
-  const target = image;
-  observer.observe(target);
-});
+// const blockForUpdatingLocoScroll = document.querySelectorAll(
+//   '.page__content>*:last-child, .footer, .about-block-last, .about-block-last',
+// );
+// blockForUpdatingLocoScroll.forEach(image => {
+//   const callback = function(entries, observer) {
+//     /* Content excerpted, show below */
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         locoScroll.update();
+//         observer.unobserve(image);
+//       }
+//     });
+//   };
+//   // eslint-disable-next-line no-undef
+//   const observer = new IntersectionObserver(callback, {
+//     rootMargin: '0px',
+//     threshold: 0.1,
+//   });
+//   const target = image;
+//   observer.observe(target);
+// });

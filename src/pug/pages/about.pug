@@ -13,6 +13,7 @@ block scripts
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/sliderCursor.js')
   script(defer src='./assets/scripts/about.js')
   script(defer src='./assets/scripts/footer.js')
   script(defer src='./assets/scripts/no-scroll.js')
@@ -21,36 +22,36 @@ block scripts
   //- script(defer src='./assets/scripts/menu-animation.js')
 block content
   .container-page-header
-    .horizontal-red 
-    .vertical-red-left 
+    .horizontal-red
+    .vertical-red-left
     .page-header
       .noise
       .page-header-content
-        ul.breadcrumbs 
-          li.breadcrumbs-item 
-            a(href="main.html") 
+        ul.breadcrumbs
+          li.breadcrumbs-item
+            a(href="main.html")
               span Home
-          li.breadcrumbs-item.breadcrumbs-item-active 
-            a(href="works.html") 
+          li.breadcrumbs-item.breadcrumbs-item-active
+            a(href="works.html")
               span About
-        h2(data-text="About").page-title 
-          span About 
+        h2(data-text="About").page-title
+          span About
     .vertical-red-right
-    .horizontal-red-bottom 
-  
-  section.about-us 
+    .horizontal-red-bottom
+
+  section.about-us
     .about-us-title
       h4 Award winning shows
       p Art Inspired by Technology
-    .about-us-description 
-      .video-container 
-        <iframe src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> 
+    .about-us-description
+      .video-container
+        <iframe src="https://player.vimeo.com/video/223829731?h=aff920558a" style="position:absolute; top:0; left:0; width:100%; height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       p Creating magic and art by bringing together modern laser & multimedia show equipment creative minds and passion. All the best for your and our guests, friends, visitors, spectators and everyone who is going to witness The Show.
- 
+
   section.specialities
     .specialities-title What are our specialities?
-    .specialities-swiper.myspecialities-swiper 
-      .swiper-wrapper 
+    .specialities-swiper.myspecialities-swiper
+      .swiper-wrapper
         //- .swiper-slide.slide-title
         //-   .swiper-slide-content
         //-     p.specialities-title What are our specialities?
@@ -79,14 +80,14 @@ block content
             a(href="services.html#laser-light")
               img(src="./assets/images/work-slider3.jpg", alt="")
               p Laser Light Shows
-      +svg('cursor').btn-works
+      //+svg('cursor').btn-works
 
-  section.team 
+  section.team
     .team-title
       h4 Team
-    .team-description 
+    .team-description
       h5 Having all hardware equipment mounted on site is not enough for real emotions for the spectators:
-      p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators giving it a long lasting feel. Laser beams, laser projections, video projections, fire, pyrotechnics, light, fog, haze, water fountains, water screens gets combined together for our multimedia shows  Take your audience on a journey to a colourful, mythically world, where elements like fire, water, fog and light match perfectly and create a spectacle, which will amaze everyone. 
+      p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators giving it a long lasting feel. Laser beams, laser projections, video projections, fire, pyrotechnics, light, fog, haze, water fountains, water screens gets combined together for our multimedia shows  Take your audience on a journey to a colourful, mythically world, where elements like fire, water, fog and light match perfectly and create a spectacle, which will amaze everyone.
       .team-description-swiper
         .team-swiper.myteam-swiper
           .swiper-wrapper
@@ -108,7 +109,7 @@ block content
               <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
               <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
             </svg>
-       
+
           .swiper-button-next
             <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -119,30 +120,30 @@ block content
               <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
             </svg>
           .swiper-pagination
- 
-  section.clients 
+
+  section.clients
     .clients-title
       h4 Clients
-    .clients-description 
+    .clients-description
       ul.clients-description-list
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo_Lightconverse.jpg", alt="")
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo_Pangolin-Laser.jpg", alt="")
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo-Kvant-Laser.jpg", alt="")
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo-Kvant-Laser.jpg", alt="")
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo_Pangolin-Laser.jpg", alt="")
-        li.clients-description-item 
+        li.clients-description-item
           img(src="./assets/images/Logo_Lightconverse.jpg", alt="")
- 
-  section.reviews 
+
+  section.reviews
     .reviews-title
       h4 Reviews
       .reviews-plagination-container
@@ -155,7 +156,7 @@ block content
                 <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                 <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
               </svg>
-        
+
             .swiper-button-next
               <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -167,88 +168,88 @@ block content
               </svg>
             .reviews-swiper-pagination
 
-    .reviews-description 
+    .reviews-description
       .reviews-description-swiper
         .reviews-swiper.myreviews-swiper
           .swiper-wrapper
             .swiper-slide
-              .card-container 
+              .card-container
                 +svg('”')
                 h5 Dmytro Lubomirov
                 p Director KVANT company
-                .card-description 
+                .card-description
                   p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi
-                .social-container 
+                .social-container
                   a(href="#") Facebook
-              .card-container 
+              .card-container
                 +svg('”')
                 h5 Oleg Voloshko
                 p Director Smile Studio
-                .card-description 
-                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. 
-                .social-container 
+                .card-description
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.
+                .social-container
                   a(href="#") Instagram
             .swiper-slide
-              .card-container 
+              .card-container
                 +svg('”')
                 h5 Dmytro Lubomirov
                 p Director KVANT company
-                .card-description 
+                .card-description
                   p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi
-                .social-container 
+                .social-container
                   a(href="#") Facebook
-              .card-container 
+              .card-container
                 +svg('”')
                 h5 Oleg Voloshko
                 p Director Smile Studio
-                .card-description 
-                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. 
-                .social-container 
+                .card-description
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.
+                .social-container
                   a(href="#") Instagram
             .swiper-slide
-              .card-container 
+              .card-container
                 +svg('”')
                 h5 Dmytro Lubomirov
                 p Director KVANT company
-                .card-description 
+                .card-description
                   p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi
-                .social-container 
+                .social-container
                   a(href="#") Facebook
-              .card-container 
+              .card-container
                 +svg('”')
                 h5 Oleg Voloshko
                 p Director Smile Studio
-                .card-description 
-                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. 
-                .social-container 
+                .card-description
+                  p It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi. It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.  It is crucial to have harmonious and synchronization of all the equipment into a show that integrates all media in an artisctic, choreographed way creating that breathtaking act that will be witnessed live and shared around the social media by spectators givi.
+                .social-container
                   a(href="#") Instagram
-   
-  section.friends 
+
+  section.friends
     .friends-container
       .friends-title
         h4 Our friends
-      .friends-description 
+      .friends-description
         ul.friends-description-list
-          li.friends-description-item 
+          li.friends-description-item
             img(src="./assets/images/Logo_Lightconverse.jpg", alt="")
-          li.friends-description-item 
+          li.friends-description-item
             img(src="./assets/images/Logo_Pangolin-Laser.jpg", alt="")
-          li.friends-description-item 
+          li.friends-description-item
             img(src="./assets/images/Logo-Kvant-Laser.jpg", alt="")
-          li.friends-description-item 
+          li.friends-description-item
             img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
-          //- li.friends-description-item 
+          //- li.friends-description-item
           //-   img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
     .container-call-back
-      .horizontal-black 
-      .vertical-black-left 
+      .horizontal-black
+      .vertical-black-left
       .call-back-form
         .noise
         .call-back-form-content
           .call-back
             h4 Want to know more?
             p Mail us, call us, lets meet up and get you covered for the next show or just have a friendly chat.
-          button(class="form-button form-button-js js-call" type="submit") 
+          button(class="form-button form-button-js js-call" type="submit")
             .form-button-footer
               span.btn-text Call back
               <svg  class="btn-submite" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -265,14 +266,14 @@ block content
               </svg>
       .vertical-black-right
       .horizontal-black-bottom
-      .horizontal-black-bottom1 
-      .horizontal-black-bottom2 
-      .horizontal-black-bottom3  
+      .horizontal-black-bottom1
+      .horizontal-black-bottom2
+      .horizontal-black-bottom3
 
-  .more-works 
+  .more-works
     h5 more info
-    .works-swiper.myworks-swiper 
-        .swiper-wrapper 
+    .works-swiper.myworks-swiper
+        .swiper-wrapper
           .swiper-slide
             .swiper-slide-content
               a(href="about.html")
@@ -288,7 +289,7 @@ block content
               a(href="services.html")
                 img(src="./assets/images/work-slider3.jpg", alt="")
                 p Services
-        +svg('cursor').btn-works
+        //+svg('cursor').btn-works
 
 block header
   include ../includes/header.pug

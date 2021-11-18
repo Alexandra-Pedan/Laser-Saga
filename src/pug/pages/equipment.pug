@@ -12,31 +12,32 @@ block scripts
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/sliderCursor.js')
   script(defer src='./assets/scripts/equipment.js')
   script(defer src='./assets/scripts/footer.js')
 block content
   .container-page-header
-    .horizontal-red 
-    .vertical-red-left 
+    .horizontal-red
+    .vertical-red-left
     .page-header
       .noise
       .page-header-content
-        ul.breadcrumbs 
-          li.breadcrumbs-item 
-            a(href="main.html") 
+        ul.breadcrumbs
+          li.breadcrumbs-item
+            a(href="main.html")
               span Home
-          li.breadcrumbs-item.breadcrumbs-item-active 
-            a(href="equipment.html") 
+          li.breadcrumbs-item.breadcrumbs-item-active
+            a(href="equipment.html")
               span Equipment
-        h2(data-text="Equipment").page-title 
-          span Equipment   
+        h2(data-text="Equipment").page-title
+          span Equipment
     .vertical-red-right
-    .horizontal-red-bottom 
-  
-  .equipment-container 
+    .horizontal-red-bottom
+
+  .equipment-container
     .title
       h4 reliable equipment
-      button(class="form-button form-btn-equipment form-button-js" type="submit") 
+      button(class="form-button form-btn-equipment form-button-js" type="submit")
         .form-button-footer
           span.btn-text.btn-equipment Catalog PDF ↓
           <svg  class="btn-submite" viewBox="0 0 420 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,55 +52,55 @@ block content
             <rect x="-0.5" y="0.5" width="4" height="42" transform="matrix(-1 0 0 1 419 37.9995)" fill="#F1F1F1" stroke="black"/>
             <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
           </svg>
-    .description 
+    .description
       p At LSP we believe in quality, therefor we only use reliable equipment at our shows and installations. Laser Saga Productions is representing and supporting KVANT Laser, Pangolin Laser Systems, TechArt Laser in UAE and Middle East.
-   
+
   ul.equipment-list
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/Laser-bar.png", alt="") 
+    li.equipment-item
+      a(href="equipment-more.html").equipment-link
+        .img-container
+          img(src="./assets/images/Laser-bar.png", alt="")
           +svg('eye').hover-eye
-        .text-container 
+        .text-container
           p Laser bar
-        .line-hover1 
+        .line-hover1
         .line-hover2
         .line-hover3
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/Lasers.png", alt="") 
+    li.equipment-item
+      a(href="equipment-more.html").equipment-link
+        .img-container
+          img(src="./assets/images/Lasers.png", alt="")
           +svg('eye').hover-eye
-        .text-container 
+        .text-container
           p Laser bar
-        .line-hover1  
+        .line-hover1
         .line-hover2
         .line-hover3
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/SFX.png", alt="") 
+    li.equipment-item
+      a(href="equipment-more.html").equipment-link
+        .img-container
+          img(src="./assets/images/SFX.png", alt="")
           +svg('eye').hover-eye
-        .text-container 
+        .text-container
           p Laser bar
-        .line-hover1 
+        .line-hover1
         .line-hover2
         .line-hover3
-    li.equipment-item 
-      a(href="equipment-more.html").equipment-link 
-        .img-container 
-          img(src="./assets/images/Video.png", alt="") 
+    li.equipment-item
+      a(href="equipment-more.html").equipment-link
+        .img-container
+          img(src="./assets/images/Video.png", alt="")
           +svg('eye').hover-eye
-        .text-container 
+        .text-container
           p Laser bar
-        .line-hover1 
+        .line-hover1
         .line-hover2
         .line-hover3
 
   section.more-works
     h5 more info
-    .works-swiper.myworks-swiper 
-        .swiper-wrapper 
+    .works-swiper.myworks-swiper
+        .swiper-wrapper
           .swiper-slide
             .swiper-slide-content
               a(href="about.html")
@@ -115,7 +116,7 @@ block content
               a(href="services.html")
                 img(src="./assets/images/work-slider3.jpg", alt="")
                 p Services
-        +svg('cursor').btn-works
+        //+svg('cursor').btn-works
 
 block header
   include ../includes/header.pug

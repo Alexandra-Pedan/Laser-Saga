@@ -12,33 +12,34 @@ block scripts
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/sliderCursor.js')
   script(defer src='./assets/scripts/works.js')
   script(defer src='./assets/scripts/footer.js')
 block content
   .container-page-header
-    .horizontal-red 
-    .vertical-red-left 
+    .horizontal-red
+    .vertical-red-left
     .page-header
       .noise
       .page-header-content
-        ul.breadcrumbs 
-          li.breadcrumbs-item 
-            a(href="main.html") 
+        ul.breadcrumbs
+          li.breadcrumbs-item
+            a(href="main.html")
               span Home
-          li.breadcrumbs-item.breadcrumbs-item-active 
-            a(href="works.html") 
+          li.breadcrumbs-item.breadcrumbs-item-active
+            a(href="works.html")
               span Works
-        h2(data-text="Works").page-title 
+        h2(data-text="Works").page-title
           span Works
     .vertical-red-right
-    .horizontal-red-bottom 
-  
-  .filter-container 
+    .horizontal-red-bottom
+
+  .filter-container
     .filter-title.js-filter
       h4 Filter
       +svg('arrow-filter')
     form(action="").filter-form
-      
+
       label(for="all").container All
         input(type="checkbox" id="all" value="all" data-filter="all")
         span.checkmark
@@ -63,7 +64,7 @@ block content
         input(type="checkbox" id="video" value="video" data-filter="video")
         span.checkmark
 
-  ul.works-list 
+  ul.works-list
     li.works-item(data-type="l-show")
       a(href="works-description.html").works-link
         .works-item-picture
@@ -131,10 +132,10 @@ block content
           .description-hover2
           .description-hover3
 
-  .more-works 
+  .more-works
     h5 more info
-    .works-swiper.myworks-swiper 
-        .swiper-wrapper 
+    .works-swiper.myworks-swiper
+        .swiper-wrapper
           .swiper-slide
             .swiper-slide-content
               a(href="about.html")
@@ -150,7 +151,7 @@ block content
               a(href="services.html")
                 img(src="./assets/images/work-slider3.jpg", alt="")
                 p Services
-        +svg('cursor').btn-works
+  //+svg('cursor').btn-works
 
 
 block header

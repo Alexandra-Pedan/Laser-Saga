@@ -13,39 +13,40 @@ block scripts
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/header.js')
   script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/sliderCursor.js')
   script(defer src='./assets/scripts/services.js')
   script(defer src='./assets/scripts/footer.js')
 block content
   .container-page-header
-    .horizontal-red 
-    .vertical-red-left 
+    .horizontal-red
+    .vertical-red-left
     .page-header
       .noise
       .page-header-content
-        ul.breadcrumbs 
-          li.breadcrumbs-item 
-            a(href="https:main.html") 
+        ul.breadcrumbs
+          li.breadcrumbs-item
+            a(href="https:main.html")
               span Home
-          li.breadcrumbs-item.breadcrumbs-item-active 
-            a(href="https:services.html") 
+          li.breadcrumbs-item.breadcrumbs-item-active
+            a(href="https:services.html")
               span Services
-        h2(data-text="Services").page-title 
-          span Services 
+        h2(data-text="Services").page-title
+          span Services
     .vertical-red-right
-    .horizontal-red-bottom 
-  
-  .equipment 
+    .horizontal-red-bottom
+
+  .equipment
     .equipment-title
       h4 reliable equipment
-    .equipment-description 
+    .equipment-description
       p At LSP we believe in quality, therefor we only use reliable equipment at our shows and installations. Laser Saga Productions is representing and supporting KVANT Laser, Pangolin Laser Systems, TechArt Laser in UAE and Middle East.
-    .equipment-img 
+    .equipment-img
       img(src="./assets/images/equipment.jpg", alt="")
 
   .accordion.js-accordion
     .accordion-item.js-services
       .accordion-noise
-      .accordion-arrow 
+      .accordion-arrow
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 46 42)"/>
@@ -58,9 +59,9 @@ block content
       .accordion-toggle#3d-video 3D video mapping
       .accordion-panel
         .panel-container
-          .description 
-            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us. 
-            button(class="form-button form-button-js js-call" type="submit") 
+          .description
+            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us.
+            button(class="form-button form-button-js js-call" type="submit")
               .form-button-footer
                 span.btn-text Call back
                 <svg  class="btn-submite" viewBox="0 0 420 100"  preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +77,7 @@ block content
                   <path class="hover-fill" d="M407 77.5H407.5V77V74.5H411H411.5V74V71.5H415H415.5V71V68.5H419H419.5V68V12V11.5H419H415.5V8V7.5H415H411.5V5V4.5H411H407.5V1V0.5H407H13H12.5V1V5.5H9H8.5V6V9.5H5H4.5V10V12.5H1H0.5V13V68V68.5H1H4.5V71V71.5H5H8.5V74V74.5H9H12.5V77V77.5H13H407Z" stroke="black"/>
                 </svg>
           .description-swiper
-            .services-swiper.myservices-swiper.js-init-services 
+            .services-swiper.myservices-swiper.js-init-services
               .swiper-wrapper
                 .swiper-slide
                   img(src="./assets/images/work1.jpg", alt="")
@@ -96,7 +97,7 @@ block content
                   <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                   <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
                 </svg>
-          
+
               .swiper-button-next
                 <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -109,7 +110,7 @@ block content
               .swiper-pagination
     .accordion-item.js-services
       .accordion-noise
-      .accordion-arrow 
+      .accordion-arrow
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 46 42)"/>
@@ -122,9 +123,9 @@ block content
       .accordion-toggle Concerts
       .accordion-panel
         .panel-container
-          .description 
-            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us. 
-            button(class="form-button form-button-js js-call" type="submit") 
+          .description
+            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us.
+            button(class="form-button form-button-js js-call" type="submit")
               .form-button-footer
                 span.btn-text Call back
                 <svg  class="btn-submite" viewBox="0 0 420 100"  preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +161,7 @@ block content
                   <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                   <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
                 </svg>
-          
+
               .swiper-button-next
                 <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -170,10 +171,10 @@ block content
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 20 16)"/>
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 20)"/>
                 </svg>
-              .swiper-pagination   
+              .swiper-pagination
     .accordion-item.js-services
       .accordion-noise
-      .accordion-arrow 
+      .accordion-arrow
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 46 42)"/>
@@ -186,9 +187,9 @@ block content
       .accordion-toggle#laser-light Laser projection mapping
       .accordion-panel
         .panel-container
-          .description 
-            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us. 
-            button(class="form-button form-button-js js-call" type="submit") 
+          .description
+            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us.
+            button(class="form-button form-button-js js-call" type="submit")
               .form-button-footer
                 span.btn-text Call back
                 <svg  class="btn-submite" viewBox="0 0 420 100"  preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +225,7 @@ block content
                   <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                   <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
                 </svg>
-          
+
               .swiper-button-next
                 <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -237,7 +238,7 @@ block content
               .swiper-pagination
     .accordion-item.js-services
       .accordion-noise
-      .accordion-arrow 
+      .accordion-arrow
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 46 42)"/>
@@ -250,9 +251,9 @@ block content
       .accordion-toggle Production
       .accordion-panel
         .panel-container
-          .description 
-            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us. 
-            button(class="form-button form-button-js js-call" type="submit") 
+          .description
+            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us.
+            button(class="form-button form-button-js js-call" type="submit")
               .form-button-footer
                 span.btn-text Call back
                 <svg  class="btn-submite" viewBox="0 0 420 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,7 +289,7 @@ block content
                   <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                   <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
                 </svg>
-          
+
               .swiper-button-next
                 <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -301,7 +302,7 @@ block content
               .swiper-pagination
     .accordion-item.js-services
       .accordion-noise
-      .accordion-arrow 
+      .accordion-arrow
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 46 42)"/>
@@ -314,9 +315,9 @@ block content
       .accordion-toggle(id=shows3d) Laser show
       .accordion-panel
         .panel-container
-          .description 
-            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us. 
-            button(class="form-button form-button-js js-call" type="submit") 
+          .description
+            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us.
+            button(class="form-button form-button-js js-call" type="submit")
               .form-button-footer
                 span.btn-text Call back
                 <svg  class="btn-submite" viewBox="0 0 420 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,7 +353,7 @@ block content
                   <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                   <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
                 </svg>
-          
+
               .swiper-button-next
                 <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -365,7 +366,7 @@ block content
               .swiper-pagination
     .accordion-item.js-services
       .accordion-noise
-      .accordion-arrow 
+      .accordion-arrow
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 46 42)"/>
@@ -378,9 +379,9 @@ block content
       .accordion-toggle#3d-video 3D video mapping
       .accordion-panel
         .panel-container
-          .description 
-            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us. 
-            button(class="form-button form-button-js js-call" type="submit") 
+          .description
+            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us.
+            button(class="form-button form-button-js js-call" type="submit")
               .form-button-footer
                 span.btn-text Call back
                 <svg  class="btn-submite" viewBox="0 0 420 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -416,7 +417,7 @@ block content
                   <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                   <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
                 </svg>
-          
+
               .swiper-button-next
                 <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -429,7 +430,7 @@ block content
               .swiper-pagination
     .accordion-item.js-services
       .accordion-noise
-      .accordion-arrow 
+      .accordion-arrow
         <svg  viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="40" cy="40" r="39.5" transform="rotate(-180 40 40)" stroke="black"/>
           <rect width="4" height="4" transform="matrix(-4.37114e-08 1 1 4.37114e-08 46 42)"/>
@@ -442,9 +443,9 @@ block content
       .accordion-toggle#multimedia-show Multimedia show
       .accordion-panel
         .panel-container
-          .description 
-            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us. 
-            button(class="form-button form-button-js js-call" type="submit") 
+          .description
+            p A team and network of international artists, developers, programmers, engineers, technicians, award winners and achievers, who loves creating emotional shows with passion. Sleepless nights of programming, weekend field tests, terabytes of content, liters of coffee all that can be said about us.
+            button(class="form-button form-button-js js-call" type="submit")
               .form-button-footer
                 span.btn-text Call back
                 <svg  class="btn-submite" viewBox="0 0 420 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -480,7 +481,7 @@ block content
                   <rect x="8" y="16" width="4" height="4" transform="rotate(-180 8 16)" "/>
                   <rect x="12" y="20" width="4" height="4" transform="rotate(-180 12 20)" "/>
                 </svg>
-          
+
               .swiper-button-next
                 <svg viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="4" height="4" transform="matrix(1 -5.56363e-08 -5.56363e-08 -1 16 4)"/>
@@ -494,8 +495,8 @@ block content
 
   section.more-works
     h5 more info
-    .works-swiper.myworks-swiper 
-        .swiper-wrapper 
+    .works-swiper.myworks-swiper
+        .swiper-wrapper
           .swiper-slide
             .swiper-slide-content
               a(href="about.html")
@@ -511,7 +512,7 @@ block content
               a(href="services.html")
                 img(src="./assets/images/work-slider3.jpg", alt="")
                 p Services
-        +svg('cursor').btn-works
+        //+svg('cursor').btn-works
 
 block header
   include ../includes/header.pug
