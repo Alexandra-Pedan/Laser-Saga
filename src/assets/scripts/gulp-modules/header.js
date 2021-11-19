@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function handleVisibilityOnScroll(elems = [], direction = 'up') {
-  elems.forEach(elem => {
+  elems.forEach((elem) => {
     switch (direction) {
       case 'down':
         elem[0].classList.add(elem[1]);
@@ -26,7 +26,7 @@ function handleVisibilityOnScroll(elems = [], direction = 'up') {
     }
   });
 }
-locoScroll.on('scroll', position => {
+locoScroll.on('scroll', (position) => {
   if (position.scroll.y > 50) {
     handleVisibilityOnScroll([[header, 'not-on-top']], 'down');
   } else {
@@ -87,34 +87,33 @@ const btnCallMenu = document.querySelectorAll('.js-call');
 const btnClose = document.querySelectorAll('.js-close');
 const formCall = document.querySelector('.sideform');
 const formGratitude = document.querySelector('.form-gratitude');
-const btnForm = document.querySelectorAll('form-button-js');
+const btnForm = document.querySelectorAll('.form-button-js');
+const btnCloseGrat = document.querySelectorAll('.js-close-grat');
 
-btnCallMenu.forEach(el =>
-  el.addEventListener('click', () => {
-    formCall.classList.toggle('sideform-active');
-    document.querySelector('body').style.overflow = 'hidden';
-  }),
-);
+btnCallMenu.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.toggle('sideform-active');
+  document.querySelector('body').style.overflow = 'hidden';
+}));
 
-btnClose.forEach(el =>
-  el.addEventListener('click', () => {
-    formCall.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-    formGratitude.classList.remove('sideform-active');
-  }),
-);
-btnClose.forEach(el =>
-  el.addEventListener('click', () => {
-    formGratitude.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
-btnForm.forEach(el =>
-  el.addEventListener('click', () => {
-    formGratitude.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
+btnClose.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+// btnClose.forEach(el =>
+//   el.addEventListener('click', () => {
+//     formGratitude.classList.remove('sideform-active');
+//     document.querySelector('body').style.overflow = 'auto';
+//   }),
+// );
+btnCloseGrat.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+  gsap.to(formGratitude, { autoAlpha: 0 });
+}));
+btnForm.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
 
 // form
 
@@ -146,7 +145,7 @@ const userPhone = document.querySelector('#callback-form-input-phone');
 const message = document.querySelector('.contact-form-input');
 
 // initMask(userPhone);
-callbackForm.addEventListener('submit', event => {
+callbackForm.addEventListener('submit', (event) => {
   return;
   event.preventDefault();
   let hasError = false;
@@ -199,7 +198,7 @@ const userName = document.querySelector('#callback-form-input-name');
 const userEmail = document.querySelector('#callback-form-email');
 
 // initMask(userPhoneHeader);
-callbackHeaderForm.addEventListener('submit', event => {
+callbackHeaderForm.addEventListener('submit', (event) => {
   return;
   event.preventDefault();
   let hasError1 = false;
@@ -303,7 +302,7 @@ ScrollTrigger.scrollerProxy(document.body, {
 ScrollTrigger.refresh();
 
 const videosA = document.querySelectorAll('video');
-videosA.forEach(video => {
+videosA.forEach((video) => {
   ScrollTrigger.create({
     trigger: video,
     onEnter: (el, some) => {
@@ -323,7 +322,7 @@ videosA.forEach(video => {
 
 const noiseEl1 = document.querySelector('.page-header .noise');
 const noisesEls = document.querySelectorAll('.noise');
-noisesEls.forEach(noiseEl => {
+noisesEls.forEach((noiseEl) => {
   ScrollTrigger.create({
     trigger: noiseEl,
     onEnter: (el, some) => {

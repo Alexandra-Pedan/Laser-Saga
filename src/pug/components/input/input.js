@@ -1,5 +1,6 @@
 import Cleave from 'cleave.js';
 import Inputmask from 'inputmask';
+
 export default class SexyInput {
   constructor(setting) {
     this.selected = false;

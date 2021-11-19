@@ -90,6 +90,9 @@
     "locomotive-scroll": "^4.0.6",
     "make": "^0.8.1",
     "on-change": "^2.2.1",
+    "imagesloaded": "^4.1.4",
+    "popmotion": "^8.6.4",
+    "three": "^0.119.1",
     "yup": "^0.32.8"
   }
 }

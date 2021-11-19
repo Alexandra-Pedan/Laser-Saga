@@ -12,15 +12,13 @@ function initSliderCursor(cursor, swiper, container) {
   });
   container.addEventListener('mouseenter', () => {
     showCursor(cursor);
-    container.style.cursor = 'none';
   });
   container.addEventListener('mouseleave', () => {
     hideCursor(cursor);
-    container.style.cursor = '';
   });
 
   container.addEventListener('click', (event) => {
-    if (centerScreenPos < event.target.clientX) {
+    if (centerScreenPos > event.clientX) {
       swiper.slidePrev();
       return;
     }
