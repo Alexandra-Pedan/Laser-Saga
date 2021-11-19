@@ -6,6 +6,14 @@
 // const header = document.querySelector('.header-js');
 // console.log(header);
 
+document.addEventListener('DOMContentLoaded', () => {
+  formCall.style.display = '';
+  popup.style.display = '';
+  formGratitude.style.display = '';
+  formMobile.style.display = '';
+  popupWorks.style.display = '';
+});
+
 function handleVisibilityOnScroll(elems = [], direction = 'up') {
   elems.forEach(elem => {
     switch (direction) {
@@ -26,6 +34,8 @@ locoScroll.on('scroll', position => {
   }
 });
 
+const popup = document.querySelector('.popup-equipment');
+const popupWorks = document.querySelector('.popup-works');
 const menuContainer = document.querySelector('.js-menu-container');
 const menuClose = document.querySelector('.js-menu-close');
 const menuOpen = document.querySelector('.js-menu-open');
@@ -33,12 +43,15 @@ menuOpen.addEventListener('click', () => {
   if (menuContainer.classList.contains('active')) return;
   document.querySelector('body').style.overflow = 'hidden';
   menuContainer.classList.add('active');
+  menuContainer.querySelector('.noise').classList.add('noise1');
+  menuContainer.querySelector('.noise1').classList.add('noise');
 });
 
 menuClose.addEventListener('click', () => {
   if (!menuContainer.classList.contains('active')) return;
   menuContainer.classList.remove('active');
   document.querySelector('body').style.overflow = 'auto';
+  menuContainer.querySelector('.noise').classList.remove('noise');
 });
 
 // Mobile phone menu start
@@ -87,6 +100,7 @@ btnClose.forEach(el =>
   el.addEventListener('click', () => {
     formCall.classList.remove('sideform-active');
     document.querySelector('body').style.overflow = 'auto';
+    formGratitude.classList.remove('sideform-active');
   }),
 );
 btnClose.forEach(el =>
@@ -264,3 +278,65 @@ callbackHeaderForm.addEventListener('submit', event => {
 //   );
 //   observer.observe(target);
 // });
+
+locoScroll.on('scroll', (position, limit, speed, direction) => {
+  ScrollTrigger.update;
+});
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.scrollerProxy(document.body, {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+  pinType: document.body.style.transform ? 'transform' : 'fixed',
+});
+ScrollTrigger.refresh();
+
+const videosA = document.querySelectorAll('video');
+videosA.forEach(video => {
+  ScrollTrigger.create({
+    trigger: video,
+    onEnter: (el, some) => {
+      video.play();
+    },
+    onEnterBack: (el, some) => {
+      video.play();
+    },
+    onLeave: (el, some) => {
+      video.pause();
+    },
+    onLeaveBack: (el, some) => {
+      video.pause();
+    },
+  });
+});
+
+const noiseEl1 = document.querySelector('.page-header .noise');
+const noisesEls = document.querySelectorAll('.noise');
+noisesEls.forEach(noiseEl => {
+  ScrollTrigger.create({
+    trigger: noiseEl,
+    onEnter: (el, some) => {
+      noiseEl.classList.add('noise');
+    },
+    onEnterBack: (el, some) => {
+      noiseEl.classList.add('noise');
+    },
+    onLeave: (el, some) => {
+      noiseEl.classList.remove('noise');
+    },
+    onLeaveBack: (el, some) => {
+      noiseEl.classList.remove('noise');
+    },
+  });
+});
