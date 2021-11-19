@@ -186,6 +186,11 @@ export default function initCustomSlider(container) {
       method: 'POST',
       data: { action: 'viewSlider' },
     }).done((response) => {
+      if (!response) {
+        container.parser.style.display = 'none';
+        console.error('нет данных картинок');
+        return;
+      }
       const conf = {
         parent: container,
         images: JSON.parse(response),

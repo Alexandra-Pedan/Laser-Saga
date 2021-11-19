@@ -7,7 +7,7 @@
 // console.log(header);
 
 function handleVisibilityOnScroll(elems = [], direction = 'up') {
-  elems.forEach(elem => {
+  elems.forEach((elem) => {
     switch (direction) {
       case 'down':
         elem[0].classList.add(elem[1]);
@@ -18,7 +18,7 @@ function handleVisibilityOnScroll(elems = [], direction = 'up') {
     }
   });
 }
-locoScroll.on('scroll', position => {
+locoScroll.on('scroll', (position) => {
   if (position.scroll.y > 50) {
     handleVisibilityOnScroll([[header, 'not-on-top']], 'down');
   } else {
@@ -76,31 +76,23 @@ const formCall = document.querySelector('.sideform');
 const formGratitude = document.querySelector('.form-gratitude');
 const btnForm = document.querySelectorAll('form-button-js');
 
-btnCallMenu.forEach(el =>
-  el.addEventListener('click', () => {
-    formCall.classList.toggle('sideform-active');
-    document.querySelector('body').style.overflow = 'hidden';
-  }),
-);
+btnCallMenu.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.toggle('sideform-active');
+  document.querySelector('body').style.overflow = 'hidden';
+}));
 
-btnClose.forEach(el =>
-  el.addEventListener('click', () => {
-    formCall.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
-btnClose.forEach(el =>
-  el.addEventListener('click', () => {
-    formGratitude.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
-btnForm.forEach(el =>
-  el.addEventListener('click', () => {
-    formGratitude.classList.remove('sideform-active');
-    document.querySelector('body').style.overflow = 'auto';
-  }),
-);
+btnClose.forEach(el => el.addEventListener('click', () => {
+  formCall.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+btnClose.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
+btnForm.forEach(el => el.addEventListener('click', () => {
+  formGratitude.classList.remove('sideform-active');
+  document.querySelector('body').style.overflow = 'auto';
+}));
 
 // form
 
@@ -132,7 +124,7 @@ const userPhone = document.querySelector('#callback-form-input-phone');
 const message = document.querySelector('.contact-form-input');
 
 // initMask(userPhone);
-callbackForm.addEventListener('submit', event => {
+callbackForm.addEventListener('submit', (event) => {
   return;
   event.preventDefault();
   let hasError = false;
@@ -185,7 +177,7 @@ const userName = document.querySelector('#callback-form-input-name');
 const userEmail = document.querySelector('#callback-form-email');
 
 // initMask(userPhoneHeader);
-callbackHeaderForm.addEventListener('submit', event => {
+callbackHeaderForm.addEventListener('submit', (event) => {
   return;
   event.preventDefault();
   let hasError1 = false;
