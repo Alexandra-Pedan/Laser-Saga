@@ -6,6 +6,7 @@ import axios from 'axios';
 import * as yup from 'yup';
 import FormMonster from '../../pug/components/form/form';
 import SexyInput from '../../pug/components/input/input';
+import InitCustomSlider from './gulp-modules/sliderThree';
 
 /** ******************************* */
 /*
@@ -16,6 +17,7 @@ global.ScrollTrigger = ScrollTrigger;
 global.axios = axios;
 
 /* eslint-disable-next-line */
+window.initCustomSlider = InitCustomSlider;
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
