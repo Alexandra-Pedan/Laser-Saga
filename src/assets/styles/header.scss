@@ -23,6 +23,7 @@ header {
     width: 364px;
     height: 35px;
     fill: $black;
+    stroke: $black;
     transition: $transition-fuction;
     &:hover {
       @include from(992px) {

@@ -64,15 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.specialities-swiper');
   if (!container || !sliderCursor) return;
   sliderCursor(swiper, container);
+  window.locoScroll.update();
 
   const container2 = document.querySelector('.works-swiper');
   if (!container) return;
   sliderCursor(swiper4, container2);
+  window.locoScroll.update();
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   // getConfig('/dist/static/configSlide.JSON');
   const container = document.getElementById('sliderThree');
-  initCustomSlider(container, 'getAboutSlider');
+  initCustomSlider(container);
+  window.locoScroll.update();
   // getConfigSlider('/dist/static/configSlide.JSON', container);
 });

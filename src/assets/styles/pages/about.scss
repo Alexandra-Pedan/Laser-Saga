@@ -157,6 +157,9 @@
       padding-left: 0;
       padding-top: 42px;
     }
+    .swiper-wrapper {
+      background: #ffffff;
+    }
     .swiper-slide {
       width: 41%;
       @include to(575px) {
@@ -335,7 +338,9 @@
       }
       .team-swiper {
         width: 100%;
-        height: 100%;
+        height: 6vw;
+
+        // height: 100%;
         overflow: hidden;
 
         .swiper-slide {
