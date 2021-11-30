@@ -58,9 +58,11 @@ block content
           img(src="./assets/images/Logo-Kvant-Laser.jpg", alt="")
         li.friends-description-item
           img(src="./assets/images/Logo-Laser-Studio.jpg", alt="")
-
-  .equipment-more-img
-    img(src="./assets/images/Video-gif.jpg", alt="")
+      
+  .equipment-more-img 
+    //- img(src="./assets/images/Video-gif.jpg", alt="")
+    video(autoplay muted loop) 
+      <source src="./assets/images/video.mp4" type="video/mp4">
 
   .equipment-details
     .title

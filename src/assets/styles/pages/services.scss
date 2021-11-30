@@ -59,19 +59,20 @@
       font-size: 48px;
       line-height: 130%;
       color: #000000;
-      max-width: 1400px;
+      // max-width: 1400px;
+      width: 100%;
       margin-left: 100px;
       @include to(1920px) {
-        width: 1076px;
+        // width: 1076px;
         margin-left: 0;
       }
       @include to(1440px) {
         font-size: 34px;
-        width: 767px;
+        // width: 767px;
       }
       @include to(992px) {
         font-size: 22px;
-        width: 421px;
+        // width: 421px;
       }
       @include to(575px) {
         font-size: 20px;
@@ -302,6 +303,7 @@
     text-transform: uppercase;
     color: #ffffff;
     position: absolute;
+    white-space: nowrap;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
@@ -361,21 +363,28 @@
   }
   .description {
     p {
-      width: 450px;
+      // width: 450px;
+      width: 100%;
+      padding-right: 200px;
       // margin-right: 176px;
       padding-bottom: 30px;
       font-size: 24px;
       line-height: 140%;
       letter-spacing: -0.03em;
       color: #000000;
+      @include to(1920px) {
+        padding-right: 170px;
+      }
       @include to(1440px) {
-        width: 335px;
+        // width: 335px;
         padding-bottom: 20px;
         font-size: 18px;
+        padding-right: 110px;
       }
       @include to(992px) {
         width: 287px;
         font-size: 12px;
+        padding-right: 0;
       }
       @include to(575px) {
         width: 100%;

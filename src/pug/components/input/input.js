@@ -121,7 +121,8 @@ export default class SexyInput {
       var im = new Inputmask({
         // mask: '+(38) 9{3} 9{3} 9{2} 9{2}',
         /* prettier-ignore */
-        mask: '+\\97 (9{3}) 9{3} 9{2} 9{2}',
+        // mask: '+\\97 (9{3}) 9{3} 9{2} 9{2}',
+        mask: '+\\971 (9{2}) 9{3} 9{2} 9{2}',
         clearMaskOnLostFocus: false,
         greedy: false,
         tabThrough: true,

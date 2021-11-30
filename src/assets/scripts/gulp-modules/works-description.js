@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const container2 = document.querySelector('.production-swiper');
   if (!container) return;
-  sliderCursor(swiper, container2);
 
   container2.addEventListener('click', (event) => {
     if (!event.target.closest('.swiper-slide')) {
@@ -94,4 +93,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (worksPopup.isInit !== true) getMiniSliderImages(event.target.closest('.swiper-wrapper'));
     worksPopup.isInit = true;
   });
+  sliderCursor(swiper, container2);
 });

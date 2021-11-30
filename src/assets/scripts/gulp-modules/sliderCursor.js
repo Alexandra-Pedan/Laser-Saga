@@ -18,7 +18,7 @@ function initSliderCursor(cursor, swiper, container) {
   });
 
   container.addEventListener('click', (event) => {
-    if (centerScreenPos < event.target.clientX) {
+    if (centerScreenPos > event.clientX) {
       swiper.slidePrev();
       return;
     }

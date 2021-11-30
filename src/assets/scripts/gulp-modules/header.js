@@ -1,5 +1,13 @@
 let isScrolling = false;
 
+document.addEventListener('DOMContentLoaded', () => {
+  formCall.style.display = '';
+  popup.style.display = '';
+  formGratitude.style.display = '';
+  formMobile.style.display = '';
+  popupWorks.style.display = '';
+});
+
 function handleVisibilityOnScroll(elems = [], direction = 'up') {
   elems.forEach((elem) => {
     switch (direction) {
@@ -24,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const popup = document.querySelector('.popup-equipment');
+const popupWorks = document.querySelector('.popup-works');
 const menuContainer = document.querySelector('.js-menu-container');
 const menuClose = document.querySelector('.js-menu-close');
 const menuOpen = document.querySelector('.js-menu-open');
@@ -31,12 +41,15 @@ menuOpen.addEventListener('click', () => {
   if (menuContainer.classList.contains('active')) return;
   document.querySelector('body').style.overflow = 'hidden';
   menuContainer.classList.add('active');
+  menuContainer.querySelector('.noise').classList.add('noise1');
+  menuContainer.querySelector('.noise1').classList.add('noise');
 });
 
 menuClose.addEventListener('click', () => {
   if (!menuContainer.classList.contains('active')) return;
   menuContainer.classList.remove('active');
   document.querySelector('body').style.overflow = 'auto';
+  menuContainer.querySelector('.noise').classList.remove('noise');
 });
 
 // Mobile phone menu start
@@ -72,7 +85,8 @@ const btnCallMenu = document.querySelectorAll('.js-call');
 const btnClose = document.querySelectorAll('.js-close');
 const formCall = document.querySelector('.sideform');
 const formGratitude = document.querySelector('.form-gratitude');
-const btnForm = document.querySelectorAll('form-button-js');
+const btnForm = document.querySelectorAll('.form-button-js');
+const btnCloseGrat = document.querySelectorAll('.js-close-grat');
 
 btnCallMenu.forEach(el => el.addEventListener('click', () => {
   formCall.classList.toggle('sideform-active');
@@ -86,6 +100,7 @@ btnClose.forEach(el => el.addEventListener('click', () => {
 btnClose.forEach(el => el.addEventListener('click', () => {
   formGratitude.classList.remove('sideform-active');
   document.querySelector('body').style.overflow = 'auto';
+  gsap.to(formGratitude, { autoAlpha: 0 });
 }));
 btnForm.forEach(el => el.addEventListener('click', () => {
   formGratitude.classList.remove('sideform-active');

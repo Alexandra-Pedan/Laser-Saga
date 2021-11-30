@@ -60,7 +60,7 @@ function displacementSlider(opts) {
   });
 
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setClearColor(0x23272A, 1.0);
+  renderer.setClearColor(0x23272a, 1.0);
   renderer.setSize(renderWidth, renderHeight);
   parent.appendChild(renderer.domElement);
 
@@ -77,7 +77,7 @@ function displacementSlider(opts) {
   });
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x23272A);
+  scene.background = new THREE.Color(0x23272a);
   const camera = new THREE.OrthographicCamera(
     renderWidth / -2,
     renderWidth / 2,
@@ -101,11 +101,7 @@ function displacementSlider(opts) {
     opacity: 1.0,
   });
 
-  const geometry = new THREE.PlaneBufferGeometry(
-    parent.offsetWidth,
-    parent.offsetHeight,
-    1,
-  );
+  const geometry = new THREE.PlaneBufferGeometry(parent.offsetWidth, parent.offsetHeight, 1);
   const object = new THREE.Mesh(geometry, mat);
   object.position.set(0, 0, 0);
   scene.add(object);
@@ -113,10 +109,10 @@ function displacementSlider(opts) {
   const addEvents = function () {
     let isAnimating = false;
     $('.js-btn-slider__next').on('click', () => {
-      (currentSlide + 1 === images.length) ? changeSlide(0) : changeSlide(currentSlide + 1);
+      currentSlide + 1 === images.length ? changeSlide(0) : changeSlide(currentSlide + 1);
     });
     $('.js-btn-slider__prev').on('click', () => {
-      (currentSlide === 0) ? changeSlide(images.length - 1) : changeSlide(currentSlide - 1);
+      currentSlide === 0 ? changeSlide(images.length - 1) : changeSlide(currentSlide - 1);
     });
     function changeSlide(next) {
       if (!isAnimating) {
@@ -176,10 +172,12 @@ export default function initCustomSlider(container) {
         console.error('нет данных картинок');
         return;
       }
+      const images = JSON.parse(response);
       const conf = {
         parent: container,
-        images: JSON.parse(response),
+        images,
       };
+
       displacementSlider(conf);
     });
   }
