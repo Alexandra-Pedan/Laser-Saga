@@ -140,25 +140,10 @@ function displacementSlider(opts) {
   };
 
   addEvents();
+  window.locoScroll && window.locoScroll.update();
   window.addEventListener('resize', (e) => {
     updateSizeCanvas(parent);
   });
-
-  // function getSize(img = { height: 1920, width: 980 }) {
-  //   renderWidth = Math.max(window.innerWidth || 0);
-  //   renderHeight = Math.max(window.innerHeight || 0);
-  //   const ratio = img.width / img.height;
-  //   let renderW; let
-  //     renderH;
-  //   renderH = renderHeight;
-  //   renderW = renderHeight * ratio;
-  //   if (renderWidth > renderW) {
-  //     const ratio = img.height / img.width;
-  //     renderH = renderWidth * ratio;
-  //     renderW = renderWidth;
-  //   }
-  //   return { w: renderW, h: renderH };
-  // }
 
   function updateSizeCanvas(parent) {
     renderer.setSize(parent.offsetWidth, parent.offsetHeight);

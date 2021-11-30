@@ -18,18 +18,12 @@ global.axios = axios;
 
 /* eslint-disable-next-line */
 window.initCustomSlider = InitCustomSlider;
-const locoScroll = new LocomotiveScroll({
+window.locoScroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
   smoothMobile: false,
   inertia: 1.1,
 });
-window.locoScroll = locoScroll;
-window.locoScroll.update();
-// disableScroll();
-setTimeout(() => {
-  window.locoScroll.update();
-}, 2000);
 /*
  * smooth scroll end
  */
@@ -39,14 +33,9 @@ setTimeout(() => {
  * form handlers start
  */
 const forms = [
-  // '[data-home-contact]',
-  // '[data-form-popup]',
-  // '[data-form-footer]',
-  // '[data-form-popup-consultation]',
+
 ];
 
-// const formsTel = ['[data-home-contact]', '[data-form-homepage]'];
-// const formsTel = ['[data-form-homepage]'];
 const formsTel = ['[data-popup-form]'];
 
 formsTel.forEach((form) => {
@@ -229,8 +218,6 @@ forms.forEach((form) => {
   const $form = document.querySelector(form);
   if ($form) {
     /* eslint-disable */
-    console.log($form);
-    console.log($form.querySelector('[data-btn-submit]'));
     new FormMonster({
       /* eslint-enable */
       elements: {
@@ -308,6 +295,7 @@ forms.forEach((form) => {
 
 function disableScroll() {
   const containersScroll = document.querySelectorAll('[data-disable-page-scroll]');
+  console.log('disableScroll', containersScroll);
   containersScroll.forEach((block) => {
     block.addEventListener('mouseenter', () => {
       window.locoScroll.stop();
@@ -323,11 +311,12 @@ window.addEventListener('load', () => {
   window.locoScroll.update();
 });
 
+
 window.addEventListener('DOMContentLoaded', () => {
-  // console.log('DOMContentLoaded');
-  // disableScroll();
-  // initPopup();
   window.locoScroll.update();
+  disableScroll();
+
+  // initPopup();
 });
 
 // const blockForUpdatingLocoScroll = document.querySelectorAll(

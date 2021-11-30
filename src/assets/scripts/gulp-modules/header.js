@@ -1,10 +1,4 @@
-// $(window).resize(() => {
-//   window.locoScroll.update();
-//   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-// });
-// document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-// const header = document.querySelector('.header-js');
-// console.log(header);
+let isScrolling = false;
 
 function handleVisibilityOnScroll(elems = [], direction = 'up') {
   elems.forEach((elem) => {
@@ -18,12 +12,16 @@ function handleVisibilityOnScroll(elems = [], direction = 'up') {
     }
   });
 }
-locoScroll.on('scroll', (position) => {
-  if (position.scroll.y > 50) {
-    handleVisibilityOnScroll([[header, 'not-on-top']], 'down');
-  } else {
-    handleVisibilityOnScroll([[header, 'not-on-top']]);
-  }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header-js');
+  window.locoScroll && window.locoScroll.on('scroll', (position) => {
+    if ((!isScrolling && position.scroll.y <= 50) || (isScrolling && position.scroll.y > 50)) return;
+
+    isScrolling = position.scroll.y > 50;
+    const direction = isScrolling ? 'down' : 'up';
+    handleVisibilityOnScroll([[header, 'not-on-top']], direction);
+  });
 });
 
 const menuContainer = document.querySelector('.js-menu-container');
@@ -97,7 +95,6 @@ btnForm.forEach(el => el.addEventListener('click', () => {
 // form
 
 function initMask(selector) {
-  console.log(selector);
   $(selector).inputmask({
     // mask: '+(38) 9{3} 9{3} 9{2} 9{2}',
     /* prettier-ignore */
@@ -225,34 +222,3 @@ callbackHeaderForm.addEventListener('submit', (event) => {
     );
   }
 });
-
-// // lazyImages
-// const lazyImages = document.querySelectorAll('img[data-src]:not(.swiper-lazy)');
-
-// lazyImages.forEach(imageArgs => {
-//   const image = imageArgs;
-//   image.style.opacity = 0;
-//   image.style.transition = ' .3s ease-out';
-//   image.addEventListener('load', () => {
-//     image.style.opacity = 1;
-//   });
-//   const target = image;
-//   const observer = new IntersectionObserver(
-//     entries => {
-//       /* Content excerpted, show below */
-//       entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//           const lazyImage = entry.target;
-//           lazyImage.src = lazyImage.dataset.src;
-//           image.style.transition = '';
-//           observer.unobserve(target);
-//         }
-//       });
-//     },
-//     {
-//       rootMargin: '0px',
-//       threshold: 0.1,
-//     },
-//   );
-//   observer.observe(target);
-// });

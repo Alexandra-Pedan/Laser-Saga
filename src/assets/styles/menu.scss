@@ -357,7 +357,7 @@ a:focus-visible {
   display: flex;
   position: relative;
   animation: marquee 15s linear infinite;
-  will-change: transform;
+  //will-change: transform;
   @include to(575px) {
     display: none;
   }
