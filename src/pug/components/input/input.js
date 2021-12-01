@@ -122,7 +122,8 @@ export default class SexyInput {
         // mask: '+(38) 9{3} 9{3} 9{2} 9{2}',
         /* prettier-ignore */
         // mask: '+\\97 (9{3}) 9{3} 9{2} 9{2}',
-        mask: '+\\971 (9{2}) 9{3} 9{2} 9{2}',
+        // mask: '+\\971 (9{2}) 9{3} 9{2} 9{2}',
+        mask: '+9{3} 9{2} 9{3} 9{2} 9{2}',
         clearMaskOnLostFocus: false,
         greedy: false,
         tabThrough: true,

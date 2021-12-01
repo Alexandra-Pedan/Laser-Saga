@@ -3,7 +3,7 @@
   grid-template-rows: 30px auto 30px; /* 3 строки */
   grid-template-columns: 30px auto 30px; /* 3 столбца */
   margin-top: 81px;
-  will-change: transform;
+  // will-change: transform;
   @include to(1440px) {
     margin-top: 61px;
     grid-template-rows: 20px auto 20px;
@@ -73,7 +73,7 @@
   left: -50%;
   top: -100%;
   width: 300%;
-  will-change: transform;
+  // will-change: transform;
 }
 .page-header-content {
   display: flex;

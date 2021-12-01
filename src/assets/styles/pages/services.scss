@@ -319,6 +319,7 @@
     }
     @include to(575px) {
       font-size: 12px;
+      transform: translate(-0%, -40%);
     }
   }
   .btn-submite {
@@ -347,6 +348,13 @@
           transform: translate(-35%, -25%);
         }
       }
+    }
+  }
+}
+.header-form-button-js {
+  .btn-text {
+    @include to(575px) {
+      transform: translate(-20%, -40%);
     }
   }
 }
