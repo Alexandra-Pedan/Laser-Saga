@@ -95,7 +95,7 @@ formsTel.forEach((form) => {
   }
 });
 
-const footerForm = ['[data-footer-form]'];
+const footerForm = ['[data-footer-form]', '[data-popup-form]'];
 // const footerForm = ['[data-form-footer]'];
 footerForm.forEach((form) => {
   const $form = document.querySelector(form);
@@ -121,6 +121,10 @@ footerForm.forEach((form) => {
             rule: yup
               .string()
               .required(i18next.t('required'))
+              .test('phone', 'wow', (evt) => {
+                const digitsCount = evt.replace(/[^0-9]/g, '');
+                return digitsCount.length >= 12;
+              }, 'Must be only digits')
               .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
 
             defaultMessage: i18next.t('phone'),
@@ -194,6 +198,7 @@ formsWithRedirect.forEach((form) => {
             rule: yup
               .string()
               .required(i18next.t('required'))
+
               .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
 
             defaultMessage: i18next.t('phone'),
@@ -204,13 +209,13 @@ formsWithRedirect.forEach((form) => {
       },
     });
 
-    $form.querySelector('.js-mask-absolute').addEventListener(
-      'click',
-      () => {
-        $form.querySelector('[name="phone"]').focus();
-      },
-      false,
-    );
+    // $form.querySelector('.js-mask-absolute').addEventListener(
+    //   'click',
+    //   () => {
+    //     $form.querySelector('[name="phone"]').focus();
+    //   },
+    //   false,
+    // );
   }
 });
 
@@ -276,13 +281,13 @@ forms.forEach((form) => {
       },
     });
 
-    $form.querySelector('.js-mask-absolute').addEventListener(
-      'click',
-      () => {
-        $form.querySelector('[name="phone"]').focus();
-      },
-      false,
-    );
+    // $form.querySelector('.js-mask-absolute').addEventListener(
+    //   'click',
+    //   () => {
+    //     $form.querySelector('[name="phone"]').focus();
+    //   },
+    //   false,
+    // );
   }
   document.querySelectorAll('[name="checkbox1"]').forEach((el) => {
     el.value = false;
