@@ -28,6 +28,7 @@ header {
     &:hover {
       @include from(992px) {
         fill: $red;
+        stroke: $red;
       }
     }
     @include to(1440px) {
@@ -70,6 +71,7 @@ header {
         @include to(575px) {
           width: 35px;
           height: 35px;
+          display: none;
         }
         &:last-child {
           margin-right: 0;
@@ -213,7 +215,8 @@ header {
           font-size: 16px;
         }
         @include to(575px) {
-          display: none;
+          // display: none;
+          font-size: 14px;
         }
       }
       svg {

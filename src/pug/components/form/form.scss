@@ -163,8 +163,20 @@
           display: inline-grid;
           grid-template-areas: 'text';
           text-transform: uppercase;
+          @include to(1800px) {
+            font-size: 145px;
+          }
+          @include to(1540px) {
+            font-size: 135px;
+          }
           @include to(1440px) {
             font-size: 120px;
+          }
+          @include to(1240px) {
+            font-size: 110px;
+          }
+          @include to(1150px) {
+            font-size: 90px;
           }
           @include to(575px) {
             font-size: 50px;
@@ -205,12 +217,12 @@
         }
       }
       .feedback-form {
-        width: 50%;
+        width: 44%;
         @include to(992px) {
           width: 100%;
         }
         .input-sideform {
-          width: 760px;
+          width: 100%;
           height: 78px;
           margin-bottom: 30px;
           padding-left: 40px;
@@ -220,7 +232,7 @@
           color: #000000;
           background: $white !important;
           @include to(1440px) {
-            width: 573px;
+            // width: 573px;
             height: 78px;
             margin-bottom: 20px;
             padding-left: 30px;
@@ -290,7 +302,7 @@
       padding-left: 20px;
     }
     .info {
-      width: 460px;
+      width: 435px;
       font-size: 24px;
       line-height: 140%;
       text-transform: uppercase;
@@ -301,7 +313,7 @@
       border-bottom: none;
       background: #f1f1f1;
       @include to(1440px) {
-        width: 338px;
+        width: 328px;
         padding: 14px 24px;
         font-size: 18px;
       }
@@ -313,13 +325,13 @@
     }
     .underline-wave {
       height: 5px;
-      width: 460px;
+      width: 435px;
       background-image: url(../images/wave.svg);
       background-size: contain;
       background-repeat: repeat;
       margin-top: -3px;
       @include to(1440px) {
-        width: 338px;
+        width: 328px;
       }
       @include to(575px) {
         width: calc(100% - 20px);

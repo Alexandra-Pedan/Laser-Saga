@@ -3,6 +3,9 @@
     font-family: $default-font;
     font-size: 120px;
     margin-top: 10px;
+    display: inline-grid;
+    grid-template-areas: 'text';
+    text-transform: uppercase;
     @include to(1440px) {
       font-size: 80px;
     }
@@ -15,13 +18,48 @@
       text-transform: none;
       width: calc(100% + 4px);
     }
+    // &::after {
+    //   transform: translate(5px, 5px);
+    //   @include to(1440px) {
+    //     transform: translate(2px, 4px);
+    //   }
+    //   @include to(575px) {
+    //     display: none;
+    //   }
+    // }
+    span {
+      background: #000000;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 0.01em rgba(0, 0, 0, 0.9);
+    }
+
+    & > *,
     &::after {
-      transform: translate(5px, 5px);
+      grid-area: text;
+    }
+
+    &::after {
+      content: attr(data-text);
+      transform: translate(8px, 8px);
       @include to(1440px) {
-        transform: translate(2px, 4px);
+        transform: translate(4px, 4px);
+      }
+      @include to(992px) {
+        transform: translate(2px, 2px);
       }
       @include to(575px) {
-        display: none;
+        transform: translate(1px, 1px);
+      }
+    }
+
+    &::after {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2px #000000;
+      z-index: -2;
+      @include to(575px) {
+        -webkit-text-stroke: 1px #000000;
       }
     }
   }

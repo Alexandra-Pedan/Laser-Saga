@@ -15,6 +15,10 @@
     position: relative;
   }
   .title {
+    width: 17.5%;
+    @include to(575px) {
+      width: 100%;
+    }
     h4 {
       font-size: 24px;
       line-height: 150%;
@@ -37,22 +41,26 @@
     }
   }
   .description {
+    width: 70%;
+    @include to(575px) {
+      width: 100%;
+    }
     p {
-      max-width: 1400px;
+      // max-width: 1400px;
       margin-left: 200px;
       font-size: 48px;
       line-height: 130%;
       color: #000000;
       @include to(1920px) {
-        width: 1076px;
+        // width: 1076px;
         margin-left: 0;
       }
       @include to(1440px) {
-        width: 767px;
+        // width: 767px;
         font-size: 34px;
       }
       @include to(992px) {
-        width: 421px;
+        // width: 421px;
         font-size: 22px;
       }
       @include to(575px) {
@@ -236,3 +244,14 @@
     width: calc(100% - 40px) !important;
   }
 }
+// .page-header-content .page-title . {
+//   @include to(1076px) {
+//     font-size: 100px;
+//   }
+//   @include to(992px) {
+//     font-size: 80px;
+//   }
+//   @include to(575px) {
+//     font-size: 34px;
+//   }
+// }

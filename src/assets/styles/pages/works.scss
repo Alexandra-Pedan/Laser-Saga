@@ -91,6 +91,7 @@
   }
   .breadcrumbs {
     display: flex;
+    margin-bottom: 5px;
     .breadcrumbs-item {
       margin-right: 10px;
       @include to(575px) {
@@ -192,6 +193,23 @@
       @include to(575px) {
         -webkit-text-stroke: 1px #000000;
       }
+    }
+  }
+  .equipment-title-header {
+    @include to(1630px) {
+      font-size: 140px;
+    }
+    @include to(1440px) {
+      font-size: 120px;
+    }
+    @include to(1076px) {
+      font-size: 100px;
+    }
+    @include to(992px) {
+      font-size: 80px;
+    }
+    @include to(575px) {
+      font-size: 34px;
     }
   }
 }
@@ -633,7 +651,8 @@
   pointer-events: none;
   cursor: none;
   fill: none !important;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
+  stroke: #ffffff;
   @include to(1440px) {
     width: 150px;
     height: 150px;

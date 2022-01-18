@@ -32,9 +32,7 @@ window.locoScroll = new LocomotiveScroll({
 /*
  * form handlers start
  */
-const forms = [
-
-];
+const forms = [];
 
 const formsTel = ['[data-popup-form]'];
 
@@ -121,10 +119,15 @@ footerForm.forEach((form) => {
             rule: yup
               .string()
               .required(i18next.t('required'))
-              .test('phone', 'wow', (evt) => {
-                const digitsCount = evt.replace(/[^0-9]/g, '');
-                return digitsCount.length >= 12;
-              }, 'Must be only digits')
+              .test(
+                'phone',
+                'wow',
+                (evt) => {
+                  const digitsCount = evt.replace(/[^0-9]/g, '');
+                  return digitsCount.length >= 12;
+                },
+                'Must be only digits',
+              )
               .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
 
             defaultMessage: i18next.t('phone'),
@@ -316,7 +319,6 @@ window.addEventListener('load', () => {
   window.locoScroll.update();
 });
 
-
 window.addEventListener('DOMContentLoaded', () => {
   window.locoScroll.update();
   disableScroll();
@@ -324,24 +326,22 @@ window.addEventListener('DOMContentLoaded', () => {
   // initPopup();
 });
 
-// const blockForUpdatingLocoScroll = document.querySelectorAll(
-//   '.page__content>*:last-child, .footer, .about-block-last, .about-block-last',
-// );
-// blockForUpdatingLocoScroll.forEach(image => {
-//   const callback = function(entries, observer) {
-//     /* Content excerpted, show below */
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         locoScroll.update();
-//         observer.unobserve(image);
-//       }
-//     });
-//   };
-//   // eslint-disable-next-line no-undef
-//   const observer = new IntersectionObserver(callback, {
-//     rootMargin: '0px',
-//     threshold: 0.1,
-//   });
-//   const target = image;
-//   observer.observe(target);
-// });
+const blockForUpdatingLocoScroll = document.querySelectorAll('footer');
+blockForUpdatingLocoScroll.forEach((image) => {
+  const callback = function (entries, observer) {
+    /* Content excerpted, show below */
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        locoScroll.update();
+        observer.unobserve(image);
+      }
+    });
+  };
+  // eslint-disable-next-line no-undef
+  const observer = new IntersectionObserver(callback, {
+    rootMargin: '0px',
+    threshold: 0.1,
+  });
+  const target = image;
+  observer.observe(target);
+});

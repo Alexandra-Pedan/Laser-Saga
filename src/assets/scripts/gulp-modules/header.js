@@ -23,13 +23,14 @@ function handleVisibilityOnScroll(elems = [], direction = 'up') {
 
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header-js');
-  window.locoScroll && window.locoScroll.on('scroll', (position) => {
-    if ((!isScrolling && position.scroll.y <= 50) || (isScrolling && position.scroll.y > 50)) return;
+  window.locoScroll
+    && window.locoScroll.on('scroll', (position) => {
+      if ((!isScrolling && position.scroll.y <= 50) || (isScrolling && position.scroll.y > 50)) return;
 
-    isScrolling = position.scroll.y > 50;
-    const direction = isScrolling ? 'down' : 'up';
-    handleVisibilityOnScroll([[header, 'not-on-top']], direction);
-  });
+      isScrolling = position.scroll.y > 50;
+      const direction = isScrolling ? 'down' : 'up';
+      handleVisibilityOnScroll([[header, 'not-on-top']], direction);
+    });
 });
 
 const popup = document.querySelector('.popup-equipment');
@@ -41,15 +42,15 @@ menuOpen.addEventListener('click', () => {
   if (menuContainer.classList.contains('active')) return;
   document.querySelector('body').style.overflow = 'hidden';
   menuContainer.classList.add('active');
-  menuContainer.querySelector('.noise').classList.add('noise1');
-  menuContainer.querySelector('.noise1').classList.add('noise');
+  // menuContainer.querySelector('.noise').classList.add('noise1');
+  // menuContainer.querySelector('.noise1').classList.add('noise');
 });
 
 menuClose.addEventListener('click', () => {
   if (!menuContainer.classList.contains('active')) return;
   menuContainer.classList.remove('active');
   document.querySelector('body').style.overflow = 'auto';
-  menuContainer.querySelector('.noise').classList.remove('noise');
+  // menuContainer.querySelector('.noise').classList.remove('noise');
 });
 
 // Mobile phone menu start
